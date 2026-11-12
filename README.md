@@ -44,7 +44,7 @@ Server-side dependencies: Worlds 4.5.0+ (per-island worlds) and FancyNpcs 2.11 (
 
 ## Status
 
-This is a release candidate. The automated test suite passes, but a large-scale human playtest has not been done yet, so balance values may still change.
+This is a release candidate. The repository contains a JUnit test suite (run locally with Gradle, not in CI), but a large-scale human playtest has not been done yet, so balance values may still change.
 
 ## Project layout
 
