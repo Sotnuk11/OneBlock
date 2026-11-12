@@ -2,6 +2,7 @@
 /*
 !/.gitignore
 !/.gitattributes
+!/README.md
 !/.env.example
 !/build.gradle.kts
 !/settings.gradle.kts
