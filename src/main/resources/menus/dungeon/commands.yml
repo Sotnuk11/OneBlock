@@ -1,0 +1,291 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "commands": {
+    "mine-continue": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "continue",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-finish": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "finish",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-records": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "records",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-ready": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "ready",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-start": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "start",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-reconnect": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "reconnect",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-guide": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "guide",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-leave": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "leave",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "mine-admin-sessions": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-sessions",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-settings": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-settings",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-players": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-players",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-stop-all": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-stop-all",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-entry": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-entry",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-player-tp": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-player-tp",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-player-heal": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-player-heal",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-player-hub": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-player-sendhub",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-player-profile": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-player-profile",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-confirm-action": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-confirm",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-home": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-next": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-next",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-admin-previous": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "admin-previous",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false,
+      "permission": "oneblock.admin.inspect"
+    },
+    "mine-menu": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "menu",
+      "requires-open": [
+        "*"
+      ],
+      "require-profile": false
+    },
+    "dungeons": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "select",
+      "requires-open": [],
+      "require-profile": false
+    },
+    "mine-invite": {
+      "aliases": [],
+      "type": "input",
+      "execute": "dungeon invite {input}",
+      "requires-open": [
+        "mine-lobby"
+      ],
+      "require-profile": false
+    },
+    "mine-accept": {
+      "aliases": [],
+      "type": "input",
+      "execute": "dungeon accept {input}",
+      "requires-open": [
+        "mine-lobby"
+      ],
+      "require-profile": false
+    },
+    "mine-records-2": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "dungeon records 2",
+      "requires-open": [
+        "mine-lobby",
+        "mine-records"
+      ],
+      "require-profile": false
+    },
+    "mine-records-3": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "dungeon records 3",
+      "requires-open": [
+        "mine-lobby",
+        "mine-records"
+      ],
+      "require-profile": false
+    },
+    "mine-records-4": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "dungeon records 4",
+      "requires-open": [
+        "mine-lobby",
+        "mine-records"
+      ],
+      "require-profile": false
+    },
+    "mine-records-next": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "records-next",
+      "requires-open": [
+        "mine-records"
+      ],
+      "require-profile": false
+    },
+    "mine-records-previous": {
+      "aliases": [],
+      "type": "dungeon",
+      "execute": "records-previous",
+      "requires-open": [
+        "mine-records"
+      ],
+      "require-profile": false
+    }
+  }
+}

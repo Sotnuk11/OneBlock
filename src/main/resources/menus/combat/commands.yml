@@ -1,0 +1,690 @@
+
+{
+  "version": 1,
+  "commands": {
+    "combat-weapons": {
+      "aliases": [
+        "combat"
+      ],
+      "type": "open",
+      "menu": "combat-weapons",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-armor": {
+      "aliases": [],
+      "type": "open",
+      "menu": "combat-armor",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-components": {
+      "aliases": [],
+      "type": "open",
+      "menu": "combat-components",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-warden_blade": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe warden_blade",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-rift_cleaver": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe rift_cleaver",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-nether_edge": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe nether_edge",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-wind_bow": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe wind_bow",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ranger_bow": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ranger_bow",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-apprentice_wand": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe apprentice_wand",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-frost_wand": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe frost_wand",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-rift_staff": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe rift_staff",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-warden_helmet": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe warden_helmet",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-warden_chestplate": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe warden_chestplate",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-warden_leggings": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe warden_leggings",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-warden_boots": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe warden_boots",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-weaver_helmet": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe weaver_helmet",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-weaver_chestplate": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe weaver_chestplate",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-weaver_leggings": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe weaver_leggings",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-weaver_boots": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe weaver_boots",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-fragment_bones": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe fragment_bones",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-fragment_flesh": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe fragment_flesh",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-fragment_resources": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe fragment_resources",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-temper_core": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe temper_core",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-claims": {
+      "aliases": [],
+      "type": "open",
+      "menu": "release-claims",
+      "requires-open": [
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-guide": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "workshop",
+      "requires-open": [
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": false
+    },
+    "combat-craft-nether_edge_reforge": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe nether_edge_reforge",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ranger_helmet": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ranger_helmet",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ranger_chestplate": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ranger_chestplate",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ranger_leggings": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ranger_leggings",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ranger_boots": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ranger_boots",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-ember_shortbow": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe ember_shortbow",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-enchanted_fragment": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe enchanted_fragment",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-island_gold": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe island_gold",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-island_diamonds": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe island_diamonds",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    },
+    "combat-craft-island_debris": {
+      "aliases": [],
+      "type": "release",
+      "execute": "recipe island_debris",
+      "requires-open": [
+        "main-menu",
+        "skills",
+        "release-core",
+        "release-skills",
+        "release-workshop",
+        "release-goals",
+        "release-claims",
+        "release-confirm",
+        "guide-page",
+        "combat-weapons",
+        "combat-armor",
+        "combat-components"
+      ],
+      "require-profile": true
+    }
+  }
+}

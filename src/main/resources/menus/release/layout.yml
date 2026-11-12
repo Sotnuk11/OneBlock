@@ -1,0 +1,2111 @@
+# GUI-копія custom-item використовує спільний каталог; дії й захист інвентаря незмінні.
+{
+  "version": 1,
+  "menus": {
+    "chest-preview": {
+      "rows": 6,
+      "title": "&8Скриня",
+      "content": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "entry": {},
+      "slots": {
+        "4": {
+          "material": "PAPER",
+          "name": "&6Пропозиція",
+          "lore": [
+            "{reward_quote}"
+          ]
+        },
+        "48": {
+          "material": "LIME_DYE",
+          "name": "&aДалі",
+          "lore": [],
+          "command": "/obmenu chests-confirm"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« До нагород",
+          "lore": [],
+          "command": "/obmenu chests-back"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "&7‹ Попередня",
+          "lore": [],
+          "command": "/obmenu chests-loot-previous"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "&7Наступна ›",
+          "lore": [],
+          "command": "/obmenu chests-loot-next"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "chest-confirm": {
+      "rows": 3,
+      "title": "&8Скриня",
+      "slots": {
+        "4": {
+          "material": "PAPER",
+          "name": "&6Ціна й вміст",
+          "lore": [
+            "{reward_quote}"
+          ]
+        },
+        "11": {
+          "material": "LIME_CONCRETE",
+          "name": "&aВідкрити",
+          "lore": [
+            "&7Предмети будуть у «Нагородах»"
+          ],
+          "command": "/obmenu chests-buy"
+        },
+        "15": {
+          "material": "ARROW",
+          "name": "&cСкасувати",
+          "lore": [],
+          "command": "/obmenu chests-back"
+        },
+        "22": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "18": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "19": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "20": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "21": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "23": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "24": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "25": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "26": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-core": {
+      "rows": 6,
+      "title": "@release.menu.core",
+      "slots": {
+        "4": {
+          "material": "BEACON",
+          "name": "@release.core",
+          "lore": [
+            "{release_chapter}",
+            "{release_core}",
+            "{release_phase}",
+            "",
+            "{release_focus}"
+          ]
+        },
+        "11": {
+          "state-source": "release_chapter_start",
+          "initial-state": "locked",
+          "states": {
+            "done": {
+              "material": "LIME_DYE",
+              "name": "@release.name.start",
+              "lore": [
+                "&aПройдено"
+              ]
+            },
+            "current": {
+              "material": "GRASS_BLOCK",
+              "name": "@release.name.start",
+              "lore": [
+                "&eТи тут"
+              ],
+              "glow": true
+            },
+            "ready": {
+              "material": "NETHER_STAR",
+              "name": "@release.name.start",
+              "lore": [
+                "{release_gate}",
+                "",
+                "&aМожна відкрити"
+              ],
+              "glow": true,
+              "command": "/obmenu release-chapter"
+            },
+            "next": {
+              "material": "YELLOW_DYE",
+              "name": "@release.name.start",
+              "lore": [
+                "{release_gate}"
+              ],
+              "command": "/obmenu release-chapter"
+            },
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "@release.name.start",
+              "lore": [
+                "&8Ще закрито"
+              ]
+            }
+          }
+        },
+        "12": {
+          "state-source": "release_chapter_living",
+          "initial-state": "locked",
+          "states": {
+            "done": {
+              "material": "LIME_DYE",
+              "name": "@release.name.living",
+              "lore": [
+                "&aПройдено"
+              ]
+            },
+            "current": {
+              "material": "OAK_SAPLING",
+              "name": "@release.name.living",
+              "lore": [
+                "&eТи тут"
+              ],
+              "glow": true
+            },
+            "ready": {
+              "material": "NETHER_STAR",
+              "name": "@release.name.living",
+              "lore": [
+                "{release_gate}",
+                "",
+                "&aМожна відкрити"
+              ],
+              "glow": true,
+              "command": "/obmenu release-chapter"
+            },
+            "next": {
+              "material": "YELLOW_DYE",
+              "name": "@release.name.living",
+              "lore": [
+                "{release_gate}"
+              ],
+              "command": "/obmenu release-chapter"
+            },
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "@release.name.living",
+              "lore": [
+                "&8Спочатку відкрий етап «Початок»"
+              ]
+            }
+          }
+        },
+        "13": {
+          "state-source": "release_chapter_workshop",
+          "initial-state": "locked",
+          "states": {
+            "done": {
+              "material": "LIME_DYE",
+              "name": "@release.name.workshop",
+              "lore": [
+                "&aПройдено"
+              ]
+            },
+            "current": {
+              "material": "CRAFTING_TABLE",
+              "name": "@release.name.workshop",
+              "lore": [
+                "&eТи тут"
+              ],
+              "glow": true
+            },
+            "ready": {
+              "material": "NETHER_STAR",
+              "name": "@release.name.workshop",
+              "lore": [
+                "{release_gate}",
+                "",
+                "&aМожна відкрити"
+              ],
+              "glow": true,
+              "command": "/obmenu release-chapter"
+            },
+            "next": {
+              "material": "YELLOW_DYE",
+              "name": "@release.name.workshop",
+              "lore": [
+                "{release_gate}"
+              ],
+              "command": "/obmenu release-chapter"
+            },
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "@release.name.workshop",
+              "lore": [
+                "&8Спочатку відкрий етап «Живий острів»"
+              ]
+            }
+          }
+        },
+        "14": {
+          "state-source": "release_chapter_depths",
+          "initial-state": "locked",
+          "states": {
+            "done": {
+              "material": "LIME_DYE",
+              "name": "@release.name.depths",
+              "lore": [
+                "&aПройдено"
+              ]
+            },
+            "current": {
+              "material": "IRON_PICKAXE",
+              "name": "@release.name.depths",
+              "lore": [
+                "&eТи тут"
+              ],
+              "glow": true
+            },
+            "ready": {
+              "material": "NETHER_STAR",
+              "name": "@release.name.depths",
+              "lore": [
+                "{release_gate}",
+                "",
+                "&aМожна відкрити"
+              ],
+              "glow": true,
+              "command": "/obmenu release-chapter"
+            },
+            "next": {
+              "material": "YELLOW_DYE",
+              "name": "@release.name.depths",
+              "lore": [
+                "{release_gate}"
+              ],
+              "command": "/obmenu release-chapter"
+            },
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "@release.name.depths",
+              "lore": [
+                "&8Спочатку відкрий етап «Майстерня»"
+              ]
+            }
+          }
+        },
+        "15": {
+          "state-source": "release_chapter_developed",
+          "initial-state": "locked",
+          "states": {
+            "done": {
+              "material": "LIME_DYE",
+              "name": "@release.name.developed",
+              "lore": [
+                "&aПройдено"
+              ]
+            },
+            "current": {
+              "material": "BEACON",
+              "name": "@release.name.developed",
+              "lore": [
+                "&eТи тут"
+              ],
+              "glow": true
+            },
+            "ready": {
+              "material": "NETHER_STAR",
+              "name": "@release.name.developed",
+              "lore": [
+                "{release_gate}",
+                "",
+                "&aМожна відкрити"
+              ],
+              "glow": true,
+              "command": "/obmenu release-chapter"
+            },
+            "next": {
+              "material": "YELLOW_DYE",
+              "name": "@release.name.developed",
+              "lore": [
+                "{release_gate}"
+              ],
+              "command": "/obmenu release-chapter"
+            },
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "@release.name.developed",
+              "lore": [
+                "&8Спочатку відкрий етап «Глибини»"
+              ]
+            }
+          }
+        },
+        "29": {
+          "material": "GOLDEN_PICKAXE",
+          "name": "@release.fortune",
+          "lore": [
+            "{release_upgrade_fortune}"
+          ],
+          "command": "/obmenu release-upgrade-fortune"
+        },
+        "31": {
+          "material": "GRASS_BLOCK",
+          "name": "@release.territory",
+          "lore": [
+            "{release_upgrade_territory}"
+          ],
+          "command": "/obmenu release-upgrade-territory"
+        },
+        "33": {
+          "material": "NETHER_STAR",
+          "name": "@release.focus",
+          "lore": [
+            "{release_upgrade_focus}"
+          ],
+          "command": "/obmenu release-upgrade-focus"
+        },
+        "40": {
+          "material": "REDSTONE",
+          "name": "@release.charge",
+          "lore": [
+            "{release_charge}"
+          ],
+          "command": "/obmenu release-packs"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "@release.back",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "53": {
+          "material": "BOOK",
+          "name": "@guides.title",
+          "lore": [],
+          "command": "/obmenu guide-core"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-skills": {
+      "rows": 6,
+      "title": "@release.menu.skills",
+      "slots": {
+        "53": {
+          "material": "BOOK",
+          "name": "@guides.title",
+          "lore": [],
+          "command": "/obmenu guide-skills"
+        },
+        "20": {
+          "material": "IRON_PICKAXE",
+          "name": "@release.name.mining",
+          "lore": [
+            "{release_skill_mining}"
+          ]
+        },
+        "22": {
+          "material": "OAK_LOG",
+          "name": "@release.name.forestry",
+          "lore": [
+            "{release_skill_forestry}"
+          ]
+        },
+        "24": {
+          "material": "WHEAT",
+          "name": "@release.name.farming",
+          "lore": [
+            "{release_skill_farming}"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "@release.back",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "EXPERIENCE_BOTTLE",
+          "name": "&aСередній рівень: {release_skill_avg}",
+          "lore": []
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-workshop": {
+      "rows": 6,
+      "title": "@release.menu.workshop",
+      "slots": {
+        "51": {
+          "material": "IRON_SWORD",
+          "name": "&cБойове спорядження",
+          "command": "/obmenu combat-weapons"
+        },
+        "53": {
+          "material": "BOOK",
+          "name": "@guides.title",
+          "lore": [],
+          "command": "/obmenu guide-workshop"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "@release.back",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "12": {
+          "state-source": "release_recipe_state_pickaxe_1",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "IRON_PICKAXE",
+              "name": "@release.name.pickaxe_1",
+              "lore": [
+                "{release_recipe_pickaxe_1}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_1",
+              "custom-item": "oneblock:pickaxe_1",
+              "glow": true
+            },
+            "other": {
+              "material": "IRON_PICKAXE",
+              "name": "@release.name.pickaxe_1",
+              "lore": [
+                "{release_recipe_pickaxe_1}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_1",
+              "custom-item": "oneblock:pickaxe_1"
+            }
+          }
+        },
+        "13": {
+          "state-source": "release_recipe_state_pickaxe_2",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_PICKAXE",
+              "name": "@release.name.pickaxe_2",
+              "lore": [
+                "{release_recipe_pickaxe_2}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_2",
+              "custom-item": "oneblock:pickaxe_2",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_PICKAXE",
+              "name": "@release.name.pickaxe_2",
+              "lore": [
+                "{release_recipe_pickaxe_2}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_2",
+              "custom-item": "oneblock:pickaxe_2"
+            }
+          }
+        },
+        "14": {
+          "state-source": "release_recipe_state_pickaxe_3",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_PICKAXE",
+              "name": "@release.name.pickaxe_3",
+              "lore": [
+                "{release_recipe_pickaxe_3}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_3",
+              "custom-item": "oneblock:pickaxe_3",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_PICKAXE",
+              "name": "@release.name.pickaxe_3",
+              "lore": [
+                "{release_recipe_pickaxe_3}"
+              ],
+              "command": "/obmenu release-recipe-pickaxe_3",
+              "custom-item": "oneblock:pickaxe_3"
+            }
+          }
+        },
+        "21": {
+          "state-source": "release_recipe_state_axe_1",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "IRON_AXE",
+              "name": "@release.name.axe_1",
+              "lore": [
+                "{release_recipe_axe_1}"
+              ],
+              "command": "/obmenu release-recipe-axe_1",
+              "custom-item": "oneblock:axe_1",
+              "glow": true
+            },
+            "other": {
+              "material": "IRON_AXE",
+              "name": "@release.name.axe_1",
+              "lore": [
+                "{release_recipe_axe_1}"
+              ],
+              "command": "/obmenu release-recipe-axe_1",
+              "custom-item": "oneblock:axe_1"
+            }
+          }
+        },
+        "22": {
+          "state-source": "release_recipe_state_axe_2",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_AXE",
+              "name": "@release.name.axe_2",
+              "lore": [
+                "{release_recipe_axe_2}"
+              ],
+              "command": "/obmenu release-recipe-axe_2",
+              "custom-item": "oneblock:axe_2",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_AXE",
+              "name": "@release.name.axe_2",
+              "lore": [
+                "{release_recipe_axe_2}"
+              ],
+              "command": "/obmenu release-recipe-axe_2",
+              "custom-item": "oneblock:axe_2"
+            }
+          }
+        },
+        "23": {
+          "state-source": "release_recipe_state_axe_3",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_AXE",
+              "name": "@release.name.axe_3",
+              "lore": [
+                "{release_recipe_axe_3}"
+              ],
+              "command": "/obmenu release-recipe-axe_3",
+              "custom-item": "oneblock:axe_3",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_AXE",
+              "name": "@release.name.axe_3",
+              "lore": [
+                "{release_recipe_axe_3}"
+              ],
+              "command": "/obmenu release-recipe-axe_3",
+              "custom-item": "oneblock:axe_3"
+            }
+          }
+        },
+        "30": {
+          "state-source": "release_recipe_state_hoe_1",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "IRON_HOE",
+              "name": "@release.name.hoe_1",
+              "lore": [
+                "{release_recipe_hoe_1}"
+              ],
+              "command": "/obmenu release-recipe-hoe_1",
+              "custom-item": "oneblock:hoe_1",
+              "glow": true
+            },
+            "other": {
+              "material": "IRON_HOE",
+              "name": "@release.name.hoe_1",
+              "lore": [
+                "{release_recipe_hoe_1}"
+              ],
+              "command": "/obmenu release-recipe-hoe_1",
+              "custom-item": "oneblock:hoe_1"
+            }
+          }
+        },
+        "31": {
+          "state-source": "release_recipe_state_hoe_2",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_HOE",
+              "name": "@release.name.hoe_2",
+              "lore": [
+                "{release_recipe_hoe_2}"
+              ],
+              "command": "/obmenu release-recipe-hoe_2",
+              "custom-item": "oneblock:hoe_2",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_HOE",
+              "name": "@release.name.hoe_2",
+              "lore": [
+                "{release_recipe_hoe_2}"
+              ],
+              "command": "/obmenu release-recipe-hoe_2",
+              "custom-item": "oneblock:hoe_2"
+            }
+          }
+        },
+        "32": {
+          "state-source": "release_recipe_state_hoe_3",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "DIAMOND_HOE",
+              "name": "@release.name.hoe_3",
+              "lore": [
+                "{release_recipe_hoe_3}"
+              ],
+              "command": "/obmenu release-recipe-hoe_3",
+              "custom-item": "oneblock:hoe_3",
+              "glow": true
+            },
+            "other": {
+              "material": "DIAMOND_HOE",
+              "name": "@release.name.hoe_3",
+              "lore": [
+                "{release_recipe_hoe_3}"
+              ],
+              "command": "/obmenu release-recipe-hoe_3",
+              "custom-item": "oneblock:hoe_3"
+            }
+          }
+        },
+        "39": {
+          "state-source": "release_recipe_state_water",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "WATER_BUCKET",
+              "name": "@release.name.water",
+              "lore": [
+                "{release_recipe_water}"
+              ],
+              "command": "/obmenu release-recipe-water",
+              "glow": true
+            },
+            "other": {
+              "material": "WATER_BUCKET",
+              "name": "@release.name.water",
+              "lore": [
+                "{release_recipe_water}"
+              ],
+              "command": "/obmenu release-recipe-water"
+            }
+          }
+        },
+        "40": {
+          "state-source": "release_recipe_state_lava",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "LAVA_BUCKET",
+              "name": "@release.name.lava",
+              "lore": [
+                "{release_recipe_lava}"
+              ],
+              "command": "/obmenu release-recipe-lava",
+              "glow": true
+            },
+            "other": {
+              "material": "LAVA_BUCKET",
+              "name": "@release.name.lava",
+              "lore": [
+                "{release_recipe_lava}"
+              ],
+              "command": "/obmenu release-recipe-lava"
+            }
+          }
+        },
+        "41": {
+          "state-source": "release_recipe_state_farm",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "WHEAT_SEEDS",
+              "name": "@release.name.farm",
+              "lore": [
+                "{release_recipe_farm}"
+              ],
+              "command": "/obmenu release-recipe-farm",
+              "glow": true
+            },
+            "other": {
+              "material": "WHEAT_SEEDS",
+              "name": "@release.name.farm",
+              "lore": [
+                "{release_recipe_farm}"
+              ],
+              "command": "/obmenu release-recipe-farm"
+            }
+          }
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "CRAFTING_TABLE",
+          "name": "&6Майстерня",
+          "lore": [
+            "&7Можна створити зараз: &f{release_ready_workshop}"
+          ]
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-goals": {
+      "rows": 6,
+      "title": "&8Журнал",
+      "slots": {
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BOOK",
+          "name": "&eНаступна ціль",
+          "lore": [
+            "{release_next}",
+            "{release_alternatives}",
+            "",
+            "@release.journal_hint"
+          ],
+          "command": "/obmenu release-go"
+        },
+        "20": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "22": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "24": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "31": {
+          "material": "GOLD_BLOCK",
+          "name": "@release.achievements",
+          "lore": [
+            "{release_achievements}"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "@release.back",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "11": {
+          "state-source": "release_tutorial_state",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "IRON_PICKAXE",
+              "name": "&aXP: Добування",
+              "lore": [
+                "&7Забрати нагороду кроку, XP сюди"
+              ],
+              "command": "/obmenu release-tutorial-mining",
+              "glow": true
+            },
+            "other": {
+              "material": "IRON_PICKAXE",
+              "name": "&8XP: Добування",
+              "lore": [
+                "&8Спершу виконай ціль"
+              ]
+            }
+          }
+        },
+        "13": {
+          "state-source": "release_tutorial_state",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "OAK_LOG",
+              "name": "&aXP: Лісництво",
+              "lore": [
+                "&7Забрати нагороду кроку, XP сюди"
+              ],
+              "command": "/obmenu release-tutorial-forestry",
+              "glow": true
+            },
+            "other": {
+              "material": "OAK_LOG",
+              "name": "&8XP: Лісництво",
+              "lore": [
+                "&8Спершу виконай ціль"
+              ]
+            }
+          }
+        },
+        "15": {
+          "state-source": "release_tutorial_state",
+          "initial-state": "other",
+          "states": {
+            "ready": {
+              "material": "WHEAT",
+              "name": "&aXP: Фермерство",
+              "lore": [
+                "&7Забрати нагороду кроку, XP сюди"
+              ],
+              "command": "/obmenu release-tutorial-farming",
+              "glow": true
+            },
+            "other": {
+              "material": "WHEAT",
+              "name": "&8XP: Фермерство",
+              "lore": [
+                "&8Спершу виконай ціль"
+              ]
+            }
+          }
+        },
+        "29": {
+          "material": "MAP",
+          "name": "&eКвести й події",
+          "lore": [
+            "{activity_status}"
+          ],
+          "command": "/obmenu activities"
+        },
+        "30": {
+          "material": "SUNFLOWER",
+          "name": "&6Щоденна нагорода",
+          "lore": [
+            "{release_daily}"
+          ],
+          "command": "/obmenu daily"
+        },
+        "32": {
+          "material": "IRON_PICKAXE",
+          "name": "&cАрени",
+          "lore": [
+            "{mine_availability}"
+          ],
+          "command": "/obmenu dungeons"
+        },
+        "33": {
+          "material": "KNOWLEDGE_BOOK",
+          "name": "&bДовідник",
+          "lore": [
+            "&7Коротко про все"
+          ],
+          "command": "/obmenu guide-index"
+        }
+      }
+    },
+    "release-confirm": {
+      "rows": 6,
+      "title": "@release.menu.confirm",
+      "slots": {
+        "13": {
+          "material": "PAPER",
+          "name": "@release.preview.title",
+          "lore": [
+            "{release_quote}"
+          ]
+        },
+        "29": {
+          "material": "LIME_DYE",
+          "name": "@release.confirm",
+          "lore": [],
+          "command": "/obmenu release-confirm-action"
+        },
+        "33": {
+          "material": "RED_DYE",
+          "name": "@release.cancel",
+          "lore": [],
+          "command": "/obmenu release-core"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu release-core"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-claims": {
+      "rows": 6,
+      "title": "@release.menu.claims",
+      "entry": {},
+      "empty": {
+        "icon": "PAPER",
+        "name": "@gui.empty",
+        "lore": []
+      },
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "slots": {
+        "47": {
+          "material": "HOPPER",
+          "name": "&aЗабрати все",
+          "lore": [
+            "&7Без скринь"
+          ],
+          "command": "/obmenu claims-all"
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "@release.back",
+          "command": "/obmenu main-menu"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "@guides.previous",
+          "command": "/obmenu claims-previous"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "@guides.next",
+          "command": "/obmenu claims-next"
+        },
+        "53": {
+          "material": "BOOK",
+          "name": "@guides.title",
+          "command": "/obmenu guide-claims"
+        },
+        "48": {
+          "material": "BEACON",
+          "name": "@release.menu.core",
+          "command": "/obmenu release-core"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "island-activities": {
+      "rows": 6,
+      "title": "&8Квести й події",
+      "slots": {
+        "4": {
+          "material": "WRITABLE_BOOK",
+          "name": "&6Квести й події",
+          "lore": [
+            "{activity_head}"
+          ]
+        },
+        "11": {
+          "state-source": "activity_slot_0",
+          "initial-state": "mine",
+          "states": {
+            "mine": {
+              "material": "IRON_PICKAXE",
+              "name": "&e{activity_offer_name_0}",
+              "lore": [
+                "{activity_offer_0}"
+              ],
+              "command": "/obmenu guild-accept-0"
+            },
+            "grow": {
+              "material": "OAK_SAPLING",
+              "name": "&e{activity_offer_name_0}",
+              "lore": [
+                "{activity_offer_0}"
+              ],
+              "command": "/obmenu guild-accept-0"
+            },
+            "supply": {
+              "material": "CHEST",
+              "name": "&e{activity_offer_name_0}",
+              "lore": [
+                "{activity_offer_0}"
+              ],
+              "command": "/obmenu guild-accept-0"
+            },
+            "active": {
+              "material": "WRITABLE_BOOK",
+              "name": "&e{activity_order_name}",
+              "lore": [
+                "{activity_order}"
+              ]
+            }
+          }
+        },
+        "13": {
+          "state-source": "activity_slot_1",
+          "initial-state": "mine",
+          "states": {
+            "mine": {
+              "material": "IRON_PICKAXE",
+              "name": "&e{activity_offer_name_1}",
+              "lore": [
+                "{activity_offer_1}"
+              ],
+              "command": "/obmenu guild-accept-1"
+            },
+            "grow": {
+              "material": "OAK_SAPLING",
+              "name": "&e{activity_offer_name_1}",
+              "lore": [
+                "{activity_offer_1}"
+              ],
+              "command": "/obmenu guild-accept-1"
+            },
+            "supply": {
+              "material": "CHEST",
+              "name": "&e{activity_offer_name_1}",
+              "lore": [
+                "{activity_offer_1}"
+              ],
+              "command": "/obmenu guild-accept-1"
+            },
+            "deliver": {
+              "material": "LIME_DYE",
+              "name": "&aЗдати квест",
+              "lore": [
+                "&7Забрати нагороду"
+              ],
+              "command": "/obmenu guild-deliver",
+              "glow": true
+            },
+            "wait": {
+              "material": "GRAY_DYE",
+              "name": "&8Здати квест",
+              "lore": [
+                "&8Спершу виконай умову"
+              ]
+            }
+          }
+        },
+        "15": {
+          "state-source": "activity_slot_2",
+          "initial-state": "mine",
+          "states": {
+            "mine": {
+              "material": "IRON_PICKAXE",
+              "name": "&e{activity_offer_name_2}",
+              "lore": [
+                "{activity_offer_2}"
+              ],
+              "command": "/obmenu guild-accept-2"
+            },
+            "grow": {
+              "material": "OAK_SAPLING",
+              "name": "&e{activity_offer_name_2}",
+              "lore": [
+                "{activity_offer_2}"
+              ],
+              "command": "/obmenu guild-accept-2"
+            },
+            "supply": {
+              "material": "CHEST",
+              "name": "&e{activity_offer_name_2}",
+              "lore": [
+                "{activity_offer_2}"
+              ],
+              "command": "/obmenu guild-accept-2"
+            },
+            "cancel": {
+              "material": "RED_DYE",
+              "name": "&cВідмовитись",
+              "lore": [
+                "&7Прогрес квесту зникне"
+              ],
+              "command": "/obmenu guild-cancel"
+            }
+          }
+        },
+        "29": {
+          "state-source": "activity_state_resonance",
+          "initial-state": "locked",
+          "states": {
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "&8Резонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&8Ще заряджається"
+              ]
+            },
+            "other": {
+              "material": "GRAY_DYE",
+              "name": "&8Резонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&8Зараз триває інша подія"
+              ]
+            },
+            "ready": {
+              "material": "AMETHYST_SHARD",
+              "name": "&aРезонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&aМожна почати"
+              ],
+              "command": "/obmenu activity-resonance",
+              "glow": true
+            },
+            "paused": {
+              "material": "AMETHYST_SHARD",
+              "name": "&eРезонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&eНа паузі, натисни, щоб продовжити"
+              ],
+              "command": "/obmenu activity-resonance"
+            },
+            "running": {
+              "material": "AMETHYST_SHARD",
+              "name": "&6Резонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&6Триває, натисни, щоб поставити на паузу"
+              ],
+              "command": "/obmenu activity-pause",
+              "glow": true
+            },
+            "done": {
+              "material": "CHEST",
+              "name": "&aРезонансна жила",
+              "lore": [
+                "&7Копай ядро в ритмі, поки жила не вичерпається",
+                "&7Без бою, близько 2 хвилин",
+                "",
+                "&aГотово, забери нагороду"
+              ],
+              "command": "/obmenu activity-reward",
+              "glow": true
+            }
+          }
+        },
+        "31": {
+          "material": "CLOCK",
+          "name": "&bПодія острова",
+          "lore": [
+            "{activity_event_info}"
+          ]
+        },
+        "33": {
+          "state-source": "activity_state_echo",
+          "initial-state": "locked",
+          "states": {
+            "locked": {
+              "material": "GRAY_DYE",
+              "name": "&8Відлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&8Ще заряджається"
+              ]
+            },
+            "other": {
+              "material": "GRAY_DYE",
+              "name": "&8Відлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&8Зараз триває інша подія"
+              ]
+            },
+            "ready": {
+              "material": "ROTTEN_FLESH",
+              "name": "&aВідлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&aМожна почати"
+              ],
+              "command": "/obmenu activity-echo",
+              "glow": true
+            },
+            "paused": {
+              "material": "ROTTEN_FLESH",
+              "name": "&eВідлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&eНа паузі, натисни, щоб продовжити"
+              ],
+              "command": "/obmenu activity-echo"
+            },
+            "running": {
+              "material": "ROTTEN_FLESH",
+              "name": "&6Відлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&6Триває, натисни, щоб поставити на паузу"
+              ],
+              "command": "/obmenu activity-pause",
+              "glow": true
+            },
+            "done": {
+              "material": "CHEST",
+              "name": "&aВідлуння глибин",
+              "lore": [
+                "&7Біля ядра по черзі з'являються вороги",
+                "&7Переможи всіх, близько 3 хвилин",
+                "",
+                "&aГотово, забери нагороду"
+              ],
+              "command": "/obmenu activity-reward",
+              "glow": true
+            }
+          }
+        },
+        "40": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "command": "/obmenu main-menu",
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": []
+        },
+        "49": {
+          "command": "/obmenu close",
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": []
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "activity-confirm": {
+      "rows": 3,
+      "title": "&8Нагорода",
+      "slots": {
+        "4": {
+          "material": "PAPER",
+          "name": "&6Результат",
+          "lore": [
+            "{activity_quote}"
+          ]
+        },
+        "11": {
+          "command": "/obmenu activity-confirm",
+          "material": "LIME_WOOL",
+          "name": "&aОтримати",
+          "lore": []
+        },
+        "15": {
+          "command": "/obmenu activities",
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": []
+        },
+        "22": {
+          "command": "/obmenu close",
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": []
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "18": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "19": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "20": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "21": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "23": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "24": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "25": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "26": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "release-packs": {
+      "rows": 6,
+      "title": "&8Заряд і пакети",
+      "slots": {
+        "4": {
+          "material": "REDSTONE",
+          "name": "@release.charge",
+          "lore": [
+            "{release_charge}",
+            "",
+            "{release_focus}"
+          ]
+        },
+        "19": {
+          "material": "BRICKS",
+          "name": "@release.balanced",
+          "lore": [],
+          "command": "/obmenu release-focus-balanced"
+        },
+        "21": {
+          "material": "COBBLESTONE",
+          "name": "@release.building",
+          "lore": [],
+          "command": "/obmenu release-focus-building"
+        },
+        "23": {
+          "material": "DIAMOND",
+          "name": "@release.mineral",
+          "lore": [],
+          "command": "/obmenu release-focus-mineral"
+        },
+        "25": {
+          "material": "OAK_SAPLING",
+          "name": "@release.nature",
+          "lore": [],
+          "command": "/obmenu release-focus-nature"
+        },
+        "37": {
+          "material": "CHEST",
+          "name": "@release.pack.building",
+          "lore": [
+            "{release_pack_building}"
+          ],
+          "command": "/obmenu release-pack-building"
+        },
+        "39": {
+          "material": "HAY_BLOCK",
+          "name": "@release.pack.nature",
+          "lore": [
+            "{release_pack_nature}"
+          ],
+          "command": "/obmenu release-pack-nature"
+        },
+        "41": {
+          "material": "IRON_ORE",
+          "name": "@release.pack.mineral",
+          "lore": [
+            "{release_pack_mineral}"
+          ],
+          "command": "/obmenu release-pack-mineral"
+        },
+        "43": {
+          "material": "ANCIENT_DEBRIS",
+          "name": "@release.pack.ancient",
+          "lore": [
+            "{release_pack_ancient}"
+          ],
+          "command": "/obmenu release-pack-ancient"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/obmenu release-core"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    }
+  }
+}

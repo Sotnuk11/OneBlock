@@ -1,0 +1,6 @@
+name: OneBlockMineSmoke
+version: '1'
+main: com.alytanta.oneblock.smoke.FoliaEndlessSmokePlugin
+api-version: '26.1.2'
+folia-supported: true
+depend: [one-block, Worlds, FancyNpcs]

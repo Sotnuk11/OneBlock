@@ -1,0 +1,254 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "messages": {
+    "denied": "&cСпочатку відкрий батьківське меню для {menu}.",
+    "permission": "&cНемає дозволу на цю дію.",
+    "profile": "&cСпочатку створи профіль острова через /home.",
+    "busy": "&cЗараз меню недоступне. Заверши поточну дію.",
+    "unknown": "&cНевідома команда меню або зайві аргументи.",
+    "player-only": "&cМеню доступне лише гравцеві."
+  },
+  "commands": {
+    "main-menu": {
+      "aliases": [
+        "menu"
+      ],
+      "type": "open",
+      "menu": "main-menu",
+      "requires-open": []
+    },
+    "skills": {
+      "aliases": [
+        "skills"
+      ],
+      "type": "open",
+      "menu": "skills",
+      "requires-open": [
+        "guide-page",
+        "main-menu",
+        "skills"
+      ],
+      "direct-permission": "oneblock.menus.direct.skills"
+    },
+    "settings": {
+      "aliases": [],
+      "type": "open",
+      "menu": "settings",
+      "requires-open": [
+        "main-menu",
+        "settings"
+      ],
+      "direct-permission": "oneblock.menus.direct.settings",
+      "require-profile": true
+    },
+    "coop": {
+      "aliases": [],
+      "type": "open",
+      "menu": "coop",
+      "requires-open": [
+        "guide-page",
+        "main-menu"
+      ],
+      "direct-permission": "oneblock.menus.direct.coop",
+      "require-profile": true
+    },
+    "home": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "home",
+      "requires-open": [
+        "guide-page",
+        "main-menu"
+      ]
+    },
+    "hub": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "hub",
+      "requires-open": [
+        "guide-page",
+        "main-menu",
+        "economy",
+        "coop",
+        "dungeon-select",
+        "mine-lobby"
+      ]
+    },
+    "profiles": {
+      "aliases": [],
+      "type": "profiles",
+      "requires-open": [
+        "guide-page",
+        "main-menu",
+        "no-island",
+        "profiles",
+        "economy",
+        "coop",
+        "dungeon-select",
+        "mine-lobby"
+      ],
+      "direct-permission": "oneblock.menus.direct.profiles"
+    },
+    "profiles-create": {
+      "aliases": [],
+      "type": "profile-action",
+      "execute": "create",
+      "requires-open": [
+        "profiles"
+      ],
+      "direct-permission": "oneblock.menus.direct.profiles-create"
+    },
+    "profiles-switch": {
+      "aliases": [],
+      "type": "profile-action",
+      "execute": "switch",
+      "requires-open": [
+        "profiles"
+      ],
+      "direct-permission": "oneblock.menus.direct.profiles-switch"
+    },
+    "profiles-rename": {
+      "aliases": [],
+      "type": "profile-action",
+      "execute": "rename",
+      "requires-open": [
+        "profiles"
+      ],
+      "direct-permission": "oneblock.menus.direct.profiles-rename"
+    },
+    "inventory-notifications": {
+      "aliases": [
+        "inventoryalerts"
+      ],
+      "type": "inventory-notifications",
+      "requires-open": [
+        "settings"
+      ],
+      "direct-permission": "oneblock.menus.direct.inventory-notifications"
+    },
+    "no-island": {
+      "aliases": [],
+      "type": "open",
+      "menu": "no-island",
+      "requires-open": []
+    },
+    "visitors-all": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "ob settings all",
+      "requires-open": [
+        "settings"
+      ],
+      "require-profile": true
+    },
+    "visitors-selected": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "ob settings selected",
+      "requires-open": [
+        "settings"
+      ],
+      "require-profile": true
+    },
+    "visitors-none": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "ob settings none",
+      "requires-open": [
+        "settings"
+      ],
+      "require-profile": true
+    },
+    "visitors-allow": {
+      "aliases": [],
+      "type": "close",
+      "requires-open": [
+        "settings"
+      ],
+      "direct-permission": "oneblock.menus.direct.visitors-allow",
+      "require-profile": true
+    },
+    "visitors-deny": {
+      "aliases": [],
+      "type": "close",
+      "requires-open": [
+        "settings"
+      ],
+      "direct-permission": "oneblock.menus.direct.visitors-deny",
+      "require-profile": true
+    },
+    "close": {
+      "aliases": [],
+      "type": "close",
+      "requires-open": [
+        "*"
+      ]
+    },
+    "economy": {
+      "aliases": [],
+      "type": "open",
+      "menu": "economy",
+      "requires-open": [
+        "main-menu"
+      ],
+      "require-profile": true
+    },
+    "daily": {
+      "aliases": [],
+      "type": "release",
+      "execute": "daily",
+      "requires-open": [
+        "main-menu",
+        "release-goals"
+      ],
+      "require-profile": true
+    },
+    "visit-player": {
+      "aliases": [],
+      "type": "input",
+      "execute": "ob visit {input}",
+      "requires-open": [
+        "main-menu"
+      ],
+      "require-profile": true
+    },
+    "coop-invite": {
+      "aliases": [],
+      "type": "input",
+      "execute": "ob coop invite {input}",
+      "requires-open": [
+        "coop"
+      ],
+      "require-profile": true
+    },
+    "coop-accept": {
+      "aliases": [],
+      "type": "player-command",
+      "execute": "ob coop accept",
+      "requires-open": [
+        "coop"
+      ],
+      "require-profile": false
+    },
+    "visitor-allow": {
+      "aliases": [],
+      "type": "input",
+      "execute": "ob settings allow {input}",
+      "requires-open": [
+        "settings"
+      ],
+      "require-profile": true
+    },
+    "visitor-deny": {
+      "aliases": [],
+      "type": "input",
+      "execute": "ob settings deny {input}",
+      "requires-open": [
+        "settings"
+      ],
+      "require-profile": true
+    }
+  }
+}

@@ -1,0 +1,56 @@
+enabled: true
+distance: 6.0
+request-seconds: 30
+session-seconds: 120
+countdown-seconds: 5
+change-cooldown-seconds: 5
+max-coins: 1000000000
+max-item-bytes: 262144
+history-limit: 1000
+# Creative is always accepted; older configs excluding it no longer block trades.
+allowed-game-modes: [SURVIVAL, ADVENTURE, CREATIVE]
+blocked-items: []
+menu:
+  rows: 6
+  # title: '&8Trade with {player}' # Omit for per-player localization; also {viewer}.
+  # own-item-lore: ['&eClick to remove'] # Omit to retain localized hints.
+  # other-item-lore: []
+  own-items: [0, 1, 2, 3, 9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30]
+  other-items: [5, 6, 7, 8, 14, 15, 16, 17, 23, 24, 25, 26, 32, 33, 34, 35]
+  own-coins: 36
+  other-coins: 44
+  own-ready: 39
+  other-ready: 41
+  cancel: 49
+  own-name: 37
+  other-name: 43
+  status: 40
+  filler: BLACK_STAINED_GLASS_PANE
+  divider: GRAY_STAINED_GLASS_PANE
+  divider-slots: [4, 13, 22, 31]
+  # Names/lore omitted => localized defaults. Positions remain the fields above.
+  # Each style: enabled, icon, name, lore, amount, glow, custom-model-data.
+  # Text placeholders: names {player}, coins {coins}, countdown {seconds}, all {viewer}.
+  styles:
+    own-name: {}
+    other-name: {}
+    own-coins: {}
+    other-coins: {}
+    own-ready: {} # Own accepted state
+    other-ready: {}
+    own-wait: {} # Own accept button before accepting
+    other-wait: {}
+    status: {}
+    countdown: {}
+    cancel: {}
+    filler: {}
+    divider: {}
+  icons:
+    own-name: PLAYER_HEAD
+    other-name: PLAYER_HEAD
+    own-coins: GOLD_NUGGET
+    other-coins: GOLD_INGOT
+    ready: LIME_TERRACOTTA
+    not-ready: RED_TERRACOTTA
+    status: CLOCK
+    cancel: BARRIER

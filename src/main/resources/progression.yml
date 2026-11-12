@@ -1,0 +1,206 @@
+# Release 1 rules; progress is stored only in PostgreSQL.
+version: 1
+enabled: true
+application-policy: all-profiles
+starter-breaks: 100
+skills:
+  xp-scale: 100
+  xp: {stone: 1, ore: 4, log: 4, crop: 2}
+  bonus-per-five-levels: 0.01
+  core-bonus-cap: 0.25
+focus:
+  multiplier: 2
+  nature:
+    - {block: OAK_LOG, reward: OAK_LOG, weight: 800}
+    - {block: SPRUCE_LOG, reward: SPRUCE_LOG, weight: 400}
+    - {block: BIRCH_LOG, reward: BIRCH_LOG, weight: 400}
+    - {block: JUNGLE_LOG, reward: JUNGLE_LOG, weight: 300}
+    - {block: ACACIA_LOG, reward: ACACIA_LOG, weight: 300}
+    - {block: DARK_OAK_LOG, reward: DARK_OAK_LOG, weight: 200}
+    - {block: CHERRY_LOG, reward: CHERRY_LOG, weight: 200}
+    - {block: MANGROVE_LOG, reward: MANGROVE_LOG, weight: 200}
+    - {block: PALE_OAK_LOG, reward: PALE_OAK_LOG, weight: 200}
+    - {block: OAK_LEAVES, reward: OAK_LEAVES, weight: 200}
+    - {block: SPRUCE_LEAVES, reward: SPRUCE_LEAVES, weight: 100}
+    - {block: BIRCH_LEAVES, reward: BIRCH_LEAVES, weight: 100}
+    - {block: JUNGLE_LEAVES, reward: JUNGLE_LEAVES, weight: 100}
+    - {block: ACACIA_LEAVES, reward: ACACIA_LEAVES, weight: 100}
+    - {block: DARK_OAK_LEAVES, reward: DARK_OAK_LEAVES, weight: 100}
+    - {block: CHERRY_LEAVES, reward: CHERRY_LEAVES, weight: 100}
+    - {block: MANGROVE_LEAVES, reward: MANGROVE_LEAVES, weight: 100}
+    - {block: PALE_OAK_LEAVES, reward: PALE_OAK_LEAVES, weight: 100}
+    - {block: HAY_BLOCK, reward: HAY_BLOCK, weight: 3000}
+    - {block: DIRT, reward: DIRT, weight: 2000}
+    - {block: HAY_BLOCK, reward: WHEAT_SEEDS, weight: 1000}
+upgrades:
+  fortune-chance-per-level: 0.04
+  fortune: [2000, 8000, 25000, 60000, 120000]
+  territory: [1000, 4000, 12000, 30000, 60000]
+  widths: [100, 120, 140, 160, 180, 200]
+  focus: 50000
+rewards:
+  living:
+    items: [{material: WATER_BUCKET, amount: 2}, {material: LAVA_BUCKET, amount: 1}, {material: WHEAT_SEEDS, amount: 8}, {material: CARROT, amount: 4}, {material: POTATO, amount: 4}, {material: SUGAR_CANE, amount: 4}, {material: COW_SPAWN_EGG, amount: 2}, {material: CHICKEN_SPAWN_EGG, amount: 2}]
+  tutorial:
+    '0': {items: []}
+    '1': {items: [{material: BREAD, amount: 8}]}
+    '2': {items: [{material: TORCH, amount: 16}]}
+    '3': {items: [{material: OAK_SAPLING, amount: 2}]}
+    '4': {items: []} # Living kit is the chapter reward, never a second copy.
+    '5': {items: [], xp: 100}
+    '6': {items: [], coins: 100}
+    '7': {items: [{material: COAL, amount: 16}]}
+    '8': {items: [{material: IRON_INGOT, amount: 16}]}
+    '9': {items: [], coins: 200}
+    '10': {items: [], xp: 100}
+    '11': {items: []}
+chapters:
+  start: {"breaks":0,"logs":0,"level":0,"coins":0,"ingredients":[],"tool":false,"upgrades":0}
+  living: {"breaks":100,"logs":16,"level":0,"coins":0,"ingredients":[{"material":"logs","amount":16},{"material":"COBBLESTONE","amount":32}],"tool":false,"upgrades":0}
+  workshop: {"breaks":1000,"logs":0,"level":3,"coins":3000,"ingredients":[{"material":"IRON_INGOT","amount":16},{"material":"COBBLESTONE","amount":64}],"tool":false,"upgrades":0}
+  depths: {"breaks":5000,"logs":0,"level":5,"coins":25000,"ingredients":[{"material":"IRON_INGOT","amount":32},{"material":"GOLD_INGOT","amount":8}],"tool":true,"upgrades":0}
+  developed: {"breaks":15000,"logs":0,"level":10,"coins":100000,"ingredients":[{"material":"IRON_INGOT","amount":64},{"material":"GOLD_INGOT","amount":16},{"material":"DIAMOND","amount":8}],"tool":false,"upgrades":3,"milestones":{"all-skills-level":11,"guild-orders":12,"events":["resonance","echo"],"arena-wave":10,"recipes-any":["rift_cleaver","ranger_bow","frost_wand"]}}
+drop-tables:
+  start:
+    - {"block":"DIRT","reward":"DIRT","weight":1200}
+    - {"block":"OAK_LOG","reward":"OAK_LOG","weight":1500}
+    - {"block":"SPRUCE_LOG","reward":"SPRUCE_LOG","weight":750}
+    - {"block":"BIRCH_LOG","reward":"BIRCH_LOG","weight":750}
+    - {"block":"OAK_LEAVES","reward":"OAK_LEAVES","weight":400}
+    - {"block":"SPRUCE_LEAVES","reward":"SPRUCE_LEAVES","weight":200}
+    - {"block":"BIRCH_LEAVES","reward":"BIRCH_LEAVES","weight":200}
+    - {"block":"STONE","reward":"COBBLESTONE","weight":2500}
+    - {"block":"COAL_ORE","reward":"COAL","weight":1000}
+    - {"block":"IRON_ORE","reward":"RAW_IRON","weight":500}
+    - {"block":"HAY_BLOCK","reward":"HAY_BLOCK","weight":1000}
+  living:
+    - {"block":"STONE","reward":"COBBLESTONE","weight":3600}
+    - {"block":"OAK_LOG","reward":"OAK_LOG","weight":600}
+    - {"block":"SPRUCE_LOG","reward":"SPRUCE_LOG","weight":300}
+    - {"block":"BIRCH_LOG","reward":"BIRCH_LOG","weight":300}
+    - {"block":"JUNGLE_LOG","reward":"JUNGLE_LOG","weight":200}
+    - {"block":"ACACIA_LOG","reward":"ACACIA_LOG","weight":200}
+    - {"block":"OAK_LEAVES","reward":"OAK_LEAVES","weight":150}
+    - {"block":"SPRUCE_LEAVES","reward":"SPRUCE_LEAVES","weight":120}
+    - {"block":"BIRCH_LEAVES","reward":"BIRCH_LEAVES","weight":120}
+    - {"block":"JUNGLE_LEAVES","reward":"JUNGLE_LEAVES","weight":110}
+    - {"block":"ACACIA_LEAVES","reward":"ACACIA_LEAVES","weight":100}
+    - {"block":"DIRT","reward":"DIRT","weight":200}
+    - {"block":"COAL_ORE","reward":"COAL","weight":1400}
+    - {"block":"IRON_ORE","reward":"RAW_IRON","weight":900}
+    - {"block":"HAY_BLOCK","reward":"HAY_BLOCK","weight":1100}
+    - {"block":"SAND","reward":"SAND","weight":300}
+    - {"block":"GRAVEL","reward":"GRAVEL","weight":300}
+  workshop:
+    - {"block":"STONE","reward":"COBBLESTONE","weight":3650}
+    - {"block":"OAK_LOG","reward":"OAK_LOG","weight":400}
+    - {"block":"SPRUCE_LOG","reward":"SPRUCE_LOG","weight":200}
+    - {"block":"BIRCH_LOG","reward":"BIRCH_LOG","weight":200}
+    - {"block":"JUNGLE_LOG","reward":"JUNGLE_LOG","weight":100}
+    - {"block":"ACACIA_LOG","reward":"ACACIA_LOG","weight":100}
+    - {"block":"DARK_OAK_LOG","reward":"DARK_OAK_LOG","weight":100}
+    - {"block":"CHERRY_LOG","reward":"CHERRY_LOG","weight":100}
+    - {"block":"OAK_LEAVES","reward":"OAK_LEAVES","weight":60}
+    - {"block":"SPRUCE_LEAVES","reward":"SPRUCE_LEAVES","weight":60}
+    - {"block":"BIRCH_LEAVES","reward":"BIRCH_LEAVES","weight":60}
+    - {"block":"JUNGLE_LEAVES","reward":"JUNGLE_LEAVES","weight":50}
+    - {"block":"ACACIA_LEAVES","reward":"ACACIA_LEAVES","weight":50}
+    - {"block":"DARK_OAK_LEAVES","reward":"DARK_OAK_LEAVES","weight":80}
+    - {"block":"CHERRY_LEAVES","reward":"CHERRY_LEAVES","weight":40}
+    - {"block":"DIRT","reward":"DIRT","weight":100}
+    - {"block":"COAL_ORE","reward":"COAL","weight":1500}
+    - {"block":"IRON_ORE","reward":"RAW_IRON","weight":1300}
+    - {"block":"COPPER_ORE","reward":"RAW_COPPER","weight":600}
+    - {"block":"GOLD_ORE","reward":"RAW_GOLD","weight":350}
+    - {"block":"REDSTONE_ORE","reward":"REDSTONE","weight":400}
+    - {"block":"LAPIS_ORE","reward":"LAPIS_LAZULI","weight":200}
+    - {"block":"SAND","reward":"SAND","weight":200}
+    - {"block":"GRAVEL","reward":"GRAVEL","weight":100}
+  depths:
+    - {"block":"STONE","reward":"COBBLESTONE","weight":3500}
+    - {"block":"OAK_LOG","reward":"OAK_LOG","weight":150}
+    - {"block":"SPRUCE_LOG","reward":"SPRUCE_LOG","weight":75}
+    - {"block":"BIRCH_LOG","reward":"BIRCH_LOG","weight":75}
+    - {"block":"JUNGLE_LOG","reward":"JUNGLE_LOG","weight":50}
+    - {"block":"ACACIA_LOG","reward":"ACACIA_LOG","weight":50}
+    - {"block":"DARK_OAK_LOG","reward":"DARK_OAK_LOG","weight":50}
+    - {"block":"CHERRY_LOG","reward":"CHERRY_LOG","weight":50}
+    - {"block":"MANGROVE_LOG","reward":"MANGROVE_LOG","weight":50}
+    - {"block":"PALE_OAK_LOG","reward":"PALE_OAK_LOG","weight":50}
+    - {"block":"OAK_LEAVES","reward":"OAK_LEAVES","weight":30}
+    - {"block":"SPRUCE_LEAVES","reward":"SPRUCE_LEAVES","weight":30}
+    - {"block":"BIRCH_LEAVES","reward":"BIRCH_LEAVES","weight":30}
+    - {"block":"JUNGLE_LEAVES","reward":"JUNGLE_LEAVES","weight":30}
+    - {"block":"ACACIA_LEAVES","reward":"ACACIA_LEAVES","weight":30}
+    - {"block":"DARK_OAK_LEAVES","reward":"DARK_OAK_LEAVES","weight":45}
+    - {"block":"CHERRY_LEAVES","reward":"CHERRY_LEAVES","weight":30}
+    - {"block":"MANGROVE_LEAVES","reward":"MANGROVE_LEAVES","weight":30}
+    - {"block":"PALE_OAK_LEAVES","reward":"PALE_OAK_LEAVES","weight":45}
+    - {"block":"DIRT","reward":"DIRT","weight":150}
+    - {"block":"COAL_ORE","reward":"COAL","weight":1200}
+    - {"block":"IRON_ORE","reward":"RAW_IRON","weight":1500}
+    - {"block":"COPPER_ORE","reward":"RAW_COPPER","weight":500}
+    - {"block":"GOLD_ORE","reward":"RAW_GOLD","weight":800}
+    - {"block":"REDSTONE_ORE","reward":"REDSTONE","weight":600}
+    - {"block":"LAPIS_ORE","reward":"LAPIS_LAZULI","weight":400}
+    - {"block":"DIAMOND_ORE","reward":"DIAMOND","weight":150}
+    - {"block":"SAND","reward":"SAND","weight":200}
+    - {"block":"GRAVEL","reward":"GRAVEL","weight":100}
+  developed:
+    - {"block":"STONE","reward":"COBBLESTONE","weight":3530}
+    - {"block":"OAK_LOG","reward":"OAK_LOG","weight":150}
+    - {"block":"SPRUCE_LOG","reward":"SPRUCE_LOG","weight":75}
+    - {"block":"BIRCH_LOG","reward":"BIRCH_LOG","weight":75}
+    - {"block":"JUNGLE_LOG","reward":"JUNGLE_LOG","weight":50}
+    - {"block":"ACACIA_LOG","reward":"ACACIA_LOG","weight":50}
+    - {"block":"DARK_OAK_LOG","reward":"DARK_OAK_LOG","weight":50}
+    - {"block":"CHERRY_LOG","reward":"CHERRY_LOG","weight":50}
+    - {"block":"MANGROVE_LOG","reward":"MANGROVE_LOG","weight":50}
+    - {"block":"PALE_OAK_LOG","reward":"PALE_OAK_LOG","weight":50}
+    - {"block":"OAK_LEAVES","reward":"OAK_LEAVES","weight":30}
+    - {"block":"SPRUCE_LEAVES","reward":"SPRUCE_LEAVES","weight":30}
+    - {"block":"BIRCH_LEAVES","reward":"BIRCH_LEAVES","weight":30}
+    - {"block":"JUNGLE_LEAVES","reward":"JUNGLE_LEAVES","weight":30}
+    - {"block":"ACACIA_LEAVES","reward":"ACACIA_LEAVES","weight":30}
+    - {"block":"DARK_OAK_LEAVES","reward":"DARK_OAK_LEAVES","weight":45}
+    - {"block":"CHERRY_LEAVES","reward":"CHERRY_LEAVES","weight":30}
+    - {"block":"MANGROVE_LEAVES","reward":"MANGROVE_LEAVES","weight":30}
+    - {"block":"PALE_OAK_LEAVES","reward":"PALE_OAK_LEAVES","weight":45}
+    - {"block":"DIRT","reward":"DIRT","weight":100}
+    - {"block":"COAL_ORE","reward":"COAL","weight":1000}
+    - {"block":"IRON_ORE","reward":"RAW_IRON","weight":1400}
+    - {"block":"COPPER_ORE","reward":"RAW_COPPER","weight":400}
+    - {"block":"GOLD_ORE","reward":"RAW_GOLD","weight":1000}
+    - {"block":"REDSTONE_ORE","reward":"REDSTONE","weight":700}
+    - {"block":"LAPIS_ORE","reward":"LAPIS_LAZULI","weight":500}
+    - {"block":"DIAMOND_ORE","reward":"DIAMOND","weight":200}
+    - {"block":"EMERALD_ORE","reward":"EMERALD","weight":15}
+    - {"block":"ANCIENT_DEBRIS","reward":"ANCIENT_DEBRIS","weight":5}
+    - {"block":"SAND","reward":"SAND","weight":150}
+    - {"block":"GRAVEL","reward":"GRAVEL","weight":100}
+recipes:
+  pickaxe_1: {"chapter":"workshop","skill":"mining","level":3,"coins":2000,"ingredients":[{"material":"IRON_INGOT","amount":32},{"material":"COAL","amount":32},{"material":"logs","amount":16}],"items":[{"material":"IRON_PICKAXE","amount":1,"tool":"pickaxe_1"}],"durability":0.15}
+  pickaxe_2: {"chapter":"depths","skill":"mining","level":5,"coins":4000,"ingredients":[{"material":"IRON_INGOT","amount":64},{"material":"DIAMOND","amount":8},{"material":"COAL","amount":64}],"items":[{"material":"DIAMOND_PICKAXE","amount":1,"tool":"pickaxe_2"}],"durability":0.25}
+  pickaxe_3: {"chapter":"developed","skill":"mining","level":8,"coins":10000,"ingredients":[{"material":"IRON_INGOT","amount":128},{"material":"DIAMOND","amount":24},{"material":"REDSTONE","amount":64}],"items":[{"material":"DIAMOND_PICKAXE","amount":1,"tool":"pickaxe_3"}],"durability":0.35}
+  axe_1: {"chapter":"workshop","skill":"forestry","level":3,"coins":2000,"ingredients":[{"material":"IRON_INGOT","amount":32},{"material":"logs","amount":128}],"items":[{"material":"IRON_AXE","amount":1,"tool":"axe_1"}],"sapling":0.05}
+  axe_2: {"chapter":"depths","skill":"forestry","level":5,"coins":4000,"ingredients":[{"material":"IRON_INGOT","amount":64},{"material":"DIAMOND","amount":8},{"material":"logs","amount":256}],"items":[{"material":"DIAMOND_AXE","amount":1,"tool":"axe_2"}],"sapling":0.1}
+  axe_3: {"chapter":"developed","skill":"forestry","level":8,"coins":10000,"ingredients":[{"material":"IRON_INGOT","amount":128},{"material":"DIAMOND","amount":24},{"material":"logs","amount":512}],"items":[{"material":"DIAMOND_AXE","amount":1,"tool":"axe_3"}],"sapling":0.15}
+  hoe_1: {"chapter":"workshop","skill":"farming","level":3,"coins":2000,"ingredients":[{"material":"IRON_INGOT","amount":32},{"material":"WHEAT","amount":64},{"material":"CARROT","amount":32}],"items":[{"material":"IRON_HOE","amount":1,"tool":"hoe_1"}],"replant":["WHEAT"]}
+  hoe_2: {"chapter":"depths","skill":"farming","level":5,"coins":4000,"ingredients":[{"material":"IRON_INGOT","amount":64},{"material":"DIAMOND","amount":8},{"material":"WHEAT","amount":128},{"material":"CARROT","amount":64}],"items":[{"material":"DIAMOND_HOE","amount":1,"tool":"hoe_2"}],"replant":["WHEAT","CARROTS","POTATOES"]}
+  hoe_3: {"chapter":"developed","skill":"farming","level":8,"coins":10000,"ingredients":[{"material":"IRON_INGOT","amount":128},{"material":"DIAMOND","amount":24},{"material":"WHEAT","amount":256},{"material":"POTATO","amount":128}],"items":[{"material":"DIAMOND_HOE","amount":1,"tool":"hoe_3"}],"replant":["WHEAT","CARROTS","POTATOES"],"durability":0.25}
+  water: {"chapter":"living","ingredients":[{"material":"BUCKET","amount":1},{"material":"COBBLESTONE","amount":32}],"items":[{"material":"WATER_BUCKET","amount":1}]}
+  lava: {"chapter":"living","ingredients":[{"material":"BUCKET","amount":1},{"material":"COBBLESTONE","amount":128},{"material":"COAL","amount":16}],"items":[{"material":"LAVA_BUCKET","amount":1}]}
+  farm: {"chapter":"living","ingredients":[{"material":"logs","amount":64},{"material":"COBBLESTONE","amount":128}],"items":[{"material":"WHEAT_SEEDS","amount":8},{"material":"CARROT","amount":4},{"material":"POTATO","amount":4},{"material":"SUGAR_CANE","amount":4},{"material":"OAK_SAPLING","amount":2},{"material":"COW_SPAWN_EGG","amount":2},{"material":"CHICKEN_SPAWN_EGG","amount":2}]}
+charge:
+  per-break: 1
+  packs:
+    building: {"chapter":"workshop","points":1000,"items":[{"material":"COBBLESTONE","amount":64},{"material":"DIRT","amount":32},{"material":"OAK_LOG","amount":16}]}
+    nature: {"chapter":"workshop","points":1000,"items":[{"material":"HAY_BLOCK","amount":16},{"material":"OAK_LOG","amount":16},{"material":"CARROT","amount":8},{"material":"POTATO","amount":8},{"material":"STRING","amount":4},{"material":"ARROW","amount":16}]}
+    mineral: {"chapter":"workshop","points":1000,"items":[{"material":"RAW_IRON","amount":8},{"material":"COAL","amount":8}], "advanced": {"items": [{"material":"RAW_GOLD","amount":4},{"material":"DIAMOND","amount":1}]}}
+    ancient: {"chapter":"developed","points":3000,"items":[{"material":"ANCIENT_DEBRIS","amount":1},{"material":"NETHERITE_UPGRADE_SMITHING_TEMPLATE","amount":1}]}
+tutorial: ["menu","core25","craft_basics","grown16","living","crops32","hub_market","merchant100","workshop","tool1","upgrade","depths"]
+achievements: ["core_1k","core_10k","core_50k","core_250k","chapter_living","chapter_workshop","chapter_depths","chapter_developed","fortune_max","territory_max","focus_unlocked","crafted_all_families","mining_10","mining_30","forestry_10","forestry_30","farming_10","farming_30"]
+# Daily reward: coins for each streak day; required-breaks = core breaks since the previous claim.
+daily: {enabled: true, required-breaks: 50, coins: [50, 75, 100, 125, 150, 200, 300]}
+# Core chest every chest-every breaks, every big-every chest is big. rare = items announced as a rare find.
+core-feel: {chest-every: 500, big-every: 5, rolls: 8, big-rolls: 24, charge: 100, big-charge: 300, rare: [DIAMOND, EMERALD, ANCIENT_DEBRIS]}

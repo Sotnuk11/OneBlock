@@ -1,0 +1,735 @@
+# combat.yml: enabled/mana/defense-cap/messages/recipes/rewards. Item and set definitions live only in items.yml.
+{
+  "version": 1,
+  "enabled": true,
+  "allow-hub-abilities": true,
+  "allow-creative-abilities": true,
+  "mana": {
+    "base": 100,
+    "regeneration-per-second": 8
+  },
+  "defense-cap": 0.35,
+  "reward-receipt-limit": 100000,
+  "head-enchant-level-cost": 2,
+  "boss-control-duration-scale": 0,
+  "demo": {
+    "health": 180,
+    "damage": 8,
+    "speed": 0.2,
+    "warning-ticks": 28,
+    "recovery-ticks": 32,
+    "length": 4.5,
+    "width": 1.6,
+    "vulnerability": 1.2,
+    "lifetime-ticks": 2400,
+    "leash": 18,
+    "name": "&cЛоматель",
+    "warning": "&6Ломатель готує широкий удар!",
+    "opening": "&aПромах! Час для контратаки."
+  },
+  "magic-trail": {
+    "particle": "ELECTRIC_SPARK",
+    "count": 2,
+    "interval-ticks": 2
+  },
+  "messages": {
+    "world-disabled": "&7Ця здібність вимкнена для цього місця або руки.",
+    "charge": "&7Дочекайся повної готовності удару.",
+    "guard-active": "&bЗахисна стійка активна!",
+    "guard-charge": "&7Стійка: {hits}/{required}",
+    "precision-ready": "&bДодатковий розріз!",
+    "precision-charge": "&7Розріз: {hits}/{required}",
+    "focus": "&aВлучання в серії: {hits}",
+    "mana": "&dМана: {mana}/{max}",
+    "cooldown": "&7Здібність відновлюється.",
+    "no-target": "&7Немає видимої цілі.",
+    "region-unavailable": "&7Здібність недоступна на межі завантаженої ділянки."
+  },
+  "recipes": {
+    "fragment_bones": {
+      "chapter": "living",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "BONE",
+          "amount": 64
+        }
+      ],
+      "items": [
+        {
+          "item": "battle_fragment",
+          "amount": 1
+        }
+      ]
+    },
+    "fragment_flesh": {
+      "chapter": "living",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "ROTTEN_FLESH",
+          "amount": 64
+        }
+      ],
+      "items": [
+        {
+          "item": "battle_fragment",
+          "amount": 1
+        }
+      ]
+    },
+    "fragment_resources": {
+      "chapter": "living",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "IRON_INGOT",
+          "amount": 32
+        },
+        {
+          "material": "COAL",
+          "amount": 64
+        }
+      ],
+      "items": [
+        {
+          "item": "battle_fragment",
+          "amount": 1
+        }
+      ]
+    },
+    "temper_core": {
+      "chapter": "workshop",
+      "coins": 1000,
+      "ingredients": [
+        {
+          "item": "battle_fragment",
+          "amount": 8
+        },
+        {
+          "material": "IRON_INGOT",
+          "amount": 32
+        },
+        {
+          "material": "COAL",
+          "amount": 64
+        }
+      ],
+      "items": [
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ]
+    },
+    "warden_blade": {
+      "chapter": "workshop",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "IRON_SWORD",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "warden_blade",
+          "amount": 1
+        }
+      ]
+    },
+    "rift_cleaver": {
+      "chapter": "depths",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "DIAMOND_AXE",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 16
+        }
+      ],
+      "items": [
+        {
+          "item": "rift_cleaver",
+          "amount": 1
+        }
+      ]
+    },
+    "nether_edge": {
+      "chapter": "developed",
+      "coins": 25000,
+      "ingredients": [
+        {
+          "material": "DIAMOND_SWORD",
+          "amount": 1
+        },
+        {
+          "material": "NETHERITE_INGOT",
+          "amount": 1
+        },
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "nether_edge",
+          "amount": 1
+        }
+      ]
+    },
+    "wind_bow": {
+      "chapter": "workshop",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "BOW",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "wind_bow",
+          "amount": 1
+        }
+      ]
+    },
+    "ranger_bow": {
+      "chapter": "depths",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "BOW",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 16
+        }
+      ],
+      "items": [
+        {
+          "item": "ranger_bow",
+          "amount": 1
+        }
+      ]
+    },
+    "ember_crossbow": {
+      "chapter": "developed",
+      "coins": 15000,
+      "ingredients": [
+        {
+          "material": "CROSSBOW",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 48
+        },
+        {
+          "item": "tempered_core",
+          "amount": 3
+        },
+        {
+          "material": "NETHERITE_INGOT",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "ember_crossbow",
+          "amount": 1
+        }
+      ]
+    },
+    "apprentice_wand": {
+      "chapter": "workshop",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "STICK",
+          "amount": 2
+        },
+        {
+          "material": "GOLD_INGOT",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "apprentice_wand",
+          "amount": 1
+        }
+      ]
+    },
+    "frost_wand": {
+      "chapter": "depths",
+      "coins": 0,
+      "ingredients": [
+        {
+          "material": "STICK",
+          "amount": 2
+        },
+        {
+          "material": "DIAMOND",
+          "amount": 1
+        },
+        {
+          "item": "battle_fragment",
+          "amount": 16
+        }
+      ],
+      "items": [
+        {
+          "item": "frost_wand",
+          "amount": 1
+        }
+      ]
+    },
+    "rift_staff": {
+      "chapter": "developed",
+      "coins": 25000,
+      "ingredients": [
+        {
+          "material": "STICK",
+          "amount": 2
+        },
+        {
+          "material": "NETHERITE_INGOT",
+          "amount": 1
+        },
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "rift_staff",
+          "amount": 1
+        }
+      ]
+    },
+    "nether_edge_reforge": {
+      "chapter": "developed",
+      "coins": 25000,
+      "ingredients": [
+        {
+          "material": "NETHERITE_SWORD",
+          "amount": 1
+        },
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "nether_edge",
+          "amount": 1
+        }
+      ]
+    },
+    "enchanted_fragment": {
+      "chapter": "depths",
+      "coins": 1000,
+      "ingredients": [
+        {
+          "item": "battle_fragment",
+          "amount": 12
+        }
+      ],
+      "items": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 1
+        }
+      ]
+    },
+    "ember_shortbow": {
+      "chapter": "developed",
+      "coins": 25000,
+      "ingredients": [
+        {
+          "material": "BOW",
+          "amount": 1
+        },
+        {
+          "material": "NETHERITE_INGOT",
+          "amount": 1
+        },
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "item": "ember_shortbow",
+          "amount": 1
+        }
+      ]
+    },
+    "warden_helmet": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 5
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "warden_helmet",
+          "amount": 1
+        }
+      ]
+    },
+    "warden_chestplate": {
+      "chapter": "developed",
+      "coins": 10000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "warden_chestplate",
+          "amount": 1
+        }
+      ]
+    },
+    "warden_leggings": {
+      "chapter": "developed",
+      "coins": 8000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 7
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "warden_leggings",
+          "amount": 1
+        }
+      ]
+    },
+    "warden_boots": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 4
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "warden_boots",
+          "amount": 1
+        }
+      ]
+    },
+    "ranger_helmet": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 5
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "ranger_helmet",
+          "amount": 1
+        }
+      ]
+    },
+    "ranger_chestplate": {
+      "chapter": "developed",
+      "coins": 10000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "ranger_chestplate",
+          "amount": 1
+        }
+      ]
+    },
+    "ranger_leggings": {
+      "chapter": "developed",
+      "coins": 8000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 7
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "ranger_leggings",
+          "amount": 1
+        }
+      ]
+    },
+    "ranger_boots": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 4
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "ranger_boots",
+          "amount": 1
+        }
+      ]
+    },
+    "weaver_helmet": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 5
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "weaver_helmet",
+          "amount": 1
+        }
+      ]
+    },
+    "weaver_chestplate": {
+      "chapter": "developed",
+      "coins": 10000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 8
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "weaver_chestplate",
+          "amount": 1
+        }
+      ]
+    },
+    "weaver_leggings": {
+      "chapter": "developed",
+      "coins": 8000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 7
+        },
+        {
+          "item": "tempered_core",
+          "amount": 2
+        }
+      ],
+      "items": [
+        {
+          "item": "weaver_leggings",
+          "amount": 1
+        }
+      ]
+    },
+    "weaver_boots": {
+      "chapter": "developed",
+      "coins": 5000,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 4
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "items": [
+        {
+          "item": "weaver_boots",
+          "amount": 1
+        }
+      ]
+    },
+    "island_gold": {
+      "chapter": "workshop",
+      "coins": 0,
+      "ingredients": [
+        {
+          "item": "battle_fragment",
+          "amount": 8
+        }
+      ],
+      "items": [
+        {
+          "material": "GOLD_INGOT",
+          "amount": 8
+        }
+      ]
+    },
+    "island_diamonds": {
+      "chapter": "depths",
+      "coins": 0,
+      "ingredients": [
+        {
+          "item": "battle_fragment",
+          "amount": 16
+        }
+      ],
+      "items": [
+        {
+          "material": "DIAMOND",
+          "amount": 2
+        }
+      ]
+    },
+    "island_debris": {
+      "chapter": "developed",
+      "coins": 0,
+      "ingredients": [
+        {
+          "item": "enchanted_fragment",
+          "amount": 4
+        }
+      ],
+      "items": [
+        {
+          "material": "ANCIENT_DEBRIS",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  "rewards": {
+    "field_encounter": {
+      "guaranteed": [
+        {
+          "item": "battle_fragment",
+          "amount": 1
+        }
+      ],
+      "trophies": [
+        {
+          "item": "warden_blade",
+          "amount": 1,
+          "chance": 0.02
+        }
+      ]
+    },
+    "elite_encounter": {
+      "guaranteed": [
+        {
+          "item": "battle_fragment",
+          "amount": 2
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "trophies": [
+        {
+          "item": "rift_cleaver",
+          "amount": 1,
+          "chance": 0.02
+        },
+        {
+          "item": "frost_wand",
+          "amount": 1,
+          "chance": 0.02
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "oneblock:warden"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "oneblock:warden"
+      }
+    ]
+  }
+}

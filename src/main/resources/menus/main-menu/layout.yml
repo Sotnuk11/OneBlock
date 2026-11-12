@@ -1,0 +1,738 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "launcher": {
+    "material": "NETHER_STAR",
+    "name": "&aМеню",
+    "lore": [
+      "&7ПКМ — відкрити"
+    ]
+  },
+  "menus": {
+    "main-menu": {
+      "rows": 6,
+      "title": "&8OneBlock",
+      "slots": {
+        "4": {
+          "statistics": "player"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "10": {
+          "material": "GRASS_BLOCK",
+          "name": "&aМій острів",
+          "lore": [
+            "&7Додому",
+            "&8/home"
+          ],
+          "command": "/obmenu home"
+        },
+        "11": {
+          "material": "BEACON",
+          "name": "&bЯдро",
+          "lore": [
+            "{release_chapter}",
+            "{release_phase}"
+          ],
+          "command": "/obmenu release-core"
+        },
+        "12": {
+          "material": "WRITABLE_BOOK",
+          "name": "&eЖурнал",
+          "lore": [
+            "{release_next}"
+          ],
+          "command": "/obmenu release-goals"
+        },
+        "13": {
+          "material": "SUNFLOWER",
+          "name": "&6Щоденна нагорода",
+          "lore": [
+            "{release_daily}"
+          ],
+          "command": "/obmenu daily",
+          "glow": true
+        },
+        "14": {
+          "material": "MAP",
+          "name": "&eКвести й події",
+          "lore": [
+            "{activity_status}"
+          ],
+          "command": "/obmenu activities"
+        },
+        "15": {
+          "material": "EXPERIENCE_BOTTLE",
+          "name": "&aНавички",
+          "lore": [
+            "&7Середній рівень: &f{release_skill_avg}"
+          ],
+          "command": "/obmenu release-skills"
+        },
+        "16": {
+          "material": "CRAFTING_TABLE",
+          "name": "&6Майстерня",
+          "lore": [
+            "&7Можна створити: &f{release_ready_workshop}"
+          ],
+          "command": "/obmenu release-workshop"
+        },
+        "20": {
+          "material": "CHEST",
+          "name": "&6Нагороди",
+          "lore": [
+            "&7Твої предмети й скрині",
+            "&7До отримання: &f{release_claim_count}"
+          ],
+          "command": "/obmenu release-claims"
+        },
+        "21": {
+          "material": "IRON_SWORD",
+          "name": "&cБойове спорядження",
+          "lore": [
+            "&7Можна створити: &f{release_ready_combat}"
+          ],
+          "command": "/obmenu combat-weapons"
+        },
+        "22": {
+          "material": "IRON_PICKAXE",
+          "name": "&cАрени",
+          "lore": [
+            "&71–4 гравці, нескінченні хвилі"
+          ],
+          "command": "/obmenu dungeons"
+        },
+        "23": {
+          "material": "GOLD_INGOT",
+          "name": "&6Економіка",
+          "lore": [
+            "&7Скупник, базар, аукціон"
+          ],
+          "command": "/obmenu economy"
+        },
+        "24": {
+          "material": "COMPASS",
+          "name": "&bХаб",
+          "lore": [
+            "&7Торговці й провідники",
+            "&8/hub"
+          ],
+          "command": "/obmenu hub"
+        },
+        "29": {
+          "material": "NAME_TAG",
+          "name": "&aПрофілі",
+          "lore": [
+            "&7Перемикання й нові острови"
+          ],
+          "command": "/obmenu profiles"
+        },
+        "30": {
+          "material": "PLAYER_HEAD",
+          "name": "&aКооператив",
+          "lore": [
+            "&7Учасників: &f{members}"
+          ],
+          "command": "/obmenu coop",
+          "texture": "{player}"
+        },
+        "31": {
+          "material": "OAK_BOAT",
+          "name": "&bВідвідати острів",
+          "lore": [
+            "&7Введи нік гравця"
+          ],
+          "command": "/obmenu visit-player"
+        },
+        "32": {
+          "material": "REPEATER",
+          "name": "&7Налаштування",
+          "lore": [
+            "&7Відвідувачі й сповіщення"
+          ],
+          "command": "/obmenu settings"
+        },
+        "33": {
+          "material": "KNOWLEDGE_BOOK",
+          "name": "&bДовідник",
+          "lore": [
+            "&7Коротко про все"
+          ],
+          "command": "/obmenu guide-index"
+        }
+      }
+    },
+    "skills": {
+      "rows": 6,
+      "title": "&8Навички",
+      "slots": {
+        "20": {
+          "material": "IRON_PICKAXE",
+          "name": "@release.name.mining",
+          "lore": [
+            "{release_skill_mining}"
+          ]
+        },
+        "21": {
+          "material": "WHEAT",
+          "name": "@release.name.farming",
+          "lore": [
+            "{release_skill_farming}"
+          ]
+        },
+        "22": {
+          "material": "OAK_LOG",
+          "name": "@release.name.forestry",
+          "lore": [
+            "{release_skill_forestry}"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "settings": {
+      "rows": 6,
+      "title": "&8Налаштування",
+      "slots": {
+        "20": {
+          "material": "LIME_DYE",
+          "name": "&aВідвідувачі: усі",
+          "command": "/obmenu visitors-all",
+          "lore": [
+            "&7Острів відкритий для всіх"
+          ]
+        },
+        "22": {
+          "material": "NAME_TAG",
+          "name": "&eВідвідувачі: вибрані",
+          "lore": [
+            "&7Лише ті, кого ти додав"
+          ],
+          "command": "/obmenu visitors-selected"
+        },
+        "24": {
+          "material": "RED_DYE",
+          "name": "&cВідвідувачі: ніхто",
+          "command": "/obmenu visitors-none",
+          "lore": [
+            "&7Острів закритий"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "40": {
+          "initial-state": "true",
+          "state-source": "player.inventory_notifications",
+          "states": {
+            "true": {
+              "material": "LIME_DYE",
+              "name": "&aСповіщення про повний інвентар",
+              "lore": [
+                "&7Увімкнено"
+              ],
+              "command": "/inventoryalerts"
+            },
+            "false": {
+              "material": "GRAY_DYE",
+              "name": "&7Сповіщення про повний інвентар",
+              "lore": [
+                "&8Вимкнено"
+              ],
+              "command": "/inventoryalerts"
+            }
+          }
+        },
+        "30": {
+          "material": "LIME_DYE",
+          "name": "&aДодати гравця",
+          "lore": [
+            "&7Введи нік"
+          ],
+          "command": "/obmenu visitor-allow"
+        },
+        "32": {
+          "material": "RED_DYE",
+          "name": "&cПрибрати гравця",
+          "lore": [
+            "&7Введи нік"
+          ],
+          "command": "/obmenu visitor-deny"
+        }
+      }
+    },
+    "coop": {
+      "rows": 6,
+      "title": "&8Кооператив",
+      "slots": {
+        "22": {
+          "material": "PLAYER_HEAD",
+          "texture": "{player}",
+          "name": "&a{profile_name}",
+          "lore": [
+            "&7Учасників: &f{members}"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "31": {
+          "material": "NAME_TAG",
+          "name": "&eКерування учасниками",
+          "lore": [],
+          "command": "/obmenu profiles"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "20": {
+          "material": "EMERALD",
+          "name": "&aЗапросити гравця",
+          "lore": [
+            "&7Введи нік"
+          ],
+          "command": "/obmenu coop-invite"
+        },
+        "24": {
+          "material": "LIME_DYE",
+          "name": "&aПрийняти запрошення",
+          "lore": [],
+          "command": "/obmenu coop-accept"
+        }
+      }
+    },
+    "no-island": {
+      "rows": 3,
+      "title": "&8Новий острів",
+      "slots": {
+        "15": {
+          "material": "BOOK",
+          "name": "@guides.title",
+          "lore": [],
+          "command": "/obmenu guide-index"
+        },
+        "13": {
+          "material": "GRASS_BLOCK",
+          "name": "&aСтворити острів",
+          "lore": [
+            "&7Обери вільний слот профілю"
+          ],
+          "command": "/obmenu profiles"
+        },
+        "22": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        }
+      }
+    },
+    "economy": {
+      "rows": 6,
+      "title": "&8Економіка",
+      "slots": {
+        "4": {
+          "material": "GOLD_INGOT",
+          "name": "&6{coins} монет",
+          "lore": [
+            "&7Монети профілю"
+          ]
+        },
+        "20": {
+          "material": "EMERALD",
+          "name": "&aСкупник",
+          "lore": [
+            "&7Продаж ресурсів за монети"
+          ],
+          "command": "/obmenu guide-merchant"
+        },
+        "22": {
+          "material": "CHEST",
+          "name": "&6Базар",
+          "lore": [
+            "&7Заявки на купівлю й продаж"
+          ],
+          "command": "/obmenu guide-bazaar"
+        },
+        "24": {
+          "material": "GOLDEN_SWORD",
+          "name": "&eАукціон та обмін",
+          "lore": [
+            "&7Лоти, ставки",
+            "&f/trade <нік> &7— обмін поруч"
+          ],
+          "command": "/obmenu guide-auction"
+        },
+        "31": {
+          "material": "COMPASS",
+          "name": "&bУ хаб",
+          "lore": [
+            "&7Торговці стоять там"
+          ],
+          "command": "/obmenu hub"
+        },
+        "40": {
+          "material": "PAPER",
+          "name": "&7Де забрати покупки",
+          "lore": [
+            "&7Базар і аукціон — у їхніх NPC",
+            "&7Майстерня й арени — у «Нагородах»"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    }
+  }
+}

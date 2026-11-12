@@ -1,0 +1,185 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "commands": {
+    "guide-index": {
+      "aliases": [
+        "guide"
+      ],
+      "type": "guide",
+      "execute": "index",
+      "requires-open": [],
+      "require-profile": false
+    },
+    "guide-back": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "back",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-next": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "next",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-previous": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "previous",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-link": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "link",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-start": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "start",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "release-goals"
+      ],
+      "require-profile": false
+    },
+    "guide-core": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "core",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "release-core"
+      ],
+      "require-profile": false
+    },
+    "guide-skills": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "skills",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "release-skills",
+        "skills"
+      ],
+      "require-profile": false
+    },
+    "guide-workshop": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "workshop",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "release-workshop"
+      ],
+      "require-profile": false
+    },
+    "guide-charge": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "charge",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-merchant": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "merchant",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "economy"
+      ],
+      "require-profile": false
+    },
+    "guide-bazaar": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "bazaar",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "economy"
+      ],
+      "require-profile": false
+    },
+    "guide-auction": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "auction",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "economy"
+      ],
+      "require-profile": false
+    },
+    "guide-claims": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "claims",
+      "requires-open": [
+        "guides-index",
+        "guide-page",
+        "release-claims"
+      ],
+      "require-profile": false
+    },
+    "guide-profiles-coop": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "profiles-coop",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-survival": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "survival",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    },
+    "guide-hub": {
+      "aliases": [],
+      "type": "guide",
+      "execute": "hub",
+      "requires-open": [
+        "guides-index",
+        "guide-page"
+      ],
+      "require-profile": false
+    }
+  }
+}

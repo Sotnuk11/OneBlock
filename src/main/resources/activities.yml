@@ -1,0 +1,671 @@
+{
+  "version": 1,
+  "enabled": true,
+  "readiness": 1200,
+  "credit-ms": 1500,
+  "motion-ms": 45000,
+  "action-ms": 1500,
+  "combat-radius": 6,
+  "npc": {
+    "name": "oneblock_guild",
+    "display": "&6Розпорядник гільдії"
+  },
+  "events": [
+    {
+      "kind": "resonance",
+      "name": "Резонансна жила",
+      "goal": 48,
+      "interval-ms": 1500,
+      "duration-seconds": 240,
+      "blocks": [
+        "STONE",
+        "COBBLESTONE",
+        "COAL_ORE",
+        "COPPER_ORE",
+        "IRON_ORE",
+        "DEEPSLATE_IRON_ORE",
+        "GOLD_ORE",
+        "DIAMOND_ORE"
+      ],
+      "hints": [
+        "Перший такт: добувайте свіжу кам’яну породу.",
+        "Другий такт: підтримуйте ритм видобутку, стежте за резонансом.",
+        "Фінальний такт: завершіть жилу й заберіть матеріали."
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 300,
+        "items": [
+          {
+            "material": "IRON_INGOT",
+            "amount": 4
+          },
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "echo",
+      "name": "Відлуння глибин",
+      "goal": 5,
+      "interval-ms": 30000,
+      "duration-seconds": 240,
+      "blocks": [],
+      "hints": [
+        "Обережно: за кілька секунд з’явиться відлуння.",
+        "Наступне відлуння формується після перепочинку.",
+        "Завершіть бій і заберіть належне в меню."
+      ],
+      "mob": "ZOMBIE",
+      "health": 30,
+      "damage": 4,
+      "reward": {
+        "skill": "mining",
+        "xp": 300,
+        "items": [
+          {
+            "material": "COAL",
+            "amount": 8
+          },
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    }
+  ],
+  "recipes": [],
+  "texts": {
+    "unavailable": "&cЗараз недоступно.",
+    "updated": "&aЗбережено",
+    "unsafe": "&eНемає вільного місця для бою. Обери жилу або розчисти ділянку.",
+    "hint": "&b{hint} &7Прогрес: {progress}/{goal}.",
+    "status": "&6{event}\n{bar}\n&7Лишилось: {seconds} с &8· &7{state}",
+    "order": "&7{requirement}\n&fПрогрес: {progress}/{goal}\n\n&aНагорода: {items}\n&7+{xp} XP {skill}",
+    "none": "&7Обери квест",
+    "ready": "&aПодія готова до запуску",
+    "charging": "&7Подія заряджається\n{bar}",
+    "paused": "на паузі",
+    "failed": "&eЧас вийшов, нагороди немає. Можна спробувати ще раз.",
+    "discovery": "&7Очки рецептів: &f{value}",
+    "running": "триває",
+    "quote": "&fНагорода: {items}\n&7+{xp} XP {skill}\n&6Здати: {ingredients}",
+    "offer": "&7{requirement}\n\n&aНагорода: {items}\n&7+{xp} XP {skill}",
+    "active": "&f{name}\n{bar}",
+    "head": "&7Виконано квестів: &f{done}",
+    "cooldown": "&cНаступний квест через {time}"
+  },
+  "order-cooldown-hours": 4,
+  "orders": [
+    {
+      "id": "start_mine",
+      "name": "Перші забої",
+      "chapter": "start",
+      "type": "mine",
+      "blocks": [
+        "STONE",
+        "COBBLESTONE",
+        "COAL_ORE",
+        "COPPER_ORE",
+        "IRON_ORE",
+        "DEEPSLATE_IRON_ORE",
+        "GOLD_ORE",
+        "DIAMOND_ORE"
+      ],
+      "target": 180,
+      "ingredients": [],
+      "reward": {
+        "skill": "mining",
+        "xp": 100,
+        "discovery": 3,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Добудь 180 породи з ядра"
+    },
+    {
+      "id": "start_grow",
+      "name": "Молодий гай",
+      "chapter": "start",
+      "type": "grow",
+      "blocks": [
+        "OAK_LOG",
+        "BIRCH_LOG",
+        "SPRUCE_LOG",
+        "JUNGLE_LOG",
+        "ACACIA_LOG",
+        "DARK_OAK_LOG",
+        "CHERRY_LOG",
+        "MANGROVE_LOG",
+        "PALE_OAK_LOG"
+      ],
+      "target": 64,
+      "ingredients": [],
+      "reward": {
+        "skill": "forestry",
+        "xp": 100,
+        "discovery": 3,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Зрубай 64 колод зі своїх дерев"
+    },
+    {
+      "id": "start_supply",
+      "name": "Смолоскипи для шахти",
+      "chapter": "start",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "TORCH",
+          "amount": 64
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 100,
+        "discovery": 3,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Здай 64 смолоскипи"
+    },
+    {
+      "id": "living_mine",
+      "name": "Глибший забій",
+      "chapter": "living",
+      "type": "mine",
+      "blocks": [
+        "STONE",
+        "COBBLESTONE",
+        "COAL_ORE",
+        "COPPER_ORE",
+        "IRON_ORE",
+        "DEEPSLATE_IRON_ORE",
+        "GOLD_ORE",
+        "DIAMOND_ORE"
+      ],
+      "target": 220,
+      "ingredients": [],
+      "reward": {
+        "skill": "mining",
+        "xp": 200,
+        "discovery": 4,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Добудь 220 породи з ядра"
+    },
+    {
+      "id": "living_grow",
+      "name": "Перший врожай",
+      "chapter": "living",
+      "type": "grow",
+      "blocks": [
+        "WHEAT",
+        "CARROTS",
+        "POTATOES"
+      ],
+      "target": 80,
+      "ingredients": [],
+      "reward": {
+        "skill": "farming",
+        "xp": 200,
+        "discovery": 4,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Збери 80 дозрілих культур"
+    },
+    {
+      "id": "living_supply",
+      "name": "Хліб для робітників",
+      "chapter": "living",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "BREAD",
+          "amount": 48
+        }
+      ],
+      "reward": {
+        "skill": "farming",
+        "xp": 200,
+        "discovery": 4,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Здай 48 хлібин"
+    },
+    {
+      "id": "workshop_mine",
+      "name": "Жила для кузні",
+      "chapter": "workshop",
+      "type": "mine",
+      "blocks": [
+        "STONE",
+        "COBBLESTONE",
+        "COAL_ORE",
+        "COPPER_ORE",
+        "IRON_ORE",
+        "DEEPSLATE_IRON_ORE",
+        "GOLD_ORE",
+        "DIAMOND_ORE"
+      ],
+      "target": 260,
+      "ingredients": [],
+      "reward": {
+        "skill": "mining",
+        "xp": 300,
+        "discovery": 5,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Добудь 260 породи з ядра"
+    },
+    {
+      "id": "workshop_grow",
+      "name": "Ділова деревина",
+      "chapter": "workshop",
+      "type": "grow",
+      "blocks": [
+        "OAK_LOG",
+        "BIRCH_LOG",
+        "SPRUCE_LOG",
+        "JUNGLE_LOG",
+        "ACACIA_LOG",
+        "DARK_OAK_LOG",
+        "CHERRY_LOG",
+        "MANGROVE_LOG",
+        "PALE_OAK_LOG"
+      ],
+      "target": 96,
+      "ingredients": [],
+      "reward": {
+        "skill": "forestry",
+        "xp": 300,
+        "discovery": 5,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Зрубай 96 колод зі своїх дерев"
+    },
+    {
+      "id": "workshop_supply",
+      "name": "Скрині для складу",
+      "chapter": "workshop",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "CHEST",
+          "amount": 24
+        }
+      ],
+      "reward": {
+        "skill": "forestry",
+        "xp": 300,
+        "discovery": 5,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Здай 24 скрині"
+    },
+    {
+      "id": "depths_mine",
+      "name": "Велика порода",
+      "chapter": "depths",
+      "type": "mine",
+      "blocks": [
+        "STONE",
+        "COBBLESTONE",
+        "COAL_ORE",
+        "COPPER_ORE",
+        "IRON_ORE",
+        "DEEPSLATE_IRON_ORE",
+        "GOLD_ORE",
+        "DIAMOND_ORE"
+      ],
+      "target": 300,
+      "ingredients": [],
+      "reward": {
+        "skill": "mining",
+        "xp": 400,
+        "discovery": 6,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Добудь 300 породи з ядра"
+    },
+    {
+      "id": "depths_grow",
+      "name": "Поля глибин",
+      "chapter": "depths",
+      "type": "grow",
+      "blocks": [
+        "WHEAT",
+        "CARROTS",
+        "POTATOES"
+      ],
+      "target": 112,
+      "ingredients": [],
+      "reward": {
+        "skill": "farming",
+        "xp": 400,
+        "discovery": 6,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Збери 112 дозрілих культур"
+    },
+    {
+      "id": "depths_supply",
+      "name": "Кайла для бригади",
+      "chapter": "depths",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "IRON_PICKAXE",
+          "amount": 4
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 400,
+        "discovery": 6,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      },
+      "text": "Здай 4 залізні кайла"
+    },
+    {
+      "id": "start_coal",
+      "name": "Вугілля на зиму",
+      "text": "Здай 32 вугілля",
+      "chapter": "start",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "COAL",
+          "amount": 32
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 100,
+        "discovery": 3,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "start_stone",
+      "name": "Камінь на стіни",
+      "text": "Здай 128 кругляку",
+      "chapter": "start",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "COBBLESTONE",
+          "amount": 128
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 100,
+        "discovery": 3,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "living_iron",
+      "name": "Залізо для кузні",
+      "text": "Здай 16 залізних злитків",
+      "chapter": "living",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "IRON_INGOT",
+          "amount": 16
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 200,
+        "discovery": 4,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "living_logs",
+      "name": "Дрова для табору",
+      "text": "Здай 64 дубові колоди",
+      "chapter": "living",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "OAK_LOG",
+          "amount": 64
+        }
+      ],
+      "reward": {
+        "skill": "forestry",
+        "xp": 200,
+        "discovery": 4,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 2,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workshop_gold",
+      "name": "Золото для гільдії",
+      "text": "Здай 8 золотих злитків",
+      "chapter": "workshop",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "GOLD_INGOT",
+          "amount": 8
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 300,
+        "discovery": 5,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workshop_wheat",
+      "name": "Зерно для складу",
+      "text": "Здай 64 пшениці",
+      "chapter": "workshop",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "WHEAT",
+          "amount": 64
+        }
+      ],
+      "reward": {
+        "skill": "farming",
+        "xp": 300,
+        "discovery": 5,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "depths_diamond",
+      "name": "Алмази для бригади",
+      "text": "Здай 4 алмази",
+      "chapter": "depths",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "DIAMOND",
+          "amount": 4
+        }
+      ],
+      "reward": {
+        "skill": "mining",
+        "xp": 400,
+        "discovery": 6,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "depths_potato",
+      "name": "Запаси на зиму",
+      "text": "Здай 64 картоплі",
+      "chapter": "depths",
+      "type": "supply",
+      "blocks": [],
+      "target": 1,
+      "ingredients": [
+        {
+          "material": "POTATO",
+          "amount": 64
+        }
+      ],
+      "reward": {
+        "skill": "farming",
+        "xp": 400,
+        "discovery": 6,
+        "items": [
+          {
+            "material": "PRISMARINE_SHARD",
+            "amount": 3,
+            "tool": "battle_fragment"
+          }
+        ]
+      }
+    }
+  ]
+}

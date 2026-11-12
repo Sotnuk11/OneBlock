@@ -1,0 +1,25 @@
+# Публічний репозиторій містить лише код. Нотатки, журнали ШІ, карти й зображення лишаються локально.
+/*
+!/.gitignore
+!/.gitattributes
+!/.env.example
+!/build.gradle.kts
+!/settings.gradle.kts
+!/gradle.properties
+!/gradlew
+!/gradlew.bat
+!/gradle/
+!/src/
+!/resource-pack/
+!/scripts/
+!/map-design/
+/map-design/**
+!/map-design/**/
+!/map-design/**/*.py
+
+# секрети й мотлох усередині дозволених папок
+**/.env
+**/__pycache__/
+*.pyc
+.gradle/
+.kotlin/

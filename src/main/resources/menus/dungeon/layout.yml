@@ -1,0 +1,1081 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "menus": {
+    "mine-lobby": {
+      "rows": 6,
+      "title": "&8Арени",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "4": {
+          "material": "MAP",
+          "name": "&6Нескінченні арени",
+          "lore": [
+            "{mine_summary}",
+            "{mine_party}",
+            "{mine_availability}",
+            "{mine_entry}"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/obmenu main-menu"
+        },
+        "20": {
+          "state-source": "mine_state",
+          "initial-state": "idle",
+          "states": {
+            "idle": {
+              "material": "LIME_DYE",
+              "name": "&aГотовий",
+              "lore": [
+                "&7Натисни ще раз, щоб скасувати"
+              ],
+              "command": "/obmenu mine-ready"
+            },
+            "intermission": {
+              "material": "CHEST",
+              "name": "&6Завершити",
+              "lore": [
+                "&7Забрати результат і вийти"
+              ],
+              "command": "/obmenu mine-finish"
+            },
+            "active": {
+              "material": "OAK_DOOR",
+              "name": "&cПокинути",
+              "lore": [
+                "&7Зароблене збережеться"
+              ],
+              "command": "/obmenu mine-leave"
+            }
+          }
+        },
+        "22": {
+          "state-source": "mine_state",
+          "initial-state": "idle",
+          "states": {
+            "idle": {
+              "material": "IRON_PICKAXE",
+              "name": "&aПочати",
+              "lore": [
+                "&7Лише лідер, усі біля входу",
+                "{mine_availability}"
+              ],
+              "command": "/obmenu mine-start"
+            },
+            "intermission": {
+              "material": "LIME_CONCRETE",
+              "name": "&aПродовжити",
+              "lore": [
+                "&7Наступна арена"
+              ],
+              "command": "/obmenu mine-continue"
+            },
+            "active": {
+              "material": "ENDER_PEARL",
+              "name": "&eПовернутися",
+              "lore": [
+                "&7У незавершений похід"
+              ],
+              "command": "/obmenu mine-reconnect"
+            }
+          }
+        },
+        "24": {
+          "state-source": "mine_state",
+          "initial-state": "idle",
+          "states": {
+            "idle": {
+              "material": "PAPER",
+              "name": "&eЗапросити",
+              "lore": [
+                "&7Введи нік"
+              ],
+              "command": "/obmenu mine-invite"
+            },
+            "intermission": {
+              "material": "BOOK",
+              "name": "&bГайд",
+              "lore": [],
+              "command": "/obmenu mine-guide"
+            },
+            "active": {
+              "material": "BOOK",
+              "name": "&bГайд",
+              "lore": [],
+              "command": "/obmenu mine-guide"
+            }
+          }
+        },
+        "30": {
+          "material": "LIME_DYE",
+          "name": "&aПрийняти запрошення",
+          "lore": [
+            "&7Введи нік лідера"
+          ],
+          "command": "/obmenu mine-accept"
+        },
+        "31": {
+          "material": "BOOK",
+          "name": "&bГайд",
+          "lore": [],
+          "command": "/obmenu mine-guide"
+        },
+        "32": {
+          "material": "OAK_DOOR",
+          "name": "&cПокинути",
+          "lore": [
+            "&7Зароблене збережеться"
+          ],
+          "command": "/obmenu mine-leave"
+        },
+        "37": {
+          "material": "PAPER",
+          "name": "&eРекорди",
+          "lore": [],
+          "command": "/obmenu mine-records"
+        },
+        "39": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "41": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "43": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "mine-admin": {
+      "rows": 6,
+      "title": "&8Адміністрація шахти",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "20": {
+          "material": "MAP",
+          "name": "&eСесії та світи",
+          "lore": [],
+          "command": "/obmenu mine-admin-sessions"
+        },
+        "22": {
+          "material": "COMPARATOR",
+          "name": "&eБаланс і налаштування",
+          "lore": [],
+          "command": "/obmenu mine-admin-settings"
+        },
+        "24": {
+          "material": "PLAYER_HEAD",
+          "name": "&eГравці",
+          "lore": [],
+          "command": "/obmenu mine-admin-players"
+        },
+        "31": {
+          "material": "REDSTONE_BLOCK",
+          "name": "&cЗупинити всі сесії",
+          "lore": [],
+          "command": "/obmenu mine-admin-stop-all"
+        },
+        "40": {
+          "material": "COMPASS",
+          "name": "&eВстановити вхід тут",
+          "lore": [],
+          "command": "/obmenu mine-admin-entry"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "mine-admin-sessions": {
+      "rows": 6,
+      "title": "&8Ізольовані світи",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "&7‹ Попередня",
+          "command": "/obmenu mine-admin-previous"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "&7Наступна ›",
+          "command": "/obmenu mine-admin-next"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      },
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "mine-admin-settings": {
+      "rows": 6,
+      "title": "&8Параметри шахти",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "&7‹ Попередня",
+          "command": "/obmenu mine-admin-previous"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "&7Наступна ›",
+          "command": "/obmenu mine-admin-next"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      },
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "mine-admin-players": {
+      "rows": 6,
+      "title": "&8Гравці OneBlock",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "&7‹ Попередня",
+          "command": "/obmenu mine-admin-previous"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "&7Наступна ›",
+          "command": "/obmenu mine-admin-next"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      },
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "mine-admin-player": {
+      "rows": 6,
+      "title": "&8Дії щодо гравця",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "20": {
+          "material": "COMPASS",
+          "name": "&eТелепорт до гравця",
+          "lore": [],
+          "command": "/obmenu mine-player-tp"
+        },
+        "22": {
+          "material": "GOLDEN_APPLE",
+          "name": "&aВідновити HP та голод",
+          "lore": [],
+          "command": "/obmenu mine-player-heal"
+        },
+        "24": {
+          "material": "OAK_DOOR",
+          "name": "&eПримусово повернути в хаб",
+          "lore": [],
+          "command": "/obmenu mine-player-hub"
+        },
+        "31": {
+          "material": "GRASS_BLOCK",
+          "name": "&eПрофіль: монети, прогрес, кооп, світи",
+          "lore": [],
+          "command": "/obmenu mine-player-profile"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "mine-admin-confirm": {
+      "rows": 6,
+      "title": "&8Підтвердження адміністратора",
+      "slots": {
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "29": {
+          "material": "LIME_DYE",
+          "name": "&aПідтвердити",
+          "lore": [
+            "&7Лише попередньо обрана дія, строк 30 с."
+          ],
+          "command": "/obmenu mine-admin-confirm-action"
+        },
+        "33": {
+          "material": "RED_DYE",
+          "name": "&cСкасувати",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu mine-admin-home"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "dungeon-select": {
+      "rows": 6,
+      "title": "&8Арени",
+      "slots": {
+        "4": {
+          "material": "COMPASS",
+          "name": "&6Вибір арени",
+          "lore": [
+            "&7Старт — біля входу в хабі"
+          ]
+        },
+        "22": {
+          "material": "IRON_PICKAXE",
+          "name": "&6{mine_name}",
+          "lore": [
+            "&7{mine_description}",
+            "&7Гравців: &f1–4",
+            "&7Тривалість: &f{mine_duration}",
+            "{mine_availability}"
+          ],
+          "command": "/obmenu mine-menu"
+        },
+        "40": {
+          "material": "BOOK",
+          "name": "&bПравила",
+          "lore": [],
+          "command": "/obmenu mine-guide"
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "lore": [],
+          "command": "/obmenu main-menu"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "lore": [],
+          "command": "/obmenu close"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "mine-records": {
+      "rows": 6,
+      "title": "&8Рекорди",
+      "content": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "empty": {
+        "name": "&7Записів ще немає"
+      },
+      "slots": {
+        "2": {
+          "material": "PAPER",
+          "name": "&eСоло",
+          "lore": [],
+          "command": "/obmenu mine-records"
+        },
+        "3": {
+          "material": "PAPER",
+          "name": "&e2 гравці",
+          "lore": [],
+          "command": "/obmenu mine-records-2"
+        },
+        "5": {
+          "material": "PAPER",
+          "name": "&e3 гравці",
+          "lore": [],
+          "command": "/obmenu mine-records-3"
+        },
+        "6": {
+          "material": "PAPER",
+          "name": "&e4 гравці",
+          "lore": [],
+          "command": "/obmenu mine-records-4"
+        },
+        "4": {
+          "material": "GOLD_INGOT",
+          "name": "&6Найкращі результати",
+          "lore": [
+            "&7Один рядок на гравця чи групу",
+            "&7Більше хвиль, потім менший час"
+          ]
+        },
+        "45": {
+          "material": "ARROW",
+          "name": "&7« Назад",
+          "command": "/obmenu dungeons"
+        },
+        "46": {
+          "material": "ARROW",
+          "name": "&7‹ Попередня",
+          "command": "/obmenu mine-records-previous"
+        },
+        "49": {
+          "material": "BARRIER",
+          "name": "&cЗакрити",
+          "command": "/obmenu close"
+        },
+        "52": {
+          "material": "ARROW",
+          "name": "&7Наступна ›",
+          "command": "/obmenu mine-records-next"
+        },
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    }
+  }
+}

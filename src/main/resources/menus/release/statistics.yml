@@ -1,0 +1,86 @@
+version: 1
+values:
+  activity_order: {"source":"activity.order","format":"text","fallback":""}
+  activity_order_name: {"source":"activity.order_name","format":"text","fallback":""}
+  activity_event_info: {"source":"activity.event_info","format":"text","fallback":""}
+  activity_head: {"source":"activity.head","format":"text","fallback":""}
+  activity_state_resonance: {"source":"activity.event_state.resonance","format":"text","fallback":"locked"}
+  activity_state_echo: {"source":"activity.event_state.echo","format":"text","fallback":"locked"}
+  activity_offer_name_0: {"source":"activity.offer_name.0","format":"text","fallback":""}
+  activity_offer_name_1: {"source":"activity.offer_name.1","format":"text","fallback":""}
+  activity_offer_name_2: {"source":"activity.offer_name.2","format":"text","fallback":""}
+  activity_slot_0: {"source":"activity.slot.0","format":"text","fallback":"mine"}
+  activity_slot_1: {"source":"activity.slot.1","format":"text","fallback":"mine"}
+  activity_slot_2: {"source":"activity.slot.2","format":"text","fallback":"mine"}
+  activity_status: {"source": "activity.status", "format": "text", "fallback": ""}
+  activity_quote: {"source": "activity.quote", "format": "text", "fallback": ""}
+  activity_offer_0: {"source": "activity.offer.0", "format": "text", "fallback": ""}
+  activity_offer_1: {"source": "activity.offer.1", "format": "text", "fallback": ""}
+  activity_offer_2: {"source": "activity.offer.2", "format": "text", "fallback": ""}
+  release_chapter: {"source":"release.chapter","format":"text","fallback":"—"}
+  release_core: {"source":"release.core","format":"text","fallback":"—"}
+  release_charge: {"source":"release.charge","format":"text","fallback":"—"}
+  release_focus: {source: release.focus, format: text, fallback: '—'}
+  release_title: {source: release.title, format: text, fallback: ''}
+  release_pack_building: {source: release.pack.building, format: text, fallback: ''}
+  release_pack_nature: {source: release.pack.nature, format: text, fallback: ''}
+  release_pack_mineral: {source: release.pack.mineral, format: text, fallback: ''}
+  release_pack_ancient: {source: release.pack.ancient, format: text, fallback: ''}
+  release_next: {"source":"release.next","format":"text","fallback":"—"}
+  release_alternatives: {"source":"release.alternatives","format":"text","fallback":"—"}
+  release_gate: {"source":"release.gate","format":"text","fallback":"—"}
+  release_quote: {"source":"release.quote","format":"text","fallback":"—"}
+  release_achievements: {"source":"release.achievements","format":"text","fallback":"—"}
+  release_core_level: {"source":"release.core_level","format":"text","fallback":"0"}
+  release_phase: {"source":"release.phase","format":"text","fallback":""}
+  release_skill_avg: {"source":"release.skill_avg","format":"text","fallback":""}
+  release_ready_workshop: {"source":"release.ready_workshop","format":"text","fallback":""}
+  release_ready_combat: {"source":"release.ready_combat","format":"text","fallback":""}
+  release_tutorial_state: {"source":"release.tutorial_state","format":"text","fallback":""}
+  release_chapter_start: {"source":"release.chapter.start","format":"text","fallback":""}
+  release_chapter_living: {"source":"release.chapter.living","format":"text","fallback":""}
+  release_chapter_workshop: {"source":"release.chapter.workshop","format":"text","fallback":""}
+  release_chapter_depths: {"source":"release.chapter.depths","format":"text","fallback":""}
+  release_chapter_developed: {"source":"release.chapter.developed","format":"text","fallback":""}
+  release_recipe_state_pickaxe_1: {"source":"release.recipe_state.pickaxe_1","format":"text","fallback":"other"}
+  release_recipe_state_pickaxe_2: {"source":"release.recipe_state.pickaxe_2","format":"text","fallback":"other"}
+  release_recipe_state_pickaxe_3: {"source":"release.recipe_state.pickaxe_3","format":"text","fallback":"other"}
+  release_recipe_state_axe_1: {"source":"release.recipe_state.axe_1","format":"text","fallback":"other"}
+  release_recipe_state_axe_2: {"source":"release.recipe_state.axe_2","format":"text","fallback":"other"}
+  release_recipe_state_axe_3: {"source":"release.recipe_state.axe_3","format":"text","fallback":"other"}
+  release_recipe_state_hoe_1: {"source":"release.recipe_state.hoe_1","format":"text","fallback":"other"}
+  release_recipe_state_hoe_2: {"source":"release.recipe_state.hoe_2","format":"text","fallback":"other"}
+  release_recipe_state_hoe_3: {"source":"release.recipe_state.hoe_3","format":"text","fallback":"other"}
+  release_recipe_state_water: {"source":"release.recipe_state.water","format":"text","fallback":"other"}
+  release_recipe_state_lava: {"source":"release.recipe_state.lava","format":"text","fallback":"other"}
+  release_recipe_state_farm: {"source":"release.recipe_state.farm","format":"text","fallback":"other"}
+  release_daily: {"source":"release.daily","format":"text","fallback":""}
+  release_claim_count: {"source":"release.claim_count","format":"text","fallback":"—"}
+  release_skill_mining: {"source":"release.skill.mining","format":"text","fallback":"—"}
+  release_skill_forestry: {"source":"release.skill.forestry","format":"text","fallback":"—"}
+  release_skill_farming: {"source":"release.skill.farming","format":"text","fallback":"—"}
+  release_upgrade_fortune: {"source":"release.upgrade.fortune","format":"text","fallback":"—"}
+  release_upgrade_territory: {"source":"release.upgrade.territory","format":"text","fallback":"—"}
+  release_upgrade_focus: {"source":"release.upgrade.focus","format":"text","fallback":"—"}
+  release_recipe_pickaxe_1: {"source":"release.recipe.pickaxe_1","format":"text","fallback":"—"}
+  release_recipe_pickaxe_2: {"source":"release.recipe.pickaxe_2","format":"text","fallback":"—"}
+  release_recipe_pickaxe_3: {"source":"release.recipe.pickaxe_3","format":"text","fallback":"—"}
+  release_recipe_axe_1: {"source":"release.recipe.axe_1","format":"text","fallback":"—"}
+  release_recipe_axe_2: {"source":"release.recipe.axe_2","format":"text","fallback":"—"}
+  release_recipe_axe_3: {"source":"release.recipe.axe_3","format":"text","fallback":"—"}
+  release_recipe_hoe_1: {"source":"release.recipe.hoe_1","format":"text","fallback":"—"}
+  release_recipe_hoe_2: {"source":"release.recipe.hoe_2","format":"text","fallback":"—"}
+  release_recipe_hoe_3: {"source":"release.recipe.hoe_3","format":"text","fallback":"—"}
+  release_recipe_water: {"source":"release.recipe.water","format":"text","fallback":"—"}
+  release_recipe_lava: {"source":"release.recipe.lava","format":"text","fallback":"—"}
+  release_recipe_farm: {"source":"release.recipe.farm","format":"text","fallback":"—"}
+  release_claim_0: {"source":"release.claim.0","format":"text","fallback":"—"}
+  release_claim_1: {"source":"release.claim.1","format":"text","fallback":"—"}
+  release_claim_2: {"source":"release.claim.2","format":"text","fallback":"—"}
+  release_claim_3: {"source":"release.claim.3","format":"text","fallback":"—"}
+  release_claim_4: {"source":"release.claim.4","format":"text","fallback":"—"}
+  release_claim_5: {"source":"release.claim.5","format":"text","fallback":"—"}
+  release_claim_6: {"source":"release.claim.6","format":"text","fallback":"—"}
+  reward_quote: {source: reward.quote, format: text, fallback: ''}
+  reward_pity: {source: reward.pity, format: text, fallback: ''}
+displays: {}

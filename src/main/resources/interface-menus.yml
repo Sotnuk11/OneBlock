@@ -1,0 +1,740 @@
+# Оформлення GUI: ID дій незмінні; ціни й перевірки задає серверний код.
+# Слоти від 0: Назад — початок нижнього рядка, Закрити — центр, сторінки — поруч.
+{
+  "version": 1,
+  "gui-layout-version": 2,
+  "defaults": {
+    "filler": "NONE"
+  },
+  "windows": {
+    "profile-members": {
+      "rows": 6,
+      "filler": "INHERIT",
+      "background": {
+        "enabled": false
+      },
+      "grids": {
+        "content": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      },
+      "templates": {
+        "content": {},
+        "preview": {},
+        "empty": {
+          "icon": "PAPER"
+        },
+        "quantities": {},
+        "categories": {},
+        "separators": {}
+      },
+      "buttons": {
+        "previous": {
+          "slot": 46,
+          "enabled": true,
+          "name": "&7‹ Попередня",
+          "icon": "ARROW"
+        },
+        "back": {
+          "slot": 45,
+          "enabled": true,
+          "name": "&7« Назад",
+          "icon": "ARROW"
+        },
+        "next": {
+          "slot": 52,
+          "enabled": true,
+          "name": "&7Наступна ›",
+          "icon": "ARROW"
+        },
+        "close": {
+          "slot": 49,
+          "enabled": true,
+          "icon": "BARRIER",
+          "name": "&cЗакрити"
+        }
+      },
+      "decorations": {
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "profile-delete": {
+      "rows": 3,
+      "filler": "INHERIT",
+      "background": {
+        "enabled": false
+      },
+      "grids": {},
+      "templates": {
+        "content": {},
+        "preview": {},
+        "empty": {
+          "icon": "PAPER"
+        },
+        "quantities": {},
+        "categories": {},
+        "separators": {}
+      },
+      "buttons": {
+        "confirm": {
+          "slot": 11,
+          "enabled": true
+        },
+        "summary": {
+          "slot": 13,
+          "enabled": true
+        },
+        "back": {
+          "slot": 18,
+          "enabled": true,
+          "name": "&7« Назад",
+          "icon": "ARROW"
+        },
+        "close": {
+          "slot": 22,
+          "enabled": true,
+          "icon": "BARRIER",
+          "name": "&cЗакрити"
+        }
+      },
+      "decorations": {
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "18": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "19": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "20": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "21": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "22": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "23": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "24": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "25": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "26": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "admin-list": {
+      "rows": 6,
+      "filler": "INHERIT",
+      "background": {
+        "enabled": false
+      },
+      "grids": {
+        "content": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      },
+      "templates": {
+        "content": {},
+        "preview": {},
+        "empty": {
+          "icon": "PAPER"
+        },
+        "quantities": {},
+        "categories": {},
+        "separators": {}
+      },
+      "buttons": {
+        "previous": {
+          "slot": 46,
+          "enabled": true,
+          "name": "&7‹ Попередня",
+          "icon": "ARROW"
+        },
+        "save": {
+          "slot": 53,
+          "enabled": true
+        },
+        "next": {
+          "slot": 52,
+          "enabled": true,
+          "name": "&7Наступна ›",
+          "icon": "ARROW"
+        },
+        "close": {
+          "slot": 49,
+          "enabled": true,
+          "icon": "BARRIER",
+          "name": "&cЗакрити"
+        },
+        "dungeons": {
+          "slot": 48,
+          "enabled": true,
+          "icon": "IRON_PICKAXE",
+          "name": "&6Данжі"
+        },
+        "players": {
+          "slot": 50,
+          "enabled": true,
+          "icon": "PLAYER_HEAD",
+          "name": "&eГравці"
+        }
+      },
+      "decorations": {
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "admin-island": {
+      "rows": 6,
+      "filler": "INHERIT",
+      "background": {
+        "enabled": false
+      },
+      "grids": {},
+      "templates": {
+        "content": {},
+        "preview": {},
+        "empty": {
+          "icon": "PAPER"
+        },
+        "quantities": {},
+        "categories": {},
+        "separators": {}
+      },
+      "buttons": {
+        "teleport": {
+          "slot": 10,
+          "enabled": true
+        },
+        "core": {
+          "slot": 12,
+          "enabled": true
+        },
+        "info": {
+          "slot": 14,
+          "enabled": true
+        },
+        "backup": {
+          "slot": 16,
+          "enabled": true
+        },
+        "breaks": {
+          "slot": 19,
+          "enabled": true
+        },
+        "coins": {
+          "slot": 20,
+          "enabled": true
+        },
+        "mode": {
+          "slot": 21,
+          "enabled": true
+        },
+        "edit": {
+          "slot": 23,
+          "enabled": true
+        },
+        "world-size": {
+          "slot": 24,
+          "enabled": true
+        },
+        "evacuate": {
+          "slot": 28,
+          "enabled": true
+        },
+        "members": {
+          "slot": 30,
+          "enabled": true
+        },
+        "reset-progress": {
+          "slot": 32,
+          "enabled": true
+        },
+        "reset-world": {
+          "slot": 34,
+          "enabled": true
+        },
+        "back": {
+          "slot": 45,
+          "enabled": true,
+          "name": "&7« Назад",
+          "icon": "ARROW"
+        },
+        "close": {
+          "slot": 49,
+          "enabled": true,
+          "icon": "BARRIER",
+          "name": "&cЗакрити"
+        }
+      },
+      "decorations": {
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    },
+    "admin-members": {
+      "rows": 6,
+      "filler": "INHERIT",
+      "background": {
+        "enabled": false
+      },
+      "grids": {
+        "content": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      },
+      "templates": {
+        "content": {},
+        "preview": {},
+        "empty": {
+          "icon": "PAPER"
+        },
+        "quantities": {},
+        "categories": {},
+        "separators": {}
+      },
+      "buttons": {
+        "previous": {
+          "slot": 46,
+          "enabled": true,
+          "name": "&7‹ Попередня",
+          "icon": "ARROW"
+        },
+        "back": {
+          "slot": 45,
+          "enabled": true,
+          "name": "&7« Назад",
+          "icon": "ARROW"
+        },
+        "next": {
+          "slot": 52,
+          "enabled": true,
+          "name": "&7Наступна ›",
+          "icon": "ARROW"
+        },
+        "close": {
+          "slot": 49,
+          "enabled": true,
+          "icon": "BARRIER",
+          "name": "&cЗакрити"
+        }
+      },
+      "decorations": {
+        "0": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "1": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "2": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "3": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "4": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "5": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "6": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "7": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "8": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "45": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "46": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "47": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "48": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "49": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "50": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "51": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "52": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        },
+        "53": {
+          "material": "BLACK_STAINED_GLASS_PANE",
+          "name": " "
+        }
+      }
+    }
+  }
+}

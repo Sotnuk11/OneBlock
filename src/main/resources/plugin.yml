@@ -1,0 +1,93 @@
+name: one-block
+version: '${version}'
+main: com.alytanta.oneblock.OneBlock
+api-version: '26.1.2'
+load: STARTUP
+folia-supported: true
+depend:
+  - Worlds
+softdepend:
+  - FancyNpcs
+
+commands:
+  obadmin:
+    description: OneBlock administration; separate from player commands
+    usage: /obadmin help
+    aliases: [oba]
+    permission: oneblock.admin
+  dungeon:
+    description: Abandoned Mine parties and reconnect
+    usage: /dungeon
+    aliases: [mine]
+    permission: oneblock.command
+  obmenu:
+    description: Run a configured menu command with its menu dependencies
+    usage: /obmenu [command]
+    permission: oneblock.command
+  obreload:
+    description: Reload OneBlock configuration and recover its database connection
+    usage: /obreload
+    aliases: [oneblockreload, obrestart]
+    permission: oneblock.admin.reload
+  oneblock:
+    description: Main OneBlock command
+    usage: /ob
+    permission: oneblock.command
+    aliases:
+      - ob
+  home:
+    description: Teleport home or open the profile selector
+    usage: /home
+    permission: oneblock.command
+  trade:
+    description: Trade items and coins with a nearby player
+    usage: /trade <player|accept|deny|cancel|collect>
+    permission: oneblock.trade
+  hub:
+    description: Teleport to the central OneBlock hub on this backend
+    usage: /hub
+    permission: oneblock.command
+
+permissions:
+  oneblock.magnet.core:
+    description: Send actual central block drops to inventory
+    default: false
+  oneblock.magnet.blocks:
+    description: Send actual regular block drops to inventory
+    default: false
+  oneblock.magnet.mobs:
+    description: Send actual mob drops to the killer inventory
+    default: false
+  oneblock.hub.build:
+    description: Explicit exemption from the hub Adventure game mode
+    default: op
+  oneblock.trade:
+    default: true
+  oneblock.market.use:
+    default: true
+  oneblock.command:
+    default: true
+  oneblock.admin:
+    default: op
+    children:
+      oneblock.admin.inspect: true
+      oneblock.admin.manage: true
+      oneblock.admin.teleport: true
+      oneblock.admin.save: true
+      oneblock.admin.reset: true
+      oneblock.admin.reload: true
+  oneblock.admin.reload:
+    default: op
+  oneblock.admin.inspect:
+    default: op
+  oneblock.admin.manage:
+    default: op
+  oneblock.admin.teleport:
+    default: op
+  oneblock.admin.save:
+    default: op
+  oneblock.admin.reset:
+    default: op
+  # Explicit permission; admin status alone does not bypass protection.
+  oneblock.admin.bypass:
+    default: false

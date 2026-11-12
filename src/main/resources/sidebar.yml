@@ -1,0 +1,51 @@
+enabled: true
+update-ticks: 20
+timezone: Europe/Kyiv
+# Up to 15 lines. Placeholders: date, world_day, world_time, location, player,
+languages:
+  uk:
+    title: '&a&lONEBLOCK'
+    hub: 'Хаб'
+    island: 'Острів'
+    elsewhere: 'Світ'
+    solo: 'Соло'
+    coop: 'Кооп'
+    no-profile: '/home — створити'
+    available: '&aДоступні'
+    unavailable: '&cТимчасово недоступні'
+    lines:
+      - '&7{location} &8· &7{world_time}'
+      - ''
+      - '&7Рівень ядра: &a{core_level}'
+      - '&eЦіль:'
+      - '{goal}'
+      - ''
+      - '&7Профіль: &f{profile}'
+      - '&7Режим: &b{profile_type}'
+      - '&7Монети: &6{coins}'
+      - '&7Блоків: &f{blocks}'
+      - ''
+      - '&7Онлайн: &a{online}'
+  en:
+    title: '&a&lONEBLOCK'
+    hub: 'Hub'
+    island: 'Island'
+    elsewhere: 'World'
+    solo: 'Solo'
+    coop: 'Co-op'
+    no-profile: '/home to create'
+    available: '&aAvailable'
+    unavailable: '&cTemporarily unavailable'
+    lines:
+      - '&7{location} &8· &7{world_time}'
+      - ''
+      - '&7Core level: &a{core_level}'
+      - '&eGoal:'
+      - '{goal}'
+      - ''
+      - '&7Profile: &f{profile}'
+      - '&7Mode: &b{profile_type}'
+      - '&7Coins: &6{coins}'
+      - '&7Blocks: &f{blocks}'
+      - ''
+      - '&7Online: &a{online}'

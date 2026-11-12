@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "oneblock:weaver"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "oneblock:weaver"
+      }
+    ]
+  }
+}

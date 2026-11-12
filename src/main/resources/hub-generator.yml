@@ -1,0 +1,80 @@
+version: 1
+# Creating a new named world is a separate explicit admin action. Existing worlds never fall back.
+allow-void-worlds: false
+language: uk
+# Stable FancyNpcs ID for the manually placed guide; this generator never creates or moves NPCs.
+guide-npc: oneblock_guide
+# Appearance for manually placed hub service NPCs. Display names use the first line in signs.<language>.<role>.
+# PLAYER skins accept a profile name, UUID or textures.minecraft.net URL; lookup runs only on explicit admin creation.
+npcs:
+  merchant: {type: VILLAGER, skin: ''}
+  bazaar: {type: WANDERING_TRADER, skin: ''}
+  auction: {type: VILLAGER, skin: ''}
+  guide: {type: VILLAGER, skin: ''}
+blocks-per-batch: 256
+in-flight-chunks: 2
+scan-per-tick: 4096
+batch-delay-ticks: 1
+palette:
+  stone: STONE_BRICKS
+  # Moss keeps its identity below planters; grass would turn to dirt and conflict with pinned rollback.
+  floor: MOSS_BLOCK
+  path: POLISHED_ANDESITE
+  trim: STONE_BRICKS
+  wood: SPRUCE_PLANKS
+  log: STRIPPED_SPRUCE_LOG
+  roof: DARK_PRISMARINE
+  glass: LIGHT_BLUE_STAINED_GLASS
+  light: GLOWSTONE
+  garden: MOSS_BLOCK
+  wall: MOSSY_STONE_BRICKS
+signs:
+  uk:
+    merchant: ['Скупник', 'Продаж ресурсів', 'NPC торговця', 'Безпечні угоди']
+    bazaar: ['Bazaar', 'Ринок ресурсів', 'Заявки гравців', 'Перевір ціну']
+    auction: ['Аукціон', 'Лоти та ставки', 'BIN / отримання', 'NPC аукціону']
+    workshop: ['Майстерня', 'Натисни: довідка', 'Рецепти й навички', '/ob guide workshop']
+    guide: ['Провідник', 'Натисни: довідка', 'Почни свій острів', '/ob guide']
+    dungeon1: ['Покинута шахта', '1–4 · Depths', 'Група й готовність', 'Натисни: меню']
+    dungeon2: ['Старі опори', 'Сад над хмарами', 'Місце відпочинку', 'Стежка до площі']
+    dungeon3: ['Оглядова арка', 'Поселення в небі', 'Місце відпочинку', 'Стежка до площі']
+  en:
+    merchant: ['Merchant', 'Sell resources', 'Merchant NPC', 'Review your trade']
+    bazaar: ['Bazaar', 'Resource market', 'Player orders', 'Review the price']
+    auction: ['Auction House', 'Listings and bids', 'BIN / claims', 'Auction NPC']
+    workshop: ['Workshop', 'Click for help', 'Recipes and skills', '/ob guide workshop']
+    guide: ['Guide', 'Click for help', 'Start your island', '/ob guide']
+    dungeon1: ['Abandoned Mine', '1–4 · Depths', 'Party and ready', 'Click: menu']
+    dungeon2: ['Old supports', 'Garden in the sky', 'Resting place', 'Path to the plaza']
+    dungeon3: ['Lookout arch', 'Village in the sky', 'Resting place', 'Path to the plaza']
+messages:
+  uk:
+    usage: '/ob admin hubgen preview <world> <x> <floor-y> <z> [0|90|180|270]; build <preview>; status [job]; cancel|resume|activate <job>; services <job> [apply]; rollback <job> [confirm]; world create|load <key>'
+    command-help: "&6Генератор хабу — /obadmin hub\n&fcreate-world <назва> &7— окремий void-світ, лише з дозволу конфіга\n&fload-world <ключ> &7— завантажити зареєстрований світ\n&fpreview <світ> <x> <y підлоги> <z> [0|90|180|270] &7— перевірити межі\n&fbuild &7— побудувати останній власний перегляд (5 хв)\n&fstatus [світ|job-id] &7— стан; services лише показує готовність, NPC став вручну: /obadmin market npc <роль>\n&factivate <світ|job-id> &7— окремо призначити /hub\n&fstop <світ|job-id> &7— пауза; resume — продовжити\n&frollback <світ|job-id> [confirm] &7— перевірка/скасування власних змін"
+    next-preview: '&eПеревір світ {world} і межі. Для побудови протягом 5 хв виконай /obadmin hub build. Попередній власний перегляд замінений цим.'
+    next-job: '&aСпоруду завершено. Перевір /obadmin hub services {job}; активуй /obadmin hub activate {job}. NPC став вручну: /obadmin market npc shop|bazaar|auction|guide|dungeon. Перенесення: /npc move_here <імʼя>.'
+    preview-missing: '&cПерегляд не знайдений або вже використаний. Створи новий: /obadmin hub preview <світ> <x> <y підлоги> <z>, потім /obadmin hub build. Для готової споруди дивись /obadmin hub status.'
+    preview-stale: '&cЦе чужий, прострочений або застарілий після reload перегляд. Створи новий preview і запускай build тим самим адміністратором.'
+    job-ambiguous: '&cДля світу немає однозначної побудови. Виконай /obadmin hub status і вкажи точний job-id. Preview ID сюди не підходить.'
+    denied: '&cПотрібні OP, oneblock.admin і oneblock.admin.manage (rollback: reset).'
+    error: '&cХаб: {error}'
+    preview: '&aPreview {id}: {world}, центр {x}/{y}/{z}, bounds ±40, y−16..+22, {blocks} блоків. Діє 5 хв. Build не активує spawn. Активація поширює чинні hub rules на весь світ.'
+    status: '&eJob {id}: {state}, {placed}/{total}; світ {world}; backup={backup}; {error}'
+    done: '&aХаб: {action} — {value}'
+    reserved: '&eТут триває/очікує відновлення побудова хабу. Зона тимчасово закрита.'
+    services: '&eСервіси: {value}. Генератор не створює і не переміщує NPC; їх ставить адміністратор через /obadmin market npc <роль>.'
+  en:
+    usage: '/ob admin hubgen preview <world> <x> <floor-y> <z> [0|90|180|270]; build <preview>; status [job]; cancel|resume|activate <job>; services <job> [apply]; rollback <job> [confirm]; world create|load <key>'
+    command-help: "&6Hub generator — /obadmin hub\n&fcreate-world <name> &7— void world, requires config opt-in\n&fload-world <key> &7— load a registered world\n&fpreview <world> <x> <floor-y> <z> [0|90|180|270] &7— check bounds\n&fbuild &7— build your latest preview within 5 minutes\n&fstatus [world|job-id] &7— progress; services only reports readiness; place NPCs manually: /obadmin market npc <role>\n&factivate <world|job-id> &7— separately assign /hub\n&fstop <world|job-id> &7— pause; resume — continue\n&frollback <world|job-id> [confirm] &7— preview/revert owned changes"
+    next-preview: '&eCheck world {world} and bounds. Run /obadmin hub build within 5 minutes. This replaces your previous preview.'
+    next-job: '&aBuilding finished. Check /obadmin hub services {job}, then /obadmin hub activate {job}. Place NPCs manually: /obadmin market npc shop|bazaar|auction|guide|dungeon. Move one explicitly with /npc move_here <name>.'
+    preview-missing: '&cPreview missing or consumed. Run /obadmin hub preview <world> <x> <floor-y> <z>, then /obadmin hub build. For an existing build use /obadmin hub status.'
+    preview-stale: '&cForeign, expired or config-stale preview. Create a new preview and build with the same administrator.'
+    job-ambiguous: '&cWorld has no unique hub job. Run /obadmin hub status and use its exact job ID, not a preview ID.'
+    denied: '&cOP, oneblock.admin and oneblock.admin.manage required (rollback: reset).'
+    error: '&cHub: {error}'
+    preview: '&aPreview {id}: {world}, centre {x}/{y}/{z}, bounds ±40, y−16..+22, {blocks} blocks. Expires in 5 min. Build does not activate spawn. Activation applies existing hub rules to the entire world.'
+    status: '&eJob {id}: {state}, {placed}/{total}; world {world}; backup={backup}; {error}'
+    done: '&aHub: {action} — {value}'
+    reserved: '&eHub construction or recovery reserves this area. Please stay outside.'
+    services: '&eServices: {value}. Hub generation never creates or moves NPCs; an administrator places them with /obadmin market npc <role>.'

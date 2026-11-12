@@ -1,0 +1,47 @@
+
+{
+  "version": 1,
+  "values": {
+    "mine_summary": {
+      "source": "mine.summary",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_name": {
+      "source": "mine.name",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_description": {
+      "source": "mine.description",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_duration": {
+      "source": "mine.duration",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_availability": {
+      "source": "mine.availability",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_party": {
+      "source": "mine.party",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_entry": {
+      "source": "mine.entry",
+      "format": "text",
+      "fallback": "—"
+    },
+    "mine_state": {
+      "source": "mine.state",
+      "format": "text",
+      "fallback": "idle"
+    }
+  },
+  "displays": {}
+}

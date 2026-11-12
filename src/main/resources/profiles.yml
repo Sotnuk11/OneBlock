@@ -1,0 +1,170 @@
+# Profile slots: available is the creation/co-op limit; existing profiles stay accessible.
+version: 1
+visible-slots: 5
+available-slots: 2
+rows: 6
+title: '&8Профілі'
+filler: {material: BLACK_STAINED_GLASS_PANE, name: ' '}
+close: {enabled: true, slot: 49, material: BARRIER, name: '&cЗакрити'}
+show-removal-hint: true
+# Omit slot for automatic placement. {label} uses the player's language.
+coop-button: {enabled: true, slot: 48, material: PLAYER_HEAD, name: '{label}', lore: []}
+profile-slot-1:
+  slot: 10
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-2:
+  slot: 11
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-3:
+  slot: 12
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-4:
+  slot: 13
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-5:
+  slot: 14
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-6:
+  slot: 15
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-7:
+  slot: 16
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-8:
+  slot: 19
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-9:
+  slot: 20
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-10:
+  slot: 21
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-11:
+  slot: 22
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-12:
+  slot: 23
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-13:
+  slot: 24
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-14:
+  slot: 25
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-15:
+  slot: 28
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-16:
+  slot: 29
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-17:
+  slot: 30
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+profile-slot-18:
+  slot: 31
+  empty: {material: LIME_DYE, name: '&aСтворити профіль {slot}', lore: ['&7Створити новий острів.']}
+  occupied: {material: GRASS_BLOCK, name: '&a{name}', lore: ['&7{type}, гравців: &f{members}', '&6{coins} монет', '&7Блоків: &f{breaks}']}
+  active: {material: EMERALD_BLOCK, glow: true, name: '&a{name} ✔', lore: ['&7{type}, гравців: &f{members}', '&aТи тут']}
+  locked: {material: GRAY_DYE, name: '&cСлот {slot} недоступний', lore: ['&7Поки що заблоковано.']}
+# Both languages share the same stable number. Empty entries are skipped.
+names:
+  1: {en: "Aurora", uk: "Сяйво"}
+  2: {en: "Bloom", uk: "Цвіт"}
+  3: {en: "Cedar", uk: "Кедр"}
+  4: {en: "Dawn", uk: "Світанок"}
+  5: {en: "Echo", uk: "Відлуння"}
+  6: {en: "Fern", uk: "Папороть"}
+  7: {en: "Grove", uk: "Гай"}
+  8: {en: "Haven", uk: "Прихисток"}
+  9: {en: "Iris", uk: "Ірис"}
+  10: {en: "Jade", uk: "Нефрит"}
+  11: {en: "Kiwi", uk: "Ківі"}
+  12: {en: "Lotus", uk: "Лотос"}
+  13: {en: "Maple", uk: "Клен"}
+  14: {en: "Nova", uk: "Нова"}
+  15: {en: "Oasis", uk: "Оаза"}
+  16: {en: "Pearl", uk: "Перлина"}
+  17: {en: "Quartz", uk: "Кварц"}
+  18: {en: "River", uk: "Річка"}
+  19: {en: "Sakura", uk: "Сакура"}
+  20: {en: "Terra", uk: "Земля"}
+  21: {en: "Umber", uk: "Умбра"}
+  22: {en: "Violet", uk: "Фіалка"}
+  23: {en: "Willow", uk: "Верба"}
+  24: {en: "Zephyr", uk: "Зефір"}
+  25: {en: "Amber", uk: "Бурштин"}
+  26: {en: "Birch", uk: "Береза"}
+  27: {en: "Coral", uk: "Корал"}
+  28: {en: "Dune", uk: "Дюна"}
+  29: {en: "Ember", uk: "Жар"}
+  30: {en: "Frost", uk: "Іній"}
+  31: {en: "Glade", uk: "Галявина"}
+  32: {en: "Hazel", uk: "Ліщина"}
+  33: {en: "Indigo", uk: "Індиго"}
+  34: {en: "Juniper", uk: "Ялівець"}
+  35: {en: "Lagoon", uk: "Лагуна"}
+  36: {en: "Meadow", uk: "Луг"}
+  37: {en: "Nimbus", uk: "Німб"}
+  38: {en: "Olive", uk: "Олива"}
+  39: {en: "Pine", uk: "Сосна"}
+  40: {en: "Raven", uk: "Крук"}
+  41: {en: "Sage", uk: "Шавлія"}
+  42: {en: "Thorn", uk: "Терен"}
+  43: {en: "Vale", uk: "Долина"}
+  44: {en: "Wren", uk: "Кропивник"}
+  45: {en: "Yarrow", uk: "Деревій"}
+  46: {en: "Zenith", uk: "Зеніт"}
+
+# Повернення в головне меню. Не накладайте на слоти профілів/коопу.
+back: {enabled: true, slot: 45, material: ARROW, name: "&aНазад"}

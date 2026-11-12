@@ -1,0 +1,1599 @@
+# Єдиний каталог. Параметри здібностей числові або @stat; ID не перейменовуйте.
+{
+  "version": 1,
+  "visible-id-format": "&8ID: {id}",
+  "models": [
+    "oneblock:battle_fragment",
+    "oneblock:tempered_core",
+    "oneblock:warden_blade",
+    "oneblock:rift_cleaver",
+    "oneblock:nether_edge",
+    "oneblock:wind_bow",
+    "oneblock:ranger_bow",
+    "oneblock:ember_crossbow",
+    "oneblock:apprentice_wand",
+    "oneblock:frost_wand",
+    "oneblock:rift_staff",
+    "oneblock:warden_helmet",
+    "oneblock:warden_chestplate",
+    "oneblock:warden_leggings",
+    "oneblock:warden_boots",
+    "oneblock:weaver_helmet",
+    "oneblock:weaver_chestplate",
+    "oneblock:weaver_leggings",
+    "oneblock:weaver_boots",
+    "oneblock:pickaxe_1",
+    "oneblock:pickaxe_2",
+    "oneblock:pickaxe_3",
+    "oneblock:axe_1",
+    "oneblock:axe_2",
+    "oneblock:axe_3",
+    "oneblock:hoe_1",
+    "oneblock:hoe_2",
+    "oneblock:hoe_3"
+  ],
+  "equipment-models": [
+    "oneblock:warden",
+    "oneblock:weaver"
+  ],
+  "abilities": {
+    "oneblock:frost": {
+      "type": "frost_burst",
+      "particle": "SNOWFLAKE",
+      "sound": "minecraft:block.glass.break",
+      "parameters": {
+        "damage": "@damage",
+        "mana-cost": "@mana-cost",
+        "cooldown-seconds": "@cooldown-seconds",
+        "range": 10,
+        "radius": 3,
+        "targets": 4,
+        "duration-ticks": 40,
+        "amplifier": 1
+      }
+    },
+    "oneblock:sparks": {
+      "type": "spark_stream",
+      "particle": "END_ROD",
+      "sound": "minecraft:block.amethyst_block.chime",
+      "parameters": {
+        "damage": "@damage",
+        "mana-cost": "@mana-cost",
+        "cooldown-seconds": "@cooldown-seconds",
+        "range": 10,
+        "pulses": 3,
+        "interval-ticks": 12
+      }
+    },
+    "oneblock:focus": {
+      "type": "ranged_focus",
+      "parameters": {
+        "step": 0.025,
+        "cap": 0.1,
+        "window-seconds": 4
+      }
+    },
+    "oneblock:wind": {
+      "type": "wind_slow",
+      "parameters": {
+        "force": 0.95,
+        "duration-ticks": 30,
+        "amplifier": 0
+      }
+    },
+    "oneblock:precise": {
+      "type": "precise_slash",
+      "particle": "SWEEP_ATTACK",
+      "sound": "minecraft:entity.player.attack.sweep",
+      "parameters": {
+        "hits": 2,
+        "window-seconds": 4,
+        "charge-threshold": 0.9,
+        "bonus": 1.0
+      }
+    },
+    "oneblock:cleave": {
+      "type": "wide_cleave",
+      "particle": "SWEEP_ATTACK",
+      "sound": "minecraft:entity.player.attack.sweep",
+      "parameters": {
+        "damage": 12.0,
+        "mana-cost": 0,
+        "cooldown-seconds": 6,
+        "range": 3.5,
+        "cos-angle": 0.5,
+        "targets": 5,
+        "charge-threshold": 0.9
+      }
+    },
+    "oneblock:lightning": {
+      "type": "aimed_lightning",
+      "particle": "ELECTRIC_SPARK",
+      "sound": "minecraft:entity.lightning_bolt.impact",
+      "parameters": {
+        "damage": "@damage",
+        "mana-cost": "@mana-cost",
+        "cooldown-seconds": "@cooldown-seconds",
+        "range": 12,
+        "jumps": 2,
+        "jump-range": 3,
+        "falloff": 0.5
+      }
+    },
+    "oneblock:ember": {
+      "type": "ember_mark",
+      "particle": "FLAME",
+      "sound": "minecraft:entity.generic.explode",
+      "parameters": {
+        "bonus": 0.1,
+        "delay-ticks": 24,
+        "radius": 2.5,
+        "targets": 3,
+        "cooldown-seconds": 2
+      }
+    },
+    "oneblock:melee": {
+      "type": "melee_bonus",
+      "parameters": {
+        "damage": "@damage"
+      }
+    },
+    "oneblock:warden_guard": {
+      "type": "charged_guard",
+      "parameters": {
+        "charge-threshold": 0.9,
+        "hits": 3,
+        "window-seconds": 5,
+        "duration-seconds": 4,
+        "reduction": 0.04
+      }
+    },
+    "oneblock:ranged": {
+      "type": "ranged_multiplier",
+      "parameters": {
+        "multiplier": "@multiplier"
+      }
+    },
+    "oneblock:bolt": {
+      "type": "magic_bolt",
+      "parameters": {
+        "damage": "@damage",
+        "mana-cost": "@mana-cost",
+        "cooldown-seconds": "@cooldown-seconds",
+        "projectile-speed": "@projectile-speed",
+        "lifetime-ticks": 100
+      }
+    },
+    "oneblock:armor": {
+      "type": "armor_stats",
+      "parameters": {
+        "defense": "@defense",
+        "mana": "@mana",
+        "magic": "@magic",
+        "melee": "@melee",
+        "ranged": "@ranged",
+        "regen": "@regen"
+      }
+    },
+    "oneblock:tool": {
+      "type": "tool_traits",
+      "parameters": {
+        "durability": "@durability",
+        "sapling": "@sapling"
+      }
+    },
+    "oneblock:shortbow": {
+      "type": "shortbow",
+      "parameters": {
+        "cooldown-seconds": 0.55,
+        "damage-scale": 0.9,
+        "speed": 3.0
+      }
+    }
+  },
+  "items": {
+    "oneblock:ranger_boots": {
+      "material": "LEATHER_BOOTS",
+      "kind": "ARMOR",
+      "name": "&aЧоботи слідопита",
+      "lore": [
+        "&7Комплект Слідопита — для лучників.",
+        "&7Повний комплект: постріли по одній цілі",
+        "&7поступово стають сильнішими.",
+        "&aНе ламається."
+      ],
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0,
+        "ranged": 0.01,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "FEET",
+      "set": "ranger",
+      "market-transfer": true,
+      "migration-from": [],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "color": "#436B43"
+    },
+    "oneblock:ranger_leggings": {
+      "material": "LEATHER_LEGGINGS",
+      "kind": "ARMOR",
+      "name": "&aПоножі слідопита",
+      "lore": [
+        "&7Комплект Слідопита — для лучників.",
+        "&7Повний комплект: постріли по одній цілі",
+        "&7поступово стають сильнішими.",
+        "&aНе ламається."
+      ],
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0,
+        "ranged": 0.01,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "LEGS",
+      "set": "ranger",
+      "market-transfer": true,
+      "migration-from": [],
+      "armor-compensation": 7,
+      "armor-toughness-compensation": 4,
+      "color": "#436B43"
+    },
+    "oneblock:ranger_chestplate": {
+      "material": "LEATHER_CHESTPLATE",
+      "kind": "ARMOR",
+      "name": "&aКуртка слідопита",
+      "lore": [
+        "&7Комплект Слідопита — для лучників.",
+        "&7Повний комплект: постріли по одній цілі",
+        "&7поступово стають сильнішими.",
+        "&aНе ламається."
+      ],
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0,
+        "ranged": 0.01,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "CHEST",
+      "set": "ranger",
+      "market-transfer": true,
+      "migration-from": [],
+      "armor-compensation": 9,
+      "armor-toughness-compensation": 4,
+      "color": "#436B43"
+    },
+    "oneblock:ranger_helmet": {
+      "material": "PLAYER_HEAD",
+      "kind": "ARMOR",
+      "name": "&aКаптур слідопита",
+      "lore": [
+        "&7Комплект Слідопита — для лучників.",
+        "&7Повний комплект: постріли по одній цілі",
+        "&7поступово стають сильнішими.",
+        "&aНе ламається."
+      ],
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0,
+        "ranged": 0.01,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "HEAD",
+      "set": "ranger",
+      "market-transfer": true,
+      "migration-from": [],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "head-texture": "https://textures.minecraft.net/texture/22795c3c6f36d67decf9a3195e128040bec5226b055f2b16d46fa19a9180e023"
+    },
+    "oneblock:battle_fragment": {
+      "material": "PRISMARINE_SHARD",
+      "kind": "COMPONENT",
+      "name": "&aБойовий фрагмент",
+      "lore": [
+        "&7Матеріал для бойового спорядження.",
+        "&7Падає на аренах, також створюється",
+        "&7в «Компонентах» із кісток чи плоті."
+      ],
+      "model": "oneblock:battle_fragment",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "component"
+      ],
+      "stats": {},
+      "abilities": [],
+      "stack-size": 64,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:tempered_core": {
+      "material": "FIRE_CHARGE",
+      "kind": "COMPONENT",
+      "name": "&aЗагартоване осердя",
+      "lore": [
+        "&7Матеріал для сильнішої зброї.",
+        "&7Створюється з бойових фрагментів,",
+        "&7заліза та вугілля."
+      ],
+      "model": "oneblock:tempered_core",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "component"
+      ],
+      "stats": {},
+      "abilities": [],
+      "stack-size": 64,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:warden_blade": {
+      "material": "IRON_SWORD",
+      "kind": "MELEE",
+      "name": "&9Клинок вартового",
+      "lore": [
+        "&7Меч для ближнього бою.",
+        "&7Чим сильніше заряджений удар —",
+        "&7тим більша шкода.",
+        "&7Заряджені удари вмикають захисну стійку:",
+        "&7ти ненадовго отримуєш менше шкоди.",
+        "&8Зачарування меча зберігаються."
+      ],
+      "model": "oneblock:warden_blade",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "melee"
+      ],
+      "stats": {
+        "damage": 0.8
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:melee",
+          "trigger": "HIT",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:warden_guard",
+          "trigger": "HIT",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:rift_cleaver": {
+      "material": "DIAMOND_AXE",
+      "kind": "MELEE",
+      "name": "&9Сікач розлому",
+      "lore": [
+        "&7Важка сокира проти груп ворогів.",
+        "&eПКМ: &7широкий удар перед собою.",
+        "&7Найкраще — повністю заряджений удар.",
+        "&7Ворогів за стінами не зачіпає."
+      ],
+      "model": "oneblock:rift_cleaver",
+      "rarity": "RARE",
+      "tags": [
+        "melee"
+      ],
+      "stats": {
+        "damage": 0.5
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:melee",
+          "trigger": "HIT",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:cleave",
+          "trigger": "USE",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "cleave"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:nether_edge": {
+      "material": "NETHERITE_SWORD",
+      "kind": "MELEE",
+      "name": "&9Незеритова грань",
+      "lore": [
+        "&7Меч для бою з однією ціллю.",
+        "&eКожен другий заряджений удар поспіль",
+        "&eпо тій самій цілі б'є подвійно.",
+        "&7Зміна цілі скидає серію."
+      ],
+      "model": "oneblock:nether_edge",
+      "rarity": "EPIC",
+      "tags": [
+        "melee"
+      ],
+      "stats": {
+        "damage": 0.75
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:melee",
+          "trigger": "HIT",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:precise",
+          "trigger": "HIT",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "precise"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:wind_bow": {
+      "material": "BOW",
+      "kind": "RANGED",
+      "name": "&9Лук вітру",
+      "lore": [
+        "&7Лук, що стримує ворогів.",
+        "&7Постріл на повному натягу ненадовго",
+        "&7сповільнює звичайного ворога.",
+        "&7На босів сповільнення не діє."
+      ],
+      "model": "oneblock:wind_bow",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "ranged"
+      ],
+      "stats": {
+        "multiplier": 1.08
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:ranged",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:wind",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "wind"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:ranger_bow": {
+      "material": "BOW",
+      "kind": "RANGED",
+      "name": "&9Лук слідопита",
+      "lore": [
+        "&7Лук для стрільби по одній цілі.",
+        "&7Кожне влучання поспіль у ту саму ціль",
+        "&7трохи посилює постріли (до межі).",
+        "&7Зміна цілі скидає бонус."
+      ],
+      "model": "oneblock:ranger_bow",
+      "rarity": "RARE",
+      "tags": [
+        "ranged"
+      ],
+      "stats": {
+        "multiplier": 1.04
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:ranged",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:focus",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "focus"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:ember_crossbow": {
+      "material": "CROSSBOW",
+      "kind": "RANGED",
+      "name": "&9Арбалет жару",
+      "lore": [
+        "&7Старий арбалет, більше не створюється.",
+        "&7Влучання залишає вогняну мітку."
+      ],
+      "model": "oneblock:ember_crossbow",
+      "rarity": "RARE",
+      "tags": [
+        "ranged"
+      ],
+      "stats": {
+        "multiplier": 1.04
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:ranged",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:ember",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:apprentice_wand": {
+      "material": "BLAZE_ROD",
+      "kind": "MAGIC",
+      "name": "&9Жезл учня",
+      "lore": [
+        "&7Перший магічний жезл.",
+        "&eПКМ: &7потік іскристих згустків вітру —",
+        "&7тримай приціл на ворогові.",
+        "&7Витрачає ману, вона відновлюється сама.",
+        "&7Зміниш предмет у руці — потік зупиниться,",
+        "&7витрачена мана не повернеться."
+      ],
+      "model": "oneblock:apprentice_wand",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "magic"
+      ],
+      "stats": {
+        "damage": 12,
+        "mana-cost": 12,
+        "cooldown-seconds": 1.8,
+        "projectile-speed": 2.0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:sparks",
+          "trigger": "USE",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "magic"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:frost_wand": {
+      "material": "BLAZE_ROD",
+      "kind": "MAGIC",
+      "name": "&9Крижаний жезл",
+      "lore": [
+        "&7Жезл холоду.",
+        "&eПКМ: &7крижаний згусток вітру вибухає",
+        "&7при влучанні й сповільнює ворогів поруч.",
+        "&7На босів сповільнення не діє.",
+        "&7Стіни блокують вибух."
+      ],
+      "model": "oneblock:frost_wand",
+      "rarity": "RARE",
+      "tags": [
+        "magic"
+      ],
+      "stats": {
+        "damage": 18,
+        "mana-cost": 18,
+        "cooldown-seconds": 2.0,
+        "projectile-speed": 2.6
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:frost",
+          "trigger": "USE",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "magic"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:rift_staff": {
+      "material": "BLAZE_ROD",
+      "kind": "MAGIC",
+      "name": "&9Посох розлому",
+      "lore": [
+        "&7Найсильніший магічний посох.",
+        "&eПКМ: &7згусток вітру; при влучанні — блискавка,",
+        "&7що перескакує на сусідніх ворогів.",
+        "&7Стіни та захист цілі зменшують шкоду."
+      ],
+      "model": "oneblock:rift_staff",
+      "rarity": "EPIC",
+      "tags": [
+        "magic"
+      ],
+      "stats": {
+        "damage": 32,
+        "mana-cost": 10,
+        "cooldown-seconds": 1.2,
+        "projectile-speed": 3.0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:lightning",
+          "trigger": "USE",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ],
+          "cooldown-group": "magic"
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:warden_helmet": {
+      "material": "PLAYER_HEAD",
+      "kind": "ARMOR",
+      "name": "&9Шолом Вартового",
+      "lore": [
+        "&7Комплект Вартового — ближній бій і захист.",
+        "&7Повний комплект: захисна стійка",
+        "&7триває довше.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0.01,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0.005,
+        "ranged": 0,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "HEAD",
+      "set": "warden",
+      "market-transfer": true,
+      "migration-from": [
+        "DIAMOND_HELMET"
+      ],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "head-texture": "https://textures.minecraft.net/texture/1c6cd7202c34e78f3073090349f7d973b288af5e5b7334dd249010b3f27078f9"
+    },
+    "oneblock:warden_chestplate": {
+      "material": "LEATHER_CHESTPLATE",
+      "kind": "ARMOR",
+      "name": "&9Кіраса Вартового",
+      "lore": [
+        "&7Комплект Вартового — ближній бій і захист.",
+        "&7Повний комплект: захисна стійка",
+        "&7триває довше.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0.01,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0.005,
+        "ranged": 0,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "CHEST",
+      "set": "warden",
+      "market-transfer": true,
+      "migration-from": [
+        "DIAMOND_CHESTPLATE"
+      ],
+      "armor-compensation": 9,
+      "armor-toughness-compensation": 4,
+      "color": "#38546B"
+    },
+    "oneblock:warden_leggings": {
+      "material": "LEATHER_LEGGINGS",
+      "kind": "ARMOR",
+      "name": "&9Поножі Вартового",
+      "lore": [
+        "&7Комплект Вартового — ближній бій і захист.",
+        "&7Повний комплект: захисна стійка",
+        "&7триває довше.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0.01,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0.005,
+        "ranged": 0,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "LEGS",
+      "set": "warden",
+      "market-transfer": true,
+      "migration-from": [
+        "DIAMOND_LEGGINGS"
+      ],
+      "armor-compensation": 7,
+      "armor-toughness-compensation": 4,
+      "color": "#38546B"
+    },
+    "oneblock:warden_boots": {
+      "material": "LEATHER_BOOTS",
+      "kind": "ARMOR",
+      "name": "&9Чоботи Вартового",
+      "lore": [
+        "&7Комплект Вартового — ближній бій і захист.",
+        "&7Повний комплект: захисна стійка",
+        "&7триває довше.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0.01,
+        "mana": 0,
+        "magic": 0,
+        "melee": 0.005,
+        "ranged": 0,
+        "regen": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "FEET",
+      "set": "warden",
+      "market-transfer": true,
+      "migration-from": [
+        "DIAMOND_BOOTS"
+      ],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "color": "#38546B"
+    },
+    "oneblock:weaver_helmet": {
+      "material": "PLAYER_HEAD",
+      "kind": "ARMOR",
+      "name": "&9Шолом Ткача чарів",
+      "lore": [
+        "&7Комплект Ткача чарів — для магів.",
+        "&7Більше мани, швидше відновлення",
+        "&7і сильніша магія.",
+        "&7Повний комплект: кожне 4-те закляття",
+        "&7повертає частину мани.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 5,
+        "magic": 0.01,
+        "melee": 0,
+        "ranged": 0,
+        "regen": 0.025
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "HEAD",
+      "set": "weaver",
+      "market-transfer": true,
+      "migration-from": [
+        "CHAINMAIL_HELMET"
+      ],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "head-texture": "https://textures.minecraft.net/texture/1b09a3752510e914b0bdc9096b392bb359f7a8e8a9566a02e7f66faff8d6f89e"
+    },
+    "oneblock:weaver_chestplate": {
+      "material": "LEATHER_CHESTPLATE",
+      "kind": "ARMOR",
+      "name": "&9Кіраса Ткача чарів",
+      "lore": [
+        "&7Комплект Ткача чарів — для магів.",
+        "&7Більше мани, швидше відновлення",
+        "&7і сильніша магія.",
+        "&7Повний комплект: кожне 4-те закляття",
+        "&7повертає частину мани.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 5,
+        "magic": 0.01,
+        "melee": 0,
+        "ranged": 0,
+        "regen": 0.025
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "CHEST",
+      "set": "weaver",
+      "market-transfer": true,
+      "migration-from": [
+        "CHAINMAIL_CHESTPLATE"
+      ],
+      "armor-compensation": 9,
+      "armor-toughness-compensation": 4,
+      "color": "#7549A8"
+    },
+    "oneblock:weaver_leggings": {
+      "material": "LEATHER_LEGGINGS",
+      "kind": "ARMOR",
+      "name": "&9Поножі Ткача чарів",
+      "lore": [
+        "&7Комплект Ткача чарів — для магів.",
+        "&7Більше мани, швидше відновлення",
+        "&7і сильніша магія.",
+        "&7Повний комплект: кожне 4-те закляття",
+        "&7повертає частину мани.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 5,
+        "magic": 0.01,
+        "melee": 0,
+        "ranged": 0,
+        "regen": 0.025
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "LEGS",
+      "set": "weaver",
+      "market-transfer": true,
+      "migration-from": [
+        "CHAINMAIL_LEGGINGS"
+      ],
+      "armor-compensation": 7,
+      "armor-toughness-compensation": 4,
+      "color": "#7549A8"
+    },
+    "oneblock:weaver_boots": {
+      "material": "LEATHER_BOOTS",
+      "kind": "ARMOR",
+      "name": "&9Чоботи Ткача чарів",
+      "lore": [
+        "&7Комплект Ткача чарів — для магів.",
+        "&7Більше мани, швидше відновлення",
+        "&7і сильніша магія.",
+        "&7Повний комплект: кожне 4-те закляття",
+        "&7повертає частину мани.",
+        "&aНе ламається."
+      ],
+      "model": null,
+      "rarity": "RARE",
+      "tags": [
+        "armor"
+      ],
+      "stats": {
+        "defense": 0,
+        "mana": 5,
+        "magic": 0.01,
+        "melee": 0,
+        "ranged": 0,
+        "regen": 0.025
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:armor",
+          "trigger": "EQUIP",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "slot": "FEET",
+      "set": "weaver",
+      "market-transfer": true,
+      "migration-from": [
+        "CHAINMAIL_BOOTS"
+      ],
+      "armor-compensation": 4,
+      "armor-toughness-compensation": 4,
+      "color": "#7549A8"
+    },
+    "oneblock:pickaxe_1": {
+      "material": "IRON_PICKAXE",
+      "kind": "TOOL",
+      "name": "&aКайло I",
+      "lore": [
+        "&7Покращене кайло OneBlock.",
+        "&7Зношується на 15% повільніше.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:pickaxe_1",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "tool",
+        "pickaxe"
+      ],
+      "stats": {
+        "durability": 0.15,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:pickaxe_2": {
+      "material": "DIAMOND_PICKAXE",
+      "kind": "TOOL",
+      "name": "&9Кайло II",
+      "lore": [
+        "&7Покращене кайло OneBlock.",
+        "&7Зношується на 25% повільніше.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:pickaxe_2",
+      "rarity": "RARE",
+      "tags": [
+        "tool",
+        "pickaxe"
+      ],
+      "stats": {
+        "durability": 0.25,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:pickaxe_3": {
+      "material": "DIAMOND_PICKAXE",
+      "kind": "TOOL",
+      "name": "&dКайло III",
+      "lore": [
+        "&7Покращене кайло OneBlock.",
+        "&7Зношується на 35% повільніше.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:pickaxe_3",
+      "rarity": "EPIC",
+      "tags": [
+        "tool",
+        "pickaxe"
+      ],
+      "stats": {
+        "durability": 0.35,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:axe_1": {
+      "material": "IRON_AXE",
+      "kind": "TOOL",
+      "name": "&aСокира I",
+      "lore": [
+        "&7Покращена сокира OneBlock.",
+        "&7Шанс 5% на додатковий паросток",
+        "&7з дерева, яке ти виростив.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:axe_1",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "tool",
+        "axe"
+      ],
+      "stats": {
+        "durability": 0,
+        "sapling": 0.05
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:axe_2": {
+      "material": "DIAMOND_AXE",
+      "kind": "TOOL",
+      "name": "&9Сокира II",
+      "lore": [
+        "&7Покращена сокира OneBlock.",
+        "&7Шанс 10% на додатковий паросток",
+        "&7з дерева, яке ти виростив.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:axe_2",
+      "rarity": "RARE",
+      "tags": [
+        "tool",
+        "axe"
+      ],
+      "stats": {
+        "durability": 0,
+        "sapling": 0.1
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:axe_3": {
+      "material": "DIAMOND_AXE",
+      "kind": "TOOL",
+      "name": "&dСокира III",
+      "lore": [
+        "&7Покращена сокира OneBlock.",
+        "&7Шанс 15% на додатковий паросток",
+        "&7з дерева, яке ти виростив.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:axe_3",
+      "rarity": "EPIC",
+      "tags": [
+        "tool",
+        "axe"
+      ],
+      "stats": {
+        "durability": 0,
+        "sapling": 0.15
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:hoe_1": {
+      "material": "IRON_HOE",
+      "kind": "TOOL",
+      "name": "&aМотика I",
+      "lore": [
+        "&7Покращена мотика OneBlock.",
+        "&7Сама пересаджує пшеницю після збору",
+        "&7(бере насіння з інвентаря).",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:hoe_1",
+      "rarity": "UNCOMMON",
+      "tags": [
+        "tool",
+        "hoe"
+      ],
+      "stats": {
+        "durability": 0,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:hoe_2": {
+      "material": "DIAMOND_HOE",
+      "kind": "TOOL",
+      "name": "&9Мотика II",
+      "lore": [
+        "&7Покращена мотика OneBlock.",
+        "&7Сама пересаджує пшеницю, моркву",
+        "&7й картоплю (бере насіння з інвентаря).",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:hoe_2",
+      "rarity": "RARE",
+      "tags": [
+        "tool",
+        "hoe"
+      ],
+      "stats": {
+        "durability": 0,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:hoe_3": {
+      "material": "DIAMOND_HOE",
+      "kind": "TOOL",
+      "name": "&dМотика III",
+      "lore": [
+        "&7Покращена мотика OneBlock.",
+        "&7Сама пересаджує пшеницю, моркву",
+        "&7й картоплю (бере насіння з інвентаря).",
+        "&7Зношується на 25% повільніше.",
+        "&8Бонус діє за умов рецепта Майстерні."
+      ],
+      "model": "oneblock:hoe_3",
+      "rarity": "EPIC",
+      "tags": [
+        "tool",
+        "hoe"
+      ],
+      "stats": {
+        "durability": 0.25,
+        "sapling": 0
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:tool",
+          "trigger": "GATHER",
+          "hand": "MAIN_HAND",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:enchanted_fragment": {
+      "material": "PRISMARINE_CRYSTALS",
+      "kind": "COMPONENT",
+      "name": "&9Зачарований фрагмент",
+      "lore": [
+        "&7Матеріал для броні й найсильнішої зброї.",
+        "&7Створюється з 4 бойових фрагментів."
+      ],
+      "model": "oneblock:battle_fragment",
+      "rarity": "RARE",
+      "tags": [
+        "component"
+      ],
+      "stats": {},
+      "abilities": [],
+      "stack-size": 64,
+      "vanilla-repair": true,
+      "market-transfer": true
+    },
+    "oneblock:ember_shortbow": {
+      "material": "BOW",
+      "kind": "RANGED",
+      "name": "&6Жаровий шортбоу",
+      "lore": [
+        "&7Стріляє одразу, без натягування: ПКМ.",
+        "&7Витрачає звичайні стріли.",
+        "&7Влучання залишає мітку, яка спалахує",
+        "&7й ранить ворогів поруч."
+      ],
+      "model": "oneblock:ranger_bow",
+      "rarity": "EPIC",
+      "tags": [
+        "ranged"
+      ],
+      "stats": {
+        "multiplier": 1.1
+      },
+      "abilities": [
+        {
+          "ability": "oneblock:ranged",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:ember",
+          "trigger": "SHOOT",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        },
+        {
+          "ability": "oneblock:shortbow",
+          "trigger": "USE",
+          "hand": "EITHER",
+          "worlds": [
+            "island",
+            "dungeon",
+            "other"
+          ]
+        }
+      ],
+      "stack-size": 1,
+      "vanilla-repair": true,
+      "market-transfer": true
+    }
+  },
+  "sets": {
+    "warden": {
+      "defense": 0,
+      "mana": 0,
+      "magic": 0,
+      "property": "guardian_resolve",
+      "property-strength": 2
+    },
+    "ranger": {
+      "defense": 0,
+      "mana": 0,
+      "magic": 0,
+      "property": "ranger_focus",
+      "property-strength": 0.04
+    },
+    "weaver": {
+      "defense": 0,
+      "mana": 0,
+      "magic": 0,
+      "property": "weaver_flow",
+      "property-strength": 0.2
+    }
+  }
+}

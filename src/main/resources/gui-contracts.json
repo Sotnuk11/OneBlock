@@ -1,0 +1,3380 @@
+{
+  "shop-catalog": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "categories-next": {
+        "source": 8,
+        "slot": 8,
+        "enabled": true
+      },
+      "search": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": false
+      },
+      "sell-all": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "close": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "quick-sell": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      }
+    },
+    "grids": {
+      "content": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "categories": [
+        0,
+        9,
+        18,
+        27,
+        36
+      ],
+      "separators": [
+        1,
+        10,
+        19,
+        28,
+        37
+      ]
+    }
+  },
+  "shop-variants": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "shop-product": {
+    "rows": 6,
+    "controls": {
+      "product": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "primary": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "sell-all": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "shop-amount-merchant-sell": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "custom-amount": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "available": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "shop-sell-confirm": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "shop-history": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "buyback-latest": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "shop-buyback": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "shop-confirm": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "shop-claims": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "collect-coins": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "filter": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "shop-claim": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "sell": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-catalog": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "categories-next": {
+        "source": 8,
+        "slot": 8,
+        "enabled": true
+      },
+      "search": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": false
+      },
+      "sell-all": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "close": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "quick-sell": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      }
+    },
+    "grids": {
+      "content": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "categories": [
+        0,
+        9,
+        18,
+        27,
+        36
+      ],
+      "separators": [
+        1,
+        10,
+        19,
+        28,
+        37
+      ]
+    }
+  },
+  "bazaar-variants": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "bazaar-product": {
+    "rows": 6,
+    "controls": {
+      "instant-buy": {
+        "source": 10,
+        "slot": 10,
+        "enabled": true
+      },
+      "product": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "instant-sell": {
+        "source": 16,
+        "slot": 16,
+        "enabled": true
+      },
+      "buy-order": {
+        "source": 28,
+        "slot": 28,
+        "enabled": true
+      },
+      "primary": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "sell-order": {
+        "source": 34,
+        "slot": 34,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "sell-all": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-amount-instant-buy": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "custom-amount": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "available": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-amount-instant-sell": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "custom-amount": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "available": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-amount-buy-order": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "custom-amount": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "cancel": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-amount-sell-order": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "custom-amount": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "cancel": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-price-buy": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "same-price": {
+        "source": 19,
+        "slot": 19,
+        "enabled": true
+      },
+      "competitive-price": {
+        "source": 21,
+        "slot": 21,
+        "enabled": true
+      },
+      "spread-price": {
+        "source": 23,
+        "slot": 23,
+        "enabled": true
+      },
+      "custom-price": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-price-sell": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "same-price": {
+        "source": 19,
+        "slot": 19,
+        "enabled": true
+      },
+      "competitive-price": {
+        "source": 21,
+        "slot": 21,
+        "enabled": true
+      },
+      "spread-price": {
+        "source": 23,
+        "slot": 23,
+        "enabled": true
+      },
+      "custom-price": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-order-buy": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "amount": {
+        "source": 19,
+        "slot": 19,
+        "enabled": true
+      },
+      "price": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-order-sell": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "amount": {
+        "source": 19,
+        "slot": 19,
+        "enabled": true
+      },
+      "price": {
+        "source": 25,
+        "slot": 25,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-confirm": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-book": {
+    "rows": 6,
+    "controls": {
+      "buy-summary": {
+        "source": 1,
+        "slot": 1,
+        "enabled": true
+      },
+      "product": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "sell-summary": {
+        "source": 7,
+        "slot": 7,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 40,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "buys": [
+        9,
+        10,
+        11,
+        12,
+        18,
+        19,
+        20,
+        21,
+        27,
+        28,
+        29,
+        30,
+        36,
+        37,
+        38,
+        39
+      ],
+      "sells": [
+        14,
+        15,
+        16,
+        17,
+        23,
+        24,
+        25,
+        26,
+        32,
+        33,
+        34,
+        35,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "bazaar-orders": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "bazaar-order": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "cancel": {
+        "source": 24,
+        "slot": 24,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      },
+      "claims-inline": {
+        "source": 20,
+        "slot": 20,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "bazaar-claims": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "collect-coins": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "filter": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "bazaar-claim": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "sell": {
+        "source": 31,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "balance": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "bazaar-quick-sell": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 47,
+        "enabled": true
+      },
+      "orders": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      },
+      "history": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "refresh": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "auction-main": {
+    "rows": 4,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 32,
+        "enabled": true
+      },
+      "browse": {
+        "source": 11,
+        "slot": 11,
+        "enabled": true
+      },
+      "bids": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "manage": {
+        "source": 15,
+        "slot": 15,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 31,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 35,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "auction-browse-all": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 4,
+        "slot": 4,
+        "enabled": true
+      },
+      "clear-filters": {
+        "source": 6,
+        "slot": 47,
+        "enabled": true
+      },
+      "search": {
+        "source": 7,
+        "slot": 48,
+        "enabled": true
+      },
+      "categories-next": {
+        "source": 8,
+        "slot": 45,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "sort": {
+        "source": 47,
+        "slot": 50,
+        "enabled": true
+      },
+      "mode": {
+        "source": 49,
+        "slot": 52,
+        "enabled": true
+      },
+      "rarity": {
+        "source": 51,
+        "slot": 51,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 44,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "categories": [
+        0,
+        9,
+        18,
+        27,
+        36,
+        8
+      ],
+      "separators": [
+        1,
+        10,
+        19,
+        28,
+        37
+      ]
+    }
+  },
+  "auction-browse-mine": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "create": {
+        "source": 48,
+        "slot": 53,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 48,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 51,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "auction-browse-bids": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "claims": {
+        "source": 50,
+        "slot": 48,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "auction-sort": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        12,
+        14,
+        16,
+        22
+      ]
+    }
+  },
+  "auction-rarity": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  "auction-duration": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        12,
+        14,
+        16,
+        22
+      ]
+    }
+  },
+  "auction-listing": {
+    "rows": 6,
+    "controls": {
+      "item": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "history": {
+        "source": 22,
+        "slot": 33,
+        "enabled": true
+      },
+      "primary": {
+        "source": 31,
+        "slot": 29,
+        "enabled": true
+      },
+      "custom-bid": {
+        "source": 33,
+        "slot": 31,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "auction-history": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "auction-select": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "duration": {
+        "source": 22,
+        "slot": 33,
+        "enabled": true
+      },
+      "mode": {
+        "source": 19,
+        "slot": 48,
+        "enabled": true
+      },
+      "price": {
+        "source": 25,
+        "slot": 31,
+        "enabled": true
+      },
+      "create": {
+        "source": 31,
+        "slot": 29,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "auction-draft": {
+    "rows": 6,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "duration": {
+        "source": 22,
+        "slot": 33,
+        "enabled": true
+      },
+      "mode": {
+        "source": 19,
+        "slot": 48,
+        "enabled": true
+      },
+      "price": {
+        "source": 25,
+        "slot": 31,
+        "enabled": true
+      },
+      "create": {
+        "source": 31,
+        "slot": 29,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "auction-confirm": {
+    "rows": 3,
+    "controls": {
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "confirm": {
+        "source": 31,
+        "slot": 11,
+        "enabled": true
+      },
+      "back": {
+        "source": 45,
+        "slot": 15,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 26,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "auction-claims": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "collect-coins": {
+        "source": 47,
+        "slot": 48,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 52,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    }
+  },
+  "auction-claim": {
+    "rows": 6,
+    "controls": {
+      "back": {
+        "source": 45,
+        "slot": 49,
+        "enabled": true
+      },
+      "previous": {
+        "source": 46,
+        "slot": 46,
+        "enabled": true
+      },
+      "next": {
+        "source": 52,
+        "slot": 52,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "quantities": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  "profile-members": {
+    "rows": 6,
+    "controls": {
+      "previous": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "back": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "next": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 52,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "profile-delete": {
+    "rows": 3,
+    "controls": {
+      "confirm": {
+        "source": 11,
+        "slot": 11,
+        "enabled": true
+      },
+      "summary": {
+        "source": 13,
+        "slot": 13,
+        "enabled": true
+      },
+      "back": {
+        "source": 15,
+        "slot": 15,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 26,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "admin-list": {
+    "rows": 6,
+    "controls": {
+      "previous": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "save": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "next": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 52,
+        "enabled": false
+      },
+      "dungeons": {
+        "source": 48,
+        "slot": 48,
+        "enabled": true
+      },
+      "players": {
+        "source": 50,
+        "slot": 50,
+        "enabled": true
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "admin-island": {
+    "rows": 6,
+    "controls": {
+      "teleport": {
+        "source": 10,
+        "slot": 10,
+        "enabled": true
+      },
+      "core": {
+        "source": 12,
+        "slot": 12,
+        "enabled": true
+      },
+      "info": {
+        "source": 14,
+        "slot": 14,
+        "enabled": true
+      },
+      "backup": {
+        "source": 16,
+        "slot": 16,
+        "enabled": true
+      },
+      "breaks": {
+        "source": 19,
+        "slot": 19,
+        "enabled": true
+      },
+      "coins": {
+        "source": 20,
+        "slot": 20,
+        "enabled": true
+      },
+      "mode": {
+        "source": 21,
+        "slot": 21,
+        "enabled": true
+      },
+      "edit": {
+        "source": 23,
+        "slot": 23,
+        "enabled": true
+      },
+      "world-size": {
+        "source": 24,
+        "slot": 24,
+        "enabled": true
+      },
+      "evacuate": {
+        "source": 28,
+        "slot": 28,
+        "enabled": true
+      },
+      "members": {
+        "source": 30,
+        "slot": 30,
+        "enabled": true
+      },
+      "reset-progress": {
+        "source": 32,
+        "slot": 32,
+        "enabled": true
+      },
+      "reset-world": {
+        "source": 34,
+        "slot": 34,
+        "enabled": true
+      },
+      "back": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 53,
+        "enabled": false
+      }
+    },
+    "grids": {}
+  },
+  "admin-members": {
+    "rows": 6,
+    "controls": {
+      "previous": {
+        "source": 45,
+        "slot": 45,
+        "enabled": true
+      },
+      "back": {
+        "source": 49,
+        "slot": 49,
+        "enabled": true
+      },
+      "next": {
+        "source": 53,
+        "slot": 53,
+        "enabled": true
+      },
+      "close": {
+        "source": 1000,
+        "slot": 52,
+        "enabled": false
+      }
+    },
+    "grids": {
+      "content": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    }
+  }
+}

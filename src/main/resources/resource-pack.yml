@@ -1,0 +1,9 @@
+version: 1
+# Хостингу немає: доставка вимкнена до встановлення реального URL і SHA-1.
+# Optional presentation pack. Vanilla leather armor and configured PLAYER_HEAD skins are the default.
+enabled: false
+required: false
+url: ''
+sha1: ''
+allow-http: false
+timeout-seconds: 60

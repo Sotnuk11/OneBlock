@@ -1,0 +1,322 @@
+
+{
+  "version": 1,
+  "values": {
+    "release_recipe_warden_blade": {
+      "source": "release.recipe.warden_blade",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_rift_cleaver": {
+      "source": "release.recipe.rift_cleaver",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_nether_edge": {
+      "source": "release.recipe.nether_edge",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_wind_bow": {
+      "source": "release.recipe.wind_bow",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ranger_bow": {
+      "source": "release.recipe.ranger_bow",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_apprentice_wand": {
+      "source": "release.recipe.apprentice_wand",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_frost_wand": {
+      "source": "release.recipe.frost_wand",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_rift_staff": {
+      "source": "release.recipe.rift_staff",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_warden_helmet": {
+      "source": "release.recipe.warden_helmet",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_warden_chestplate": {
+      "source": "release.recipe.warden_chestplate",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_warden_leggings": {
+      "source": "release.recipe.warden_leggings",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_warden_boots": {
+      "source": "release.recipe.warden_boots",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_weaver_helmet": {
+      "source": "release.recipe.weaver_helmet",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_weaver_chestplate": {
+      "source": "release.recipe.weaver_chestplate",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_weaver_leggings": {
+      "source": "release.recipe.weaver_leggings",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_weaver_boots": {
+      "source": "release.recipe.weaver_boots",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_fragment_bones": {
+      "source": "release.recipe.fragment_bones",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_fragment_flesh": {
+      "source": "release.recipe.fragment_flesh",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_fragment_resources": {
+      "source": "release.recipe.fragment_resources",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_temper_core": {
+      "source": "release.recipe.temper_core",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_nether_edge_reforge": {
+      "source": "release.recipe.nether_edge_reforge",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ranger_helmet": {
+      "source": "release.recipe.ranger_helmet",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ranger_chestplate": {
+      "source": "release.recipe.ranger_chestplate",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ranger_leggings": {
+      "source": "release.recipe.ranger_leggings",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ranger_boots": {
+      "source": "release.recipe.ranger_boots",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_ember_shortbow": {
+      "source": "release.recipe.ember_shortbow",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_enchanted_fragment": {
+      "source": "release.recipe.enchanted_fragment",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_state_warden_blade": {
+      "source": "release.recipe_state.warden_blade",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_rift_cleaver": {
+      "source": "release.recipe_state.rift_cleaver",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_nether_edge": {
+      "source": "release.recipe_state.nether_edge",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_wind_bow": {
+      "source": "release.recipe_state.wind_bow",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ranger_bow": {
+      "source": "release.recipe_state.ranger_bow",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ember_shortbow": {
+      "source": "release.recipe_state.ember_shortbow",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_apprentice_wand": {
+      "source": "release.recipe_state.apprentice_wand",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_frost_wand": {
+      "source": "release.recipe_state.frost_wand",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_rift_staff": {
+      "source": "release.recipe_state.rift_staff",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_nether_edge_reforge": {
+      "source": "release.recipe_state.nether_edge_reforge",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_warden_helmet": {
+      "source": "release.recipe_state.warden_helmet",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_warden_chestplate": {
+      "source": "release.recipe_state.warden_chestplate",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_warden_leggings": {
+      "source": "release.recipe_state.warden_leggings",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_warden_boots": {
+      "source": "release.recipe_state.warden_boots",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_weaver_helmet": {
+      "source": "release.recipe_state.weaver_helmet",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_weaver_chestplate": {
+      "source": "release.recipe_state.weaver_chestplate",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_weaver_leggings": {
+      "source": "release.recipe_state.weaver_leggings",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_weaver_boots": {
+      "source": "release.recipe_state.weaver_boots",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ranger_helmet": {
+      "source": "release.recipe_state.ranger_helmet",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ranger_chestplate": {
+      "source": "release.recipe_state.ranger_chestplate",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ranger_leggings": {
+      "source": "release.recipe_state.ranger_leggings",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_ranger_boots": {
+      "source": "release.recipe_state.ranger_boots",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_fragment_bones": {
+      "source": "release.recipe_state.fragment_bones",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_fragment_flesh": {
+      "source": "release.recipe_state.fragment_flesh",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_fragment_resources": {
+      "source": "release.recipe_state.fragment_resources",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_enchanted_fragment": {
+      "source": "release.recipe_state.enchanted_fragment",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_state_temper_core": {
+      "source": "release.recipe_state.temper_core",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_set_warden": {
+      "source": "release.set.warden",
+      "format": "text",
+      "fallback": "0"
+    },
+    "release_set_ranger": {
+      "source": "release.set.ranger",
+      "format": "text",
+      "fallback": "0"
+    },
+    "release_set_weaver": {
+      "source": "release.set.weaver",
+      "format": "text",
+      "fallback": "0"
+    },
+    "release_recipe_island_gold": {
+      "source": "release.recipe.island_gold",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_state_island_gold": {
+      "source": "release.recipe_state.island_gold",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_island_diamonds": {
+      "source": "release.recipe.island_diamonds",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_state_island_diamonds": {
+      "source": "release.recipe_state.island_diamonds",
+      "format": "text",
+      "fallback": "other"
+    },
+    "release_recipe_island_debris": {
+      "source": "release.recipe.island_debris",
+      "format": "text",
+      "fallback": "—"
+    },
+    "release_recipe_state_island_debris": {
+      "source": "release.recipe_state.island_debris",
+      "format": "text",
+      "fallback": "other"
+    }
+  },
+  "displays": {}
+}

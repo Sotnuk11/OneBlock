@@ -1,0 +1,693 @@
+# Данж створює тільки власні тимчасові світи. enabled та allow-instance-worlds — явний дозвіл на запуск.
+# Баланс, нагороди й координати entry збережено. NPC не активує вимкнений данж.
+# NPC is never spawned by startup or the hub generator. Enable it to bind this configured FancyNpcs role name,
+# then stand at the intended position/facing in the configured hub and run /obadmin market npc dungeon.
+# Move an existing NPC explicitly with FancyNpcs /npc move_here <name>; OneBlock refuses to duplicate or move it.
+# npc.type: VILLAGER / WANDERING_TRADER / PLAYER; skin — used only for PLAYER and resolved on explicit creation.
+# Legacy npc.world/x/y/z/yaw/pitch values are ignored; FancyNpcs stores the manually chosen position.
+# endless — новий маршрут. max-seconds/puzzle/rewards.secret збережені для старих журналів; secret bundle є нагородою звичайної хвилі.
+# Нескінченні сесії не мають max-seconds. order циклічний; повторіть ID для повторення кімнати.
+{
+  "version": 1,
+  "enabled": false,
+  "allow-instance-worlds": false,
+  "name": "Нескінченні арени",
+  "description": "1–4 гравці · нескінченні хвилі · бос кожні 5 хвиль",
+  "max-sessions": 8,
+  "attempts": 3,
+  "reconnect-seconds": 120,
+  "max-seconds": 1800,
+  "blocks-per-batch": 256,
+  "entry": {
+    "world": "",
+    "x": 0.5,
+    "y": 101.0,
+    "z": 0.5,
+    "radius": 5
+  },
+  "mobs": {
+    "count": 6,
+    "health": 40,
+    "per-extra": 2
+  },
+  "boss": {
+    "health": 340,
+    "cleave-damage": 12,
+    "area-damage": 10,
+    "warning-ticks": 35,
+    "attack-ticks": 100,
+    "cleave-length": 5.5,
+    "cleave-width": 1.8,
+    "area-radius": 3.0
+  },
+  "scaling": {
+    "health-per-extra": 0.65,
+    "damage-per-extra": 0.12
+  },
+  "puzzle": {
+    "sequence": [
+      1,
+      3,
+      2
+    ]
+  },
+  "death-rewards": [
+    {
+      "deaths": 0,
+      "guaranteed": 1,
+      "chance": 1
+    },
+    {
+      "deaths": 1,
+      "guaranteed": 0.75,
+      "chance": 0.65
+    },
+    {
+      "deaths": 2,
+      "guaranteed": 0.5,
+      "chance": 0.35
+    },
+    {
+      "deaths": 3,
+      "guaranteed": 0.25,
+      "chance": 0.1
+    }
+  ],
+  "rewards": {
+    "boss": {
+      "guaranteed": [
+        {
+          "item": "battle_fragment",
+          "amount": 4
+        },
+        {
+          "item": "tempered_core",
+          "amount": 1
+        }
+      ],
+      "trophies": [
+        {
+          "item": "rift_cleaver",
+          "amount": 1,
+          "chance": 0.1
+        }
+      ]
+    },
+    "secret": {
+      "guaranteed": [
+        {
+          "item": "battle_fragment",
+          "amount": 2
+        }
+      ],
+      "trophies": []
+    }
+  },
+  "presentation": {
+    "palette": {
+      "entry-floor": "andesite",
+      "puzzle-floor": "stone_bricks",
+      "boss-floor": "polished_deepslate",
+      "wall": "deepslate_bricks",
+      "cracked": "cracked_deepslate_bricks",
+      "roof": "deepslate_tiles",
+      "wood": "spruce_planks",
+      "log": "spruce_log",
+      "trim": "chiseled_deepslate",
+      "light": "glowstone"
+    },
+    "particles": true,
+    "sounds": true,
+    "pulse-ticks": 8,
+    "warning-color": "#F4A340",
+    "impact-color": "#E45A50",
+    "warning-sound": "minecraft:block.note_block.hat",
+    "impact-sound": "minecraft:entity.iron_golem.attack"
+  },
+  "sidebar": [
+    "&6{name}",
+    "&7{phase}",
+    "&fХвиля: &e{wave}",
+    "&fРекорд: &a{completed}",
+    "&fСпроби: &e{attempts}",
+    "&fСмерті: &c{deaths}",
+    "&7Нагороди до: {reward-limit}"
+  ],
+  "messages": {
+    "record-name": "&6#{rank} &f{names}",
+    "record-wave": "&7Хвиля: &a{wave}",
+    "record-time": "&7Час: &b{time}",
+    "record-new": "&6&lНовий рекорд: хвиля {wave}!",
+    "wave-warning": "&6Хвиля {wave}: &eвідійди від помаранчевих точок",
+    "intermission": "&aХвилю {completed} завершено. &f/dungeon continue &7— наступна кімната; &f/dungeon finish &7— завершити похід. Нагороди лише до хвилі {limit} включно.",
+    "phase-wave_warning": "Підготовка хвилі",
+    "phase-wave": "Бій",
+    "phase-intermission": "Перерва після боса",
+    "phase-transition": "Перехід",
+    "records-title": "&6Рекорди • група {size}",
+    "record-row": "&e#{rank} &f{names} &7— хвиля &a{wave}&7, час &b{minutes} хв",
+    "phase-preparing": "Підготовка",
+    "phase-entry": "Вантажна галерея",
+    "phase-puzzle": "Майстерня колій",
+    "phase-boss": "Зала вартового",
+    "phase-won": "Перемога",
+    "phase-aborted": "Завершено",
+    "phase-closed": "Повернення",
+    "disabled": "&cШахта ще не підготовлена адміністратором.",
+    "usage": "&e/dungeon menu|guide|info|ready|start|reconnect|leave|continue|finish|records [1–4]",
+    "party": "&aГрупа: {players}. Готові: {ready}.",
+    "invite": "&e{leader} кличе на арену &a/dungeon accept {leader}",
+    "invited": "",
+    "busy": "&cЗаверши поточну операцію.",
+    "requirements": "&cПотрібен активний профіль, живий гравець, вільний курсор і готовність усієї групи біля входу в хабі.",
+    "ready": "",
+    "loading": "&eГотуємо арену…",
+    "entry": "&6Арена готова.",
+    "puzzle": "&6Майстерня колій &7— прочитай порядок на табличці біля входу. Зістав номери й предмети біля важелів.",
+    "lever": "&eПослідовність: {step}/{total}.",
+    "boss": "&cКам’яний вартовий прокидається. Стеж за попередженнями!",
+    "cleave": "&6УДАР УПЕРЕД &f— вийди вбік із позначеного прямокутника!",
+    "area": "&6ОБВАЛ &f— вийди за позначене коло!",
+    "secret": "&bСхованку знайдено. Бонус буде видано після перемоги.",
+    "death": "&cСмертей групи: {deaths}. Чекай завершення сутички.",
+    "wipe": "&eНова спроба. Лишилось: {attempts}.",
+    "away": "&eВихід зараховано як смерть. /dungeon reconnect протягом {seconds} с.",
+    "reconnected": "&aТи знову в сесії",
+    "expired": "&cЧас повернення минув.",
+    "won": "&aПохід завершено. Нагороди — в меню.",
+    "aborted": "&eПрохід завершено: {reason}.",
+    "unavailable": "&cДія зараз недоступна.",
+    "blocked": "&cПід час проходження ця дія недоступна. Для виходу: /hub або /home; повернення: /dungeon reconnect.",
+    "status": "&e{name}: {phase}; смертей {deaths}; спроб {attempts}; світ {world}.",
+    "guide": "&6Нескінченні арени &7для 1–4 гравців. Хвилі 1–4, бос 5; далі 6–9, бос 10. Після боса /dungeon continue або /dungeon finish. Нагороди до reward-wave-limit; після поразки зароблене збережено. /dungeon records 1|2|3|4.",
+    "yes": "так",
+    "no": "ні",
+    "denied": "&cНедостатньо прав.",
+    "admin-usage": "&e/ob admin dungeon [list|info <id>|stop <id>|stop-all|set <field> <value>|entry|players|player <нік>|sendhub <нік>|heal <нік>]",
+    "admin-saved": "&aНалаштування збережено; нові сесії отримають новий баланс.",
+    "admin-stopped": "&aСесію зупинено; повернення та очищення виконуються без видалення чужих світів.",
+    "admin-player": "&e{player}: профіль {account}; данж {session}; стан {phase}; inventory guard {guard}.",
+    "admin-confirm": "&eПідтвердження: {command} CONFIRM (30 с).",
+    "clue": "&8Потріскана опора…\n&7Між камінням кнопка.\n&7Бонус — після боса.",
+    "puzzle-clue": "&eПорядок важелів:\n&f{order}\n&7Помилився — почни знову.",
+    "lever-1": "&f1 · Рейки",
+    "lever-2": "&e2 · Смолоскип",
+    "lever-3": "&73 · Ковадло",
+    "guardian-name": "&7Кам’яний вартовий",
+    "return-unavailable": "&cТочка повернення з данжу недоступна. Адміністратор має відновити налаштований хаб.",
+    "admin-dungeons": "&6Данжі та світи",
+    "admin-players": "&eГравці OneBlock",
+    "admin-stop-hint": "&eОбрати зупинку цього світу (з підтвердженням).",
+    "admin-long-value": "&eДовгий текст: /ob admin dungeon set {field} <текст> або dungeon.yml; табличка не обрізає його мовчки.",
+    "admin-edit-hint": "&eНове значення — перший рядок.",
+    "admin-new-sessions": "&7Зміни лише для нових сесій.",
+    "available": "&aВхід відкрито",
+    "need-party": "&eНатисни «Готовий» або прийми запрошення.",
+    "need-leader": "&cПочати може лише лідер групи.",
+    "need-ready": "&cНе всі готові біля входу.",
+    "need-profile": "&cПотрібен активний профіль.",
+    "entry-missing": "&cВхід недоступний: адміністратор має налаштувати й завантажити світ хабу.",
+    "entry-near": "&cУсі мають бути біля входу: {world} {x}/{y}/{z}, радіус {radius}",
+    "entry-unsafe": "&cМісце входу небезпечне. Адміністратор має перевірити підлогу й простір над входом.",
+    "active-session": "&eУ тебе є сесія або незавершене повернення. Скористайся «Повернутися до сесії» чи /dungeon leave.",
+    "need-mode": "&cДля входу потрібен режим виживання або пригоди.",
+    "lobby-summary": "&7Лідер: &f{leader} &8· &7Готові: &f{ready}/{players}",
+    "entry-location": "&7Вхід: &f{world} {x}/{y}/{z}"
+  },
+  "estimated-minutes": "без ліміту хвиль",
+  "npc": {
+    "enabled": false,
+    "name": "oneblock_dungeon_guide",
+    "display-name": "<gold>Провідник данжів",
+    "type": "VILLAGER",
+    "skin": "",
+    "world": "",
+    "x": 2.5,
+    "y": 101.0,
+    "z": 0.5,
+    "yaw": 90.0,
+    "pitch": 0.0,
+    "interaction-distance": 6.0
+  },
+  "endless": {
+    "rules-version": "endless.v1",
+    "boss-every": 5,
+    "reward-wave-limit": 15,
+    "warning-ticks": 60,
+    "between-wave-ticks": 30,
+    "spawn-distance": 3.0,
+    "count": 4,
+    "growth": {
+      "count": 0.35,
+      "health": 0.12,
+      "damage": 0.06,
+      "speed": 0.002
+    },
+    "party": {
+      "count": 2,
+      "health": 0.5,
+      "damage": 0.1
+    },
+    "limits": {
+      "entities": 24,
+      "projectiles": 64,
+      "health": 1024,
+      "damage": 40,
+      "speed": 0.4
+    },
+    "order": [
+      "hall",
+      "crypt",
+      "mine",
+      "forge"
+    ],
+    "arenas": [
+      {
+        "id": "hall",
+        "size": 28,
+        "height": 9,
+        "material": "STONE_BRICKS",
+        "theme": "hall",
+        "entry": [
+          14.5,
+          65,
+          14.5
+        ],
+        "spawns": [
+          [
+            4.5,
+            65,
+            4.5
+          ],
+          [
+            23.5,
+            65,
+            4.5
+          ],
+          [
+            4.5,
+            65,
+            23.5
+          ],
+          [
+            23.5,
+            65,
+            23.5
+          ],
+          [
+            4.5,
+            65,
+            14.5
+          ],
+          [
+            23.5,
+            65,
+            14.5
+          ],
+          [
+            14.5,
+            65,
+            4.5
+          ],
+          [
+            14.5,
+            65,
+            23.5
+          ]
+        ]
+      },
+      {
+        "id": "crypt",
+        "size": 24,
+        "height": 7,
+        "material": "DEEPSLATE_BRICKS",
+        "theme": "crypt",
+        "entry": [
+          12.5,
+          65,
+          12.5
+        ],
+        "spawns": [
+          [
+            4.5,
+            65,
+            4.5
+          ],
+          [
+            19.5,
+            65,
+            4.5
+          ],
+          [
+            4.5,
+            65,
+            19.5
+          ],
+          [
+            19.5,
+            65,
+            19.5
+          ],
+          [
+            4.5,
+            65,
+            12.5
+          ],
+          [
+            19.5,
+            65,
+            12.5
+          ],
+          [
+            12.5,
+            65,
+            4.5
+          ],
+          [
+            12.5,
+            65,
+            19.5
+          ]
+        ]
+      },
+      {
+        "id": "mine",
+        "size": 32,
+        "height": 10,
+        "material": "STONE",
+        "theme": "mine",
+        "entry": [
+          16.5,
+          65,
+          16.5
+        ],
+        "spawns": [
+          [
+            4.5,
+            65,
+            4.5
+          ],
+          [
+            27.5,
+            65,
+            4.5
+          ],
+          [
+            4.5,
+            65,
+            27.5
+          ],
+          [
+            27.5,
+            65,
+            27.5
+          ],
+          [
+            4.5,
+            65,
+            16.5
+          ],
+          [
+            27.5,
+            65,
+            16.5
+          ],
+          [
+            16.5,
+            65,
+            4.5
+          ],
+          [
+            16.5,
+            65,
+            27.5
+          ]
+        ]
+      },
+      {
+        "id": "forge",
+        "size": 28,
+        "height": 9,
+        "material": "NETHER_BRICKS",
+        "theme": "forge",
+        "entry": [
+          14.5,
+          65,
+          14.5
+        ],
+        "spawns": [
+          [
+            4.5,
+            65,
+            4.5
+          ],
+          [
+            23.5,
+            65,
+            4.5
+          ],
+          [
+            4.5,
+            65,
+            23.5
+          ],
+          [
+            23.5,
+            65,
+            23.5
+          ],
+          [
+            4.5,
+            65,
+            14.5
+          ],
+          [
+            23.5,
+            65,
+            14.5
+          ],
+          [
+            14.5,
+            65,
+            4.5
+          ],
+          [
+            14.5,
+            65,
+            23.5
+          ]
+        ]
+      }
+    ],
+    "enemies": [
+      {
+        "id": "walker",
+        "type": "ZOMBIE",
+        "weight": 5,
+        "health": 30,
+        "damage": 4,
+        "speed": 0.23,
+        "name": "Вартовий арени",
+        "ability": "native"
+      },
+      {
+        "id": "archer",
+        "type": "SKELETON",
+        "weight": 2,
+        "health": 24,
+        "damage": 4,
+        "speed": 0.22,
+        "name": "Стрілець",
+        "ability": "native"
+      },
+      {
+        "id": "husk",
+        "type": "HUSK",
+        "weight": 3,
+        "health": 38,
+        "damage": 5,
+        "speed": 0.22,
+        "name": "Піщаний боєць",
+        "ability": "native"
+      },
+      {
+        "id": "guardian",
+        "type": "IRON_GOLEM",
+        "weight": 1,
+        "health": 240,
+        "damage": 10,
+        "speed": 0.2,
+        "name": "Кам’яний вартовий",
+        "ability": "guardian"
+      }
+    ],
+    "pools": [
+      {
+        "id": "mixed",
+        "boss": false,
+        "weight": 3,
+        "enemies": [
+          "walker",
+          "archer"
+        ]
+      },
+      {
+        "id": "melee",
+        "boss": false,
+        "weight": 2,
+        "enemies": [
+          "walker",
+          "husk"
+        ]
+      },
+      {
+        "id": "boss",
+        "boss": true,
+        "weight": 1,
+        "enemies": [
+          "guardian"
+        ]
+      }
+    ]
+  },
+  "room-rewards": {
+    "pity": {
+      "after": 0,
+      "price": 1000,
+      "boss-only": true
+    },
+    "offers": [
+      {
+        "id": "run_free",
+        "name": "Безкоштовна скриня",
+        "chest": true,
+        "final": true,
+        "min-bosses": 0,
+        "on": "any",
+        "chance": 1,
+        "price": 0,
+        "guaranteed": [
+          {
+            "item": "battle_fragment",
+            "amount": 1
+          }
+        ],
+        "per-boss": [
+          {
+            "item": "battle_fragment",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "run_paid",
+        "name": "Платна скриня",
+        "chest": true,
+        "final": true,
+        "min-bosses": 1,
+        "on": "any",
+        "chance": 1,
+        "price": 500,
+        "price-per-boss": 500,
+        "equipment-price-bonus": 5000,
+        "good-chance": 0.05,
+        "good-chance-per-wave": 0.02,
+        "good-chance-max": 0.35,
+        "rolls": 1,
+        "per-boss": [
+          {
+            "item": "battle_fragment",
+            "amount": 3
+          }
+        ],
+        "pool": [
+          {
+            "item": "battle_fragment",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "enchanted_fragment",
+            "weight": 100,
+            "amount": 1
+          },
+          {
+            "item": "warden_helmet",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "warden_chestplate",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "warden_leggings",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "warden_boots",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "ranger_helmet",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "ranger_chestplate",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "ranger_leggings",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "ranger_boots",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "weaver_helmet",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "weaver_chestplate",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "weaver_leggings",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "weaver_boots",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "nether_edge",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "rift_staff",
+            "weight": 1,
+            "amount": 1
+          },
+          {
+            "item": "ember_shortbow",
+            "weight": 1,
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+# Dedicated Auction House rules. /ob reload reads this file together with config.yml and locales.
+# Only these materials may be listed. [] disables new listings. Live lots and claims remain valid.
+auction:
+  allowed-items:
+    - DIAMOND_SWORD
+    - NETHERITE_SWORD
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+    - NETHERITE_HELMET
+    - NETHERITE_CHESTPLATE
+    - NETHERITE_LEGGINGS
+    - NETHERITE_BOOTS
+    - IRON_PICKAXE
+    - IRON_AXE
+    - IRON_HOE
+    - DIAMOND_HOE
+    - IRON_PICKAXE
+    - IRON_AXE
+    - IRON_HOE
+    - DIAMOND_HOE
+    - DIAMOND_PICKAXE
+    - NETHERITE_PICKAXE
+    - DIAMOND_AXE
+    - NETHERITE_AXE
+    - BOW
+    - CROSSBOW
+    - TRIDENT
+    - MACE
+    - ELYTRA
+    - ENCHANTED_BOOK
+    - TOTEM_OF_UNDYING
+    - PLAYER_HEAD
+    - IRON_SWORD
+    - BLAZE_ROD
+    - LEATHER_CHESTPLATE
+    - LEATHER_LEGGINGS
+    - LEATHER_BOOTS
+  enabled: true
+  max-listings-per-island: 14
+  min-price: 1
+  max-price: 25000000000
+  require-price-input: true # Seller must explicitly enter the whole-lot price before publishing.
+  duration-hours: [1, 6, 12, 24, 48]
+  # Grace period protects against a mistaken BIN publication. Seller may cancel if there are no bids.
+  purchase-delay-seconds: 20
+  bid-increment-bps: 1500 # Fallback if the tier table is empty.
+  bid-increment-tiers: {0: 1500, 100000: 1000, 1000000: 500, 10000000: 250}
+  bid-minimum-step: 1
+  bid-extension-seconds: 120 # Late bids extend the remaining time to this value.
+  listing-fee-bps: 100
+  listing-flat-fee: 0
+  sale-tax-bps: 100
+  max-bids-per-listing: 10000
+  max-item-bytes: 65536
+  # Plain configured Bazaar products belong on Bazaar; renamed/enchanted gear is preserved on AH.
+  exclude-plain-bazaar-products: true
+  blocked-materials: [BARRIER, COMMAND_BLOCK, STRUCTURE_BLOCK]
+  # Optional MATERIAL -> WEAPONS|ARMOR|ACCESSORIES|CONSUMABLES|BLOCKS|TOOLS|MISC.
+  categories: {BLAZE_ROD: WEAPONS, PLAYER_HEAD: ARMOR}
+  # Optional MATERIAL -> COMMON|UNCOMMON|RARE|EPIC|LEGENDARY|MYTHIC|DIVINE|SPECIAL|VERY_SPECIAL.
+  # Otherwise the item's vanilla rarity is used. Does not modify the item itself.
+  rarity-overrides: {}

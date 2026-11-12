@@ -1,0 +1,31 @@
+# Add any number of named values; use {value_name} in titles, item names and lore.
+# source is a built-in or registered statistics provider. Unknown sources use fallback.
+# formats: text, integer, decimal, compact. Menu displays do not change stored progress.
+version: 1
+values:
+  player_name: {source: player.name, format: text, fallback: '—'}
+  profile_name: {source: profile.name, format: text, fallback: 'Без профілю'}
+  profile_type: {source: profile.type, format: text, fallback: '—'}
+  coins: {source: profile.coins, format: integer, fallback: '0'}
+  blocks: {source: profile.blocks, format: integer, fallback: '0'}
+  members: {source: profile.members, format: integer, fallback: '0'}
+  location: {source: player.place, format: text, fallback: 'Подорож'}
+displays:
+  player:
+    material: PLAYER_HEAD
+    texture: '{player}'
+    name: '&a{player_name}'
+    lore:
+      - '&7Рівень ядра: &a{release_core_level}'
+      - '&7Ти зараз: &b{location}'
+      - '&7Профіль: &f{profile_name}'
+      - '&7Тип: &f{profile_type}'
+      - ''
+      - '&7Монети: &6{coins}'
+      - '&7Зламано блоків: &f{blocks}'
+      - '&7Учасників: &f{members}'
+      - '{release_title}'
+      - ''
+      - '{release_phase}'
+      - '&6Наступна ціль'
+      - '{release_next}'

@@ -1,0 +1,270 @@
+language:
+  default: uk
+
+# Central OneBlock hub on THIS backend (not the Velocity lobby).
+# Stand in the hub and use /ob admin sethub to save an exact position without a restart.
+# The hub world must already be loaded by the server/Worlds.
+hub:
+  rules:
+    enabled: true
+    adventure: true
+    pvp: false
+    collisions: false
+    mob-spawning: false
+    island-game-mode: SURVIVAL
+  world: world
+  use-world-spawn: true
+  x: 0.5
+  y: 100.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+islands:
+  platform-upgrade-step: 2
+  visitors:
+    default-mode: ALL # ALL, NONE or SELECTED. Owner and co-op members always have access.
+    coop-can-manage: false
+    max-selected: 100
+  # World border width/depth for every individual island world.
+  world-size: 100
+  # False enforces the same limits without the visible vanilla wall/red warning.
+  visible-border: false
+  # Unload an island world after it has not been requested for this many minutes.
+  idle-unload-minutes: 10
+  # Core position for NEW profiles: 0,60,0. Existing islands keep their coordinates.
+  y: 60
+  # Island platform radius: (size*2+1) x (size*2+1). Default 1 = 3x3 platform (one surrounding ring).
+  size: 1
+  # Starting items given once when the island is first created (MATERIAL or MATERIAL:amount)
+  starting-items:
+    - WOODEN_SWORD
+    - WOODEN_PICKAXE
+    - WOODEN_AXE
+    - WOODEN_SHOVEL
+    - BREAD:8
+    - OAK_SAPLING:4
+    - TORCH:16
+
+release:
+  enabled: true
+
+core:
+  # Recenter real item entities in the core cell and one neighboring block in all directions.
+  # Includes dropped/thrown items and items falling into the area; never grants extra items.
+  item-gathering:
+    enabled: true
+    radius: 1 # Cube of (2*radius+1)^3 block cells, default 3x3x3.
+    interval-ticks: 1 # One small region query per loaded core; no scans of entire worlds.
+    height: 1.1 # Item feet above the core's bottom Y; X/Z stay exactly at its center.
+  tool-damage-per-break: 1 # Paper applies Unbreaking, unbreakable items and creative rules.
+  starting-mode: wood
+  default-stability: stable
+  # Keep mining silent. Set true only if you explicitly want a chat line for every reward.
+  reward-messages: false
+  # Fortune bonus. Disable for exact amounts from the drop table.
+  bonus-drops:
+    enabled: true
+    fortune-chance-per-level: 0.04
+  # Per island, shared by all co-op members, persisted across restarts. 0 disables the starter table.
+  starter-breaks: 100
+  # Relative positive integer weights. An invalid/empty table prevents startup rather than losing data.
+  # 'block' is the displayed core; 'reward' is the actual item given on a successful break.
+  # Add/remove any entries. Optional amount: 3 OR min-amount: 1, max-amount: 4 (1..64).
+  # Example: {block: DIAMOND_ORE, reward: DIAMOND, weight: 2, min-amount: 1, max-amount: 3}
+  # Apply changes with /ob reload (OP / oneblock.admin + oneblock.admin.reload).
+  drops:
+    starter:
+      - {block: OAK_LOG, reward: OAK_LOG, weight: 30}
+      - {block: SPRUCE_LOG, reward: SPRUCE_LOG, weight: 10}
+      - {block: COAL_ORE, reward: COAL, weight: 20}
+      - {block: IRON_ORE, reward: RAW_IRON, weight: 15}
+      - {block: HAY_BLOCK, reward: HAY_BLOCK, weight: 15}
+      - {block: DIRT, reward: DIRT, weight: 5}
+      - {block: STONE, reward: COBBLESTONE, weight: 5}
+    main:
+      - {block: OAK_LOG, reward: OAK_LOG, weight: 1200}
+      - {block: SPRUCE_LOG, reward: SPRUCE_LOG, weight: 500}
+      - {block: BIRCH_LOG, reward: BIRCH_LOG, weight: 500}
+      - {block: OAK_LEAVES, reward: OAK_SAPLING, weight: 900}
+      - {block: GRASS_BLOCK, reward: GRASS_BLOCK, weight: 700}
+      - {block: DIRT, reward: DIRT, weight: 800}
+      - {block: STONE, reward: STONE, weight: 1000}
+      - {block: COBBLESTONE, reward: COBBLESTONE, weight: 900}
+      - {block: COAL_ORE, reward: COAL, weight: 1000}
+      - {block: IRON_ORE, reward: RAW_IRON, weight: 700}
+      - {block: COPPER_ORE, reward: RAW_COPPER, weight: 500}
+      - {block: OAK_PLANKS, reward: OAK_PLANKS, weight: 400}
+      - {block: OAK_LEAVES, reward: OAK_LEAVES, weight: 250}
+      - {block: OAK_LEAVES, reward: APPLE, weight: 150}
+      - {block: OAK_LEAVES, reward: STICK, weight: 150}
+      - {block: SAND, reward: SAND, weight: 120}
+      - {block: GRAVEL, reward: GRAVEL, weight: 100}
+      - {block: REDSTONE_ORE, reward: REDSTONE, weight: 70}
+      - {block: LAPIS_ORE, reward: LAPIS_LAZULI, weight: 30}
+      - {block: GOLD_ORE, reward: RAW_GOLD, weight: 20}
+      - {block: DIAMOND_ORE, reward: DIAMOND, weight: 8}
+      - {block: EMERALD_ORE, reward: EMERALD, weight: 1}
+      - {block: ANCIENT_DEBRIS, reward: ANCIENT_DEBRIS, weight: 1}
+
+storage:
+  flush-interval-seconds: 1
+
+# Game state is stored in PostgreSQL. Credentials live only in plugins/one-block/.env.
+# Core breaks never award coins; resources are sold through trading.
+market:
+
+  # Ordered category sidebar; any unique lowercase ID can be added. No All category.
+  # Assign products with category: <ID>. Additional categories have a sidebar page button.
+  categories:
+    farming: {name: Farming, icon: WHEAT, color: YELLOW_STAINED_GLASS_PANE}
+    mining: {name: Mining, icon: IRON_PICKAXE, color: LIGHT_GRAY_STAINED_GLASS_PANE}
+    combat: {name: Combat, icon: IRON_SWORD, color: RED_STAINED_GLASS_PANE}
+    woods: {name: 'Woods & Fishes', icon: OAK_LOG, color: ORANGE_STAINED_GLASS_PANE}
+    other: {name: Oddities, icon: BREWING_STAND, color: PURPLE_STAINED_GLASS_PANE}
+  # Products sharing a group open one resource-family page, then its individual variants.
+  # Optional product key: group: wood. Unspecified groups are inferred from the resource.
+  groups:
+    wood: {name: Wood, icon: OAK_LOG}
+    fish: {name: Fish, icon: COD}
+    wheat: {name: 'Wheat & Seeds', icon: WHEAT}
+    iron: {name: Iron, icon: IRON_INGOT}
+    gold: {name: Gold, icon: GOLD_INGOT}
+    copper: {name: Copper, icon: COPPER_INGOT}
+    prismarine: {name: Prismarine, icon: PRISMARINE_SHARD}
+    coal: {name: Coal, icon: COAL}
+    diamond: {name: Diamond, icon: DIAMOND}
+    emerald: {name: Emerald, icon: EMERALD}
+    redstone: {name: Redstone, icon: REDSTONE}
+    lapis_lazuli: {name: Lapis, icon: LAPIS_LAZULI}
+    combat_parts: {name: 'Бойові компоненти', icon: PRISMARINE_SHARD, category: combat}
+  enabled: true
+  # Stable FancyNpcs names/IDs. Only clicks on these configured NPCs open trading.
+  # Place them manually in the configured hub: /obadmin market npc shop|bazaar|auction.
+  npcs:
+    bazaar: oneblock_bazaar
+    shop: oneblock_merchant
+    auction: oneblock_auction
+  interaction-distance: 6.0
+  session-seconds: 120
+  # Custom price/quantity opens a private virtual sign. Empty first line cancels.
+  input-timeout-seconds: 60
+  # Hover shows this many individual orders per side; right-click opens every order with pagination.
+  hover-orders-per-side: 6
+  # Suggested prices: highest buy + 5% of spread; lowest sell - 10% of spread.
+  buy-spread-bps: 500
+  sell-spread-bps: 1000
+  # Four editable sign lines. input-line (0..3) must be exactly '{value}'.
+  # {label} is localized; {min}/{max} are optional. An empty input line cancels.
+  sign:
+    input-line: 0
+    price-lines: ['{value}', '^^^^^^^^^^^^^^^', '{label}', '']
+    amount-lines: ['{value}', '^^^^^^^^^^^^^^^', '{label}', '']
+  max-orders-per-island: 14
+  max-quantity: 2304
+  order-expiry-hours: 168
+  # 125 basis points = 1.25%, applied to Bazaar sellers only. Merchant sales have no extra fee.
+  sell-tax-bps: 125
+  quantities: [1, 16, 64]
+  price-steps: [1, 10, 100]
+  # The first price-step is the competitive order-price step (integer coins).
+  trade-history-limit: 10000
+  # Labels, titles and full lore are editable in lang/uk.yml and lang/en.yml.
+  appearance:
+    filler: BLACK_STAINED_GLASS_PANE # NONE disables the background.
+    # Locale keys -> material. Example: auction.buy: EMERALD
+    icons: {}
+  # Auction House rules and allowed items are in auction.yml.
+  merchant:
+    buyback-seconds: 900 # Personal history; exact original payout, no fee.
+  # Merchant only buys resources from players; sell-price is the integer payout per item.
+  # Sold resources are removed. All item purchases require other players' Bazaar offers.
+  # Add/remove products freely. bazaar enables player orders; shop enables merchant payouts.
+  # Example merchant only: OAK_LOG: {sell-price: 4, shop: true, bazaar: false}
+  # Example Bazaar only: DIAMOND: {sell-price: 100, shop: false, bazaar: true}
+  # Optional per-product fields: bazaar: true, shop: true, min-order-price: 1, max-order-price: 1000000000.
+  # No configured buy-price: Bazaar purchase prices are chosen by players' orders.
+  # Optional category: any ID in market.categories; auto-detected if absent.
+  # Optional group: resource-family ID; inferred if absent. fishing maps to woods unless configured separately.
+  # Optional display-name: 'Your translated product name'.
+  # Legacy buy-price, initial-stock and max-stock keys are ignored.
+  products:
+    OAK_LOG: {sell-price: 2}
+    SPRUCE_LOG: {sell-price: 2}
+    BIRCH_LOG: {sell-price: 2}
+    JUNGLE_LOG: {sell-price: 2}
+    ACACIA_LOG: {sell-price: 2}
+    DARK_OAK_LOG: {sell-price: 2}
+    CHERRY_LOG: {sell-price: 2}
+    MANGROVE_LOG: {sell-price: 2}
+    PALE_OAK_LOG: {sell-price: 2}
+    OAK_SAPLING: {sell-price: 1}
+    SPRUCE_SAPLING: {sell-price: 1}
+    BIRCH_SAPLING: {sell-price: 1}
+    JUNGLE_SAPLING: {sell-price: 1}
+    ACACIA_SAPLING: {sell-price: 1}
+    DARK_OAK_SAPLING: {sell-price: 1}
+    CHERRY_SAPLING: {sell-price: 1}
+    MANGROVE_PROPAGULE: {sell-price: 1}
+    PALE_OAK_SAPLING: {sell-price: 1}
+    GRASS_BLOCK: {sell-price: 2}
+    DIRT: {sell-price: 1}
+    STONE: {sell-price: 1}
+    COBBLESTONE: {sell-price: 1}
+    COAL: {sell-price: 3}
+    RAW_IRON: {sell-price: 5}
+    IRON_INGOT: {sell-price: 5}
+    RAW_COPPER: {sell-price: 2}
+    COPPER_INGOT: {sell-price: 2}
+    OAK_PLANKS: {sell-price: 1}
+    OAK_LEAVES: {sell-price: 1}
+    APPLE: {sell-price: 1}
+    STICK: {sell-price: 1}
+    SAND: {sell-price: 1}
+    GRAVEL: {sell-price: 1}
+    REDSTONE: {sell-price: 2}
+    LAPIS_LAZULI: {sell-price: 4}
+    RAW_GOLD: {sell-price: 7}
+    GOLD_INGOT: {sell-price: 8}
+    DIAMOND: {sell-price: 60}
+    EMERALD: {sell-price: 90}
+    ANCIENT_DEBRIS: {sell-price: 150}
+    HAY_BLOCK: {sell-price: 5}
+    WHEAT: {sell-price: 1}
+    CARROT: {sell-price: 1, shop: false, category: farming}
+    WHEAT_SEEDS: {sell-price: 1, shop: false, category: farming}
+    SUGAR_CANE: {sell-price: 1, shop: false, category: farming}
+    COW_SPAWN_EGG: {sell-price: 1, shop: false, category: farming}
+    CHICKEN_SPAWN_EGG: {sell-price: 1, shop: false, category: farming}
+    STRING: {sell-price: 1, shop: false, category: combat}
+    ARROW: {sell-price: 1, shop: false, category: combat}
+    BUCKET: {sell-price: 1, shop: false, category: other}
+    NETHERITE_UPGRADE_SMITHING_TEMPLATE: {sell-price: 1, shop: false, category: combat}
+    BONE: {sell-price: 1, shop: false, category: combat}
+    BREAD: {sell-price: 1, shop: false, category: farming}
+    CHEST: {sell-price: 1, shop: false, category: other}
+    NETHERITE_INGOT: {sell-price: 1, shop: false, category: combat}
+    POTATO: {sell-price: 1, shop: false, category: farming}
+    ROTTEN_FLESH: {sell-price: 1, shop: false, category: combat}
+    TORCH: {sell-price: 1, shop: false, category: other}
+    oneblock_battle_fragment: {material: PRISMARINE_SHARD, sell-price: 1, shop: false, category: combat, group: combat_parts, display-name: 'Бойовий фрагмент'}
+    oneblock_enchanted_fragment: {material: PRISMARINE_CRYSTALS, sell-price: 1, shop: false, category: combat, group: combat_parts, display-name: 'Зачарований фрагмент'}
+    oneblock_tempered_core: {material: FIRE_CHARGE, sell-price: 1, shop: false, category: combat, group: combat_parts, display-name: 'Загартоване ядро'}
+
+# Costs scale by current level + 1. These settings can be changed without resetting player data.
+progression:
+  upgrades:
+    fortune:
+      max-level: 5
+      base-cost: 100
+    island_size:
+      max-level: 5
+      base-cost: 250
+
+# Ordinary player command suggestions/routes. This cannot grant OP/admin access.
+commands:
+  player: [help, home, hub, menu, profile, profiles, skills, settings, coop, visit, trade]
+
+# On startup, replace menus, lang and sidebar when the plugin brings new versions (old copies go to backups/config-update-*).
+# dungeon.yml only gets new messages. Settings files are never replaced. false = keep all files as they are.
+auto-update-interface-configs: true

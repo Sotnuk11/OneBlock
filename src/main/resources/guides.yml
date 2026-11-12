@@ -1,0 +1,16 @@
+version: 1
+intro: true
+hub-generator-help: true
+topics:
+  start: {"icon": "GRASS_BLOCK", "pages": ["guides.body.start"], "action": "profiles", "visible": true}
+  core: {"icon": "BEACON", "pages": ["guides.body.core"], "action": "core", "visible": true}
+  skills: {"icon": "EXPERIENCE_BOTTLE", "pages": ["guides.body.skills"], "action": "skills", "visible": true}
+  workshop: {"icon": "CRAFTING_TABLE", "pages": ["guides.body.workshop"], "action": "workshop", "visible": true}
+  charge: {"icon": "AMETHYST_SHARD", "pages": ["guides.body.charge"], "action": "charge", "visible": true}
+  merchant: {"icon": "EMERALD", "pages": ["guides.body.merchant"], "action": "merchant", "visible": true}
+  bazaar: {"icon": "CHEST", "pages": ["guides.body.bazaar"], "action": "bazaar", "visible": true}
+  auction: {"icon": "GOLD_INGOT", "pages": ["guides.body.auction"], "action": "auction", "visible": true}
+  claims: {"icon": "ENDER_CHEST", "pages": ["guides.body.claims"], "action": "claims", "visible": true}
+  profiles-coop: {"icon": "PLAYER_HEAD", "pages": ["guides.body.profiles-coop"], "action": "coop", "visible": true}
+  survival: {"icon": "WATER_BUCKET", "pages": ["guides.body.survival"], "action": "recovery", "visible": true}
+  hub: {"icon": "COMPASS", "pages": ["guides.body.hub"], "action": "hub", "visible": true}
